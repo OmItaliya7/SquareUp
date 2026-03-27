@@ -1,6 +1,6 @@
 import Container from "../../../shared/ui/Container";
 import SectionHeader from "../../../shared/components/SectionHeader";
-import wave from "../../../assets/images/backgrounds/services-wave.png";
+import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import designIcon from "../../../assets/icons/home/design.png";
 import engineeringIcon from "../../../assets/icons/home/engineering.png";
 import pmIcon from "../../../assets/icons/home/project-management.png";

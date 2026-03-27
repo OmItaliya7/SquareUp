@@ -1,5 +1,5 @@
 import SectionHeader from "../../../shared/components/SectionHeader";
-import wave from "../../../assets/images/backgrounds/services-wave.png";
+import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import Container from "../../../shared/ui/Container";
 import HighlightCTA from "../../../shared/components/HighlightCTA";
 import { storySteps } from "../../../shared/data/aboutData";

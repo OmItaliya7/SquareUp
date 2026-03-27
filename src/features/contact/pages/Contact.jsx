@@ -2,12 +2,30 @@ import SectionHeader from "../../../shared/components/SectionHeader";
 import Container from "../../../shared/ui/Container";
 import ContactForm from "../../../shared/components/ContactForm";
 import HighlightCTA from "../../../shared/components/HighlightCTA";
-import wave from "../../../assets/images/backgrounds/faq-wave.png";
+import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import facebookIcon from "../../../assets/icons/social/facebook.png";
 import twitterIcon from "../../../assets/icons/social/twitter.png";
 import linkedinIcon from "../../../assets/icons/social/linkedin.png";
 import FrqAskQue from "../../../shared/components/FrqAskQue";
+
+
+
+const contactInfo = [
+  { id: "email", icon: FiMail, text: "hello@squareup.com" },
+  { id: "phone", icon: FiPhone, text: "+91 91813 23 2309" },
+  { id: "location", icon: FiMapPin, text: "Get Location" },
+];
+
+
+const socialIcons = [
+  { id: "fb", src: facebookIcon, alt: "Facebook" },
+  { id: "tw", src: twitterIcon, alt: "Twitter" },
+  { id: "ln", src: linkedinIcon, alt: "LinkedIn" },
+];
+
+
+
 
 const ContactInfoCard = ({ Icon, text }) => (
   <div
@@ -44,9 +62,9 @@ const Contact = () => {
           <div className="border-x border-b border-[#262626] px-6 py-7.5 xl:py-10 2xl:py-12.5">
             <div className="mx-auto max-w-200 ">
               <div className="flex flex-col items-center gap-5 2xl:gap-7.5 md:flex-row md:justify-center">
-                <ContactInfoCard Icon={FiMail} text="hello@squareup.com" />
-                <ContactInfoCard Icon={FiPhone} text="+91 91813 23 2309" />
-                <ContactInfoCard Icon={FiMapPin} text="Get Location" />
+                {contactInfo.map(({ id, icon: Icon, text }) => (
+                  <ContactInfoCard key={id} Icon={Icon} text={text} />
+                ))}
               </div>
             </div>
           </div>
@@ -71,30 +89,22 @@ const Contact = () => {
 
               {/* RIGHT SIDE: Stay Connected */}
               <div className="flex items-center justify-center flex-1  md:py-12 xl:py-12.5">
-                <div className="flex flex-col md:flex-row items-center gap-5 2xl:gap-5 md:bg-[#1C1C1C] md:border md:border-[#262626] md:rounded-lg p-5 pb-10 md:px-8 md:py-3 xl:pl-5 xl:p-2.5 2xl:pl-6 2xl:p-3.5">
+                <div className="flex flex-col md:flex-row items-center gap-5 2xl:gap-5 md:bg-[#1C1C1C] md:border md:border-[#262626] md:rounded-lg p-5 pb-10  md:px-2 md:py-3 xl:pl-5 xl:p-2.5 2xl:pl-6 2xl:p-3.5">
                   <span className="text-[#E6E6E6] text-base 2xl:text-lg font-medium leading-normal">
                     Stay Connected
                   </span>
 
                   {/* Icon Group  */}
                   <div className="flex items-center gap-2.5 2xl:gap-3.5">
-                    <img
-                      src={facebookIcon}
-                      alt="Facebook"
-                      className="size-13 2xl:size-16"
-                    />
-
-                    <img
-                      src={twitterIcon}
-                      alt="Twitter"
-                      className="size-13 2xl:size-16"
-                    />
-
-                    <img
-                      src={linkedinIcon}
-                      alt="LinkedIn"
-                      className="size-13 2xl:size-16"
-                    />
+                     {socialIcons.map(({ id, src, alt }) => (
+                        <img
+                          key={id}
+                          src={src}
+                          alt={alt}
+                          className="size-13 2xl:size-16"
+                          loading="lazy"
+                        />
+                      ))}
                   </div>
                 </div>
               </div>
@@ -102,13 +112,13 @@ const Contact = () => {
           </div>
           
           {/* Section 4: FAQ */}
-          <div className="">
+          
             <SectionHeader
             title="Frequently Asked Questions"
               subtitle="Still you have any questions? Contact our Team via hello@squareup.com"
               bgImage={wave}
             />
-          </div>
+          
           <div>
             <FrqAskQue />
           </div>

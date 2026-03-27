@@ -5,7 +5,7 @@ import expertice from "../../../assets/icons/home/expertise.png"
 import client from "../../../assets/icons/home/client-centric.png"
 import solution from "../../../assets/icons/home/results.png"
 import partenership from "../../../assets/icons/home/collborative.png"
-import wave from "../../../assets/images/backgrounds/wco-wave.png"
+import wave from "../../../assets/images/backgrounds/wco-wave.webp"
 
 import Container from "../../../shared/ui/Container"
 import SectionHeader from "../../../shared/components/SectionHeader"

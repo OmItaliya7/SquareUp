@@ -1,5 +1,5 @@
-import heroBg from "../../../assets/images/hero/hero-bg.png";
-import grid from "../../../assets/images/backgrounds/grid.png";
+import heroBg from "../../../assets/images/hero/hero-bg.webp";
+import grid from "../../../assets/images/backgrounds/grid.webp";
 import Container from "../../../shared/ui/Container";
 import { Link } from "react-router-dom";
 

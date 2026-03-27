@@ -1,5 +1,5 @@
 
-import grid from "../../assets/images/backgrounds/grid.png";
+import grid from "../../assets/images/backgrounds/grid.webp";
 
 const SectionHeader = ({ title, subtitle, bgImage }) => {
   return (
@@ -16,12 +16,16 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
           
           {/* 1. BACKGROUND WAVE - Using mix-blend-overlay from Figma */}
           {bgImage && (
-            <img
-              src={bgImage}
-              alt="background effect"
-              className="absolute inset-0 object-cover w-full h-full pointer-events-none mix-blend-overlay opacity-60"
-            />
-          )}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-60 mix-blend-overlay"
+            style={{
+              backgroundImage: `url(${bgImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              willChange: "transform",
+            }}
+          />
+        )}
 
           {/* 2. SQUARES GRID - Tiled background */}
           <div
@@ -34,7 +38,7 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
           />
 
           {/* 3. BRAND TINT - #ACFF24 at 20% opacity as per Figma */}
-          <div className="absolute inset-0 bg-[#ACFF24] opacity-[0.02] mix-blend-color-dodge pointer-events-none" />
+          <div className="absolute inset-0 bg-[#ACFF24] opacity-[0.01] mix-blend-color-dodge pointer-events-none" />
 
           {/* CONTENT LAYER */}
           <div className="relative z-10 flex flex-col items-center gap-4 text-center">

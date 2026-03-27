@@ -2,7 +2,7 @@ import Container from "../../../shared/ui/Container";
 import SectionHeader from "../../../shared/components/SectionHeader";
 import IntroBlock from "../../../shared/components/IntroBlock";
 import StepGrid from "../../../shared/components/StepGrid";
-import wave from "../../../assets/images/backgrounds/faq-wave.png";
+import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 import { processSteps } from "../../../shared/data/processData";
 import CTABanner from "../../../shared/components/CTABanner";
 import ContactForm from "../../../shared/components/ContactForm";

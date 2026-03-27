@@ -7,7 +7,7 @@
   import HighlightCTA from "../../../shared/components/HighlightCTA";
   import JobGrid from "../components/JobGrid";
   import { whyWorkData, jobCategories } from "../../../shared/data/careersData";
-  import wave from "../../../assets/images/backgrounds/services-wave.png";
+  import wave from "../../../assets/images/backgrounds/services-wave.webp";
 
   const Careers = () => {
     return (

@@ -1,136 +1,137 @@
-import { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { navLinks } from "../../shared/data/navbarData"
-import logo from "../../assets/logo/brand/logo-main.png"
-import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"
-import Container from "../../shared/ui/Container"
+  import { useState } from "react"
+  import { Link, useLocation } from "react-router-dom"
+  import { navLinks } from "../../shared/data/navbarData"
+  import logo from "../../assets/logo/brand/logo-main.png"
+  import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"
+  import Container from "../../shared/ui/Container"
 
-const Header = () => {
+  const Header = () => {
 
-  const [open, setOpen] = useState(false)
-  const { pathname } = useLocation()
+    const [open, setOpen] = useState(false)
+    const { pathname } = useLocation()
 
-  const isActive = (path) => {
-    if (path === "/") return pathname === "/"
-    return pathname.startsWith(path)
-  }
+    const isActive = (path) => {
+      if (path === "/") return pathname === "/"
+      return pathname.startsWith(path)
+    }
 
-  const closeMenu = () => setOpen(false)
+    const closeMenu = () => setOpen(false)
 
-  return (
-    <>
-      {/* ================= HEADER ================= */}
-      <header className="w-full bg-[#1A1A1A] lg:border-b border-[#262626]">
-        <Container>
+    return (
+      <>
+        {/* ================= HEADER ================= */}
+        <header className="w-full bg-[#1A1A1A] lg:border-b border-[#262626]">
+          <Container>
 
-          {/* ⭐ Parent Flex Row */}
-          <div className="flex items-center justify-between pt-[40px] pb-[20px] xl:py-5">
+            {/* ⭐ Parent Flex Row */}
+            <div className="flex items-center justify-between pt-[40px] pb-[20px] xl:py-5">
 
-            {/* ⭐ Child 1 → Logo */}
-            <div className="flex items-center">
-              <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
-                <img src={logo} className="size-[40px] 2xl:size-[60px]" />
-                <span className="font-semibold text-white">SquareUp</span>
-              </Link>
+              {/* ⭐ Child 1 → Logo */}
+              <div className="flex items-center">
+                <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
+                  <img src={logo} alt="SquareUp logo" className="size-[40px] 2xl:size-[60px]" />
+                  <span className="font-semibold text-white">SquareUp</span>
+                </Link>
+              </div>
+
+              {/* ⭐ Child 2 → Navigation */}
+              <nav aria-label="Main navigation" className="items-center hidden lg:flex xl:gap-1 2xl:gap-5">
+
+                {navLinks.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={
+                      isActive(item.path)
+                        ? "bg-[#262626] text-white px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-semibold "
+                        : "text-[#262626] hover:text-[#E6E6E6] hover:bg-[#262626] px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-medium"
+                    }
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+
+              </nav>
+
+              {/* ⭐ Child 3 → Actions */}
+              <div className="flex items-center gap-3">
+
+                {/* Desktop Contact */}
+                <Link
+                  to="/contact"
+                  className="hidden lg:flex bg-[#9EFF00] !text-[#262626]  px-[18px] py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium"
+                >
+                  Contact Us
+                </Link>
+
+                {/* Mobile Menu Button */}
+                <button
+                  onClick={() => setOpen(!open)}
+                  aria-label="Toggle menu"
+                  aria-expanded={open}
+                  aria-controls="mobile-menu"
+                  className="lg:hidden w-[46px] h-[46px] bg-[#262626]  rounded-md flex items-center justify-center"
+                >
+                  {open
+                    ? <HiOutlineX size={22} color="#D8FF99" />
+                    : <HiOutlineMenuAlt3 size={28} color="#D8FF99" />
+                  }
+                </button>
+
+              </div>
+
             </div>
 
-            {/* ⭐ Child 2 → Navigation */}
-            <nav className="items-center hidden lg:flex xl:gap-1 2xl:gap-5">
+          </Container>
+        </header>
+
+
+        {/* ================= MOBILE MENU ================= */}
+        <div
+          className={`
+            absolute z-40
+            lg:hidden
+            w-full
+            bg-[#1A1A1A]
+            
+            border-b border-[#262626]
+            transition-all duration-300
+            ${open ? "max-h-[500px] py-6" : "max-h-0 overflow-hidden"}
+          `}
+        >
+          <Container>
+            <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
 
               {navLinks.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
+                  onClick={closeMenu}
                   className={
                     isActive(item.path)
-                      ? "bg-[#262626] text-white px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-semibold "
-                      : "text-[#262626] hover:text-[#E6E6E6] hover:bg-[#262626] px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-medium"
+                      ? "bg-[#262626] text-white px-4 py-3 rounded-md text-sm font-semibold"
+                      : "text-[#98989A] hover:text-white hover:bg-[#262626] px-4 py-3 rounded-md text-sm font-medium"
                   }
                 >
                   {item.name}
                 </Link>
               ))}
 
-            </nav>
-
-            {/* ⭐ Child 3 → Actions */}
-            <div className="flex items-center gap-3">
-
-              {/* Desktop Contact */}
               <Link
                 to="/contact"
-              >
-                <button className="hidden lg:flex bg-[#9EFF00] text-[#262626]  px-[18px] py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium">
-                  Contact Us
-                </button>
-              </Link>
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setOpen(!open)}
-                className="lg:hidden w-[46px] h-[46px] bg-[#262626]  rounded-md flex items-center justify-center"
-              >
-                {open
-                  ? <HiOutlineX size={22} color="#D8FF99" />
-                  : <HiOutlineMenuAlt3 size={28} color="#D8FF99" />
-                }
-              </button>
-
-            </div>
-
-          </div>
-
-        </Container>
-      </header>
-
-
-      {/* ================= MOBILE MENU ================= */}
-      <div
-        className={`
-          absolute z-40
-          lg:hidden
-          w-full
-          bg-[#1A1A1A]
-          
-          border-b border-[#262626]
-          transition-all duration-300
-          ${open ? "max-h-[500px] py-6" : "max-h-0 overflow-hidden"}
-        `}
-      >
-        <Container>
-          <nav className="flex flex-col gap-2">
-
-            {navLinks.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
                 onClick={closeMenu}
-                className={
-                  isActive(item.path)
-                    ? "bg-[#262626] text-white px-4 py-3 rounded-md text-sm font-semibold"
-                    : "text-[#98989A] hover:text-white hover:bg-[#262626] px-4 py-3 rounded-md text-sm font-medium"
-                }
+                className="mt-3 bg-[#9EFF00] text-[#262626]! w-full py-5 rounded-md text-center font-medium"
+                
               >
-                {item.name}
+               Contact Us
+                
               </Link>
-            ))}
 
-            <Link
-              to="/contact"
-              onClick={closeMenu}
-              
-            >
-              <button className="mt-3 bg-[#9EFF00] text-[#262626] w-full py-5 rounded-md text-center font-medium">
-                Contact Us
-              </button>
-              
-            </Link>
+            </nav>
+          </Container>
+        </div>
+      </>
+    )
+  }
 
-          </nav>
-        </Container>
-      </div>
-    </>
-  )
-}
-
-export default Header
+  export default Header

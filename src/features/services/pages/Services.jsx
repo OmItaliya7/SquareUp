@@ -3,7 +3,7 @@ import SectionHeader from '../../../shared/components/SectionHeader';
 import IntroBlock from '../../../shared/components/IntroBlock';
 import ServiceCategoryGrid from '../components/ServiceCategoryGrid';
 import { servicesData } from '../../../shared/data/servicesData';
-import wave from "../../../assets/images/backgrounds/services-wave.png";
+import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import CTABanner from '../../../shared/components/CTABanner';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

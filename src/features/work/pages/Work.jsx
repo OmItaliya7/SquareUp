@@ -5,7 +5,7 @@ import SectionHeader from "../../../shared/components/SectionHeader";
 import WorkGrid from "../components/WorkGrid";
 import CTABanner from "../../../shared/components/CTABanner";
 import { workData } from "../../../shared/data/workData";
-import wave from "../../../assets/images/backgrounds/about-wave.png";
+import wave from "../../../assets/images/backgrounds/about-wave.webp";
 import IntroBlock from "../../../shared/components/IntroBlock";
 
 const Work = () => {

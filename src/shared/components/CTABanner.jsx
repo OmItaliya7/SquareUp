@@ -1,6 +1,6 @@
-import grid from "../../assets/images/backgrounds/grid.png";
+import grid from "../../assets/images/backgrounds/grid.webp";
 import logo from "../../assets/logo/brand/logo-main.png";
-import wave from "../../assets/images/backgrounds/about-wave.png";
+import wave from "../../assets/images/backgrounds/about-wave.webp";
 
 const CTABanner = ({ title, subtitle }) => {
   return (

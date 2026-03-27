@@ -4,7 +4,7 @@ import client3 from "../../../assets/icons/clients/client_3.svg"
 import client4 from "../../../assets/icons/clients/client_4.svg"
 import client5 from "../../../assets/icons/clients/client_5.svg"
 import client6 from "../../../assets/icons/clients/client_6.svg"
-import wave from "../../../assets/images/backgrounds/about-wave.png"
+import wave from "../../../assets/images/backgrounds/about-wave.webp"
 
 import Container from "../../../shared/ui/Container"
 import SectionHeader from "../../../shared/components/SectionHeader"
