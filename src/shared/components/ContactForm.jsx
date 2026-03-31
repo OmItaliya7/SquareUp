@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   const handleBudgetChange = useCallback((e) => {
     setBudget(Number(e.target.value));
-  });
+  }, []);
 
   return (
     <section className="w-full bg-[#1A1A1A] border-x border-t  border-[#262626]">
@@ -22,24 +22,26 @@ const ContactForm = () => {
             <div className="grid grid-cols-1  md:grid-cols-2 gap-[30px] 2xl:gap-10">
               {/* Name */}
               <div className="bg-[#24242480] border border-[#262626] rounded-md px-[24px] py-[18px] xl:px-[30px] xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-[14px] xl:gap-4 2xl:gap-5">
-                <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
+                <label htmlFor="name" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
                   Full Name
                 </label>
 
                 <input
                   type="text"
+                  id="name"
                   placeholder="Type here"
                   className=" w-full  bg-transparent border-b border-[#333333] pb-[6px] text-[#98989A] placeholder:text-[#656567] focus:outline-none focus:border-[#C5FF66] transition-colors  font-normal text-base 2xl:text-lg leading-normal" />
               </div>
 
               {/* Email */}
               <div className="bg-[#24242480] border border-[#262626] rounded-md px-[24px] py-[18px] xl:px-[30px] xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-[14px] xl:gap-4 2xl:gap-5">
-                <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
+                <label htmlFor="email" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
                   Email
                 </label>
 
                 <input
                   type="email"
+                  id="email"
                   placeholder="Type here"
                   className=" w-full bg-transparent border-b border-[#333333] pb-[6px] text-[#98989A] placeholder:text-[#656567] focus:outline-none focus:border-[#C5FF66] transition-colors font-normal text-base 2xl:text-lg leading-normal" />
 
@@ -54,7 +56,7 @@ const ContactForm = () => {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {contactOptions.map((item) => (
                   <label
-                    key={item}
+                    key={item}                  
                     className="flex items-center cursor-pointer gap-[10px]"
                   >
                     <div className="relative flex items-center justify-center">

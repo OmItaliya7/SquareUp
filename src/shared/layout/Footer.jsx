@@ -12,7 +12,7 @@ const Footer = () => {
   const contactData = [
     { icon: FiMail, text: "hello@squareup.com" },
     { icon: FiPhone, text: "+91 91813 23 2309" },
-    { icon: FiMapPin, text: "Somewhere in the World" },
+    { icon: FiMapPin, text: "Remote-first, Globally Available" },
   ];
 
   return (
@@ -53,9 +53,9 @@ const Footer = () => {
               </span>
 
               <div className="flex gap-[10px] 2xl:gap-[14px]">
-                <img src={facebookIcon} alt="facebookicon" className="size-[52px] 2xl:size-[64px]" />
-                <img src={twitterIcon} alt="twittericon" className="size-[52px] 2xl:size-[64px]" />
-                <img src={linkedinIcon} alt="linkedinicon" className="size-[52px] 2xl:size-[64px]" />
+                <img src={facebookIcon} alt="Follow us on Facebook" className="size-[52px] 2xl:size-[64px]" />
+                <img src={twitterIcon} alt="Follow us on Twitter" className="size-[52px] 2xl:size-[64px]" />
+                <img src={linkedinIcon} alt="connect to LinkedIn" className="size-[52px] 2xl:size-[64px]" />
               </div>
 
             </div>

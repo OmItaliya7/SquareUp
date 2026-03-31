@@ -1,0 +1,7 @@
+/* https://squareup.com replace with real domain*/
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://squareup.com/sitemap.xml
