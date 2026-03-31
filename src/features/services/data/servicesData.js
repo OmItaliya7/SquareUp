@@ -1,47 +1,47 @@
-import Ux_1 from "../../../assets/icons/services/ux/research.png";
-import Ux_2 from "../../../assets/icons/common/wireframe.png";
-import Ux_3 from "../../../assets/icons/services/ux/prototyping.png";
-import Ux_4 from "../../../assets/icons/services/ux/visualbranding.png";
+import Ux_1 from "../../../assets/icons/services/ux/research.svg";
+import Ux_2 from "../../../assets/icons/common/wireframe.svg";
+import Ux_3 from "../../../assets/icons/services/ux/prototyping.svg";
+import Ux_4 from "../../../assets/icons/services/ux/visualbranding.svg";
 
-import Ui_1 from "../../../assets/icons/common/interface-design.png";
-import Ui_2 from "../../../assets/icons/services/ui/iconography.png";
-import Ui_3 from "../../../assets/icons/services/ui/typography.png";
-import Ui_4 from "../../../assets/icons/services/ui/responsivedesign.png";
+import Ui_1 from "../../../assets/icons/common/interface-design.svg";
+import Ui_2 from "../../../assets/icons/services/ui/iconography.svg";
+import Ui_3 from "../../../assets/icons/services/ui/typography.svg";
+import Ui_4 from "../../../assets/icons/services/ui/responsivedesign.svg";
 
-import Brand_1 from "../../../assets/icons/services/branding/logo-design.png";
-import Brand_2 from "../../../assets/icons/services/branding/brand-strategy.png";
-import Brand_3 from "../../../assets/icons/services/branding/brand-guidelines.png";
-import Brand_4 from "../../../assets/icons/services/branding/marketing-assets.png";
+import Brand_1 from "../../../assets/icons/services/branding/logo-design.svg";
+import Brand_2 from "../../../assets/icons/services/branding/brand-strategy.svg";
+import Brand_3 from "../../../assets/icons/services/branding/brand-guidelines.svg";
+import Brand_4 from "../../../assets/icons/services/branding/marketing-assets.svg";
 
-import app_1 from "../../../assets/icons/services/app/ios.png";
-import app_2 from "../../../assets/icons/services/app/cross-platform.png";
-import app_3 from "../../../assets/icons/services/app/app-prototype.png";
-import app_4 from "../../../assets/icons/services/app/app-testing.png";
+import app_1 from "../../../assets/icons/services/app/ios.svg";
+import app_2 from "../../../assets/icons/services/app/cross-platform.svg";
+import app_3 from "../../../assets/icons/services/app/app-prototype.svg";
+import app_4 from "../../../assets/icons/services/app/app-testing.svg";
 
-import web_1 from "../../../assets/icons/common/frontend.png";
-import web_2 from "../../../assets/icons/common/backend.png";
-import web_3 from "../../../assets/icons/common/cms.png";
-import web_4 from "../../../assets/icons/services/web/ecommerce.png";
+import web_1 from "../../../assets/icons/common/frontend.svg";
+import web_2 from "../../../assets/icons/common/backend.svg";
+import web_3 from "../../../assets/icons/common/cms.svg";
+import web_4 from "../../../assets/icons/services/web/ecommerce.svg";
 
-import custom_1 from "../../../assets/icons/services/custom/enterprice.png";
-import custom_2 from "../../../assets/icons/services/custom/custom-app.png";
-import custom_3 from "../../../assets/icons/services/custom/api-integration.png";
-import custom_4 from "../../../assets/icons/services/custom/legacy-migration.png";
+import custom_1 from "../../../assets/icons/services/custom/enterprice.svg";
+import custom_2 from "../../../assets/icons/services/custom/custom-app.svg";
+import custom_3 from "../../../assets/icons/services/custom/api-integration.svg";
+import custom_4 from "../../../assets/icons/services/custom/legacy-migration.svg";
 
-import plan_1 from "../../../assets/icons/services/planning/requirements.png";
-import plan_2 from "../../../assets/icons/services/planning/roadmap.png";
-import plan_3 from "../../../assets/icons/services/planning/resource.png";
-import plan_4 from "../../../assets/icons/services/planning/risk-assessment.png";
+import plan_1 from "../../../assets/icons/services/planning/requirements.svg";
+import plan_2 from "../../../assets/icons/services/planning/roadmap.svg";
+import plan_3 from "../../../assets/icons/services/planning/resource.svg";
+import plan_4 from "../../../assets/icons/services/planning/risk-assessment.svg";
 
-import agile_1 from "../../../assets/icons/services/agile/sprints.png";
-import agile_2 from "../../../assets/icons/services/agile/scrum.png";
-import agile_3 from "../../../assets/icons/services/agile/progress-updates.png";
-import agile_4 from "../../../assets/icons/services/agile/improvement.png";
+import agile_1 from "../../../assets/icons/services/agile/sprints.svg";
+import agile_2 from "../../../assets/icons/services/agile/scrum.svg";
+import agile_3 from "../../../assets/icons/services/agile/progress-updates.svg";
+import agile_4 from "../../../assets/icons/services/agile/improvement.svg";
 
-import qa_1 from "../../../assets/icons/services/qa-testing/test-planning.png";
-import qa_2 from "../../../assets/icons/common/manual-tester.png";
-import qa_3 from "../../../assets/icons/common/sql-tester.png";
-import qa_4 from "../../../assets/icons/common/qa-tester.png";
+import qa_1 from "../../../assets/icons/services/qa-testing/test-planning.svg";
+import qa_2 from "../../../assets/icons/common/manual-tester.svg";
+import qa_3 from "../../../assets/icons/common/sql-tester.svg";
+import qa_4 from "../../../assets/icons/common/qa-tester.svg";
 
 export const servicesData = [
   {

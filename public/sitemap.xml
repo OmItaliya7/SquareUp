@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://squareup.com/</loc>
+    <loc>https://square-upp.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/services</loc>
+    <loc>https://square-upp.vercel.app/services</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/work</loc>
+    <loc>https://square-upp.vercel.app/work</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/process</loc>
+    <loc>https://square-upp.vercel.app/process</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/about</loc>
+    <loc>https://square-upp.vercel.app/about</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/careers</loc>
+    <loc>https://square-upp.vercel.app/careers</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://squareup.com/contact</loc>
+    <loc>https://square-upp.vercel.app/contact</loc>
     <priority>0.9</priority>
   </url>
 

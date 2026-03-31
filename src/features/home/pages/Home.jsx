@@ -1,4 +1,7 @@
 import {lazy, Suspense} from "react";
+import { Helmet } from "react-helmet-async"
+import SEO from "../../../shared/components/SEO";
+
 
 import Hero from "../sections/Hero";
 import LogoStrip from "../sections/LogoStrip";
@@ -13,6 +16,11 @@ const ContactUs = lazy(() => import("../sections/ContactUs"));
 const Home = () => {
     return(
         <>
+            <SEO
+                title="SquareUp | Digital Agency for Web, UI/UX & Scalable Solutions"
+                description="SquareUp is a modern digital agency delivering UI/UX design, web development, and scalable digital solutions."
+                path="/" 
+            />
             <Hero />
             <LogoStrip />
 

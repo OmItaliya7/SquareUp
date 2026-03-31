@@ -10,8 +10,8 @@ const ServiceCard = ({ icon, title, index, total }) => {
     <div
       className={`
         
-        flex flex-col gap-5 xl:gap-6 2xl:gap-[30px]        
-        p-5 xl:p-10 2xl:p-[50px]
+        flex flex-col gap-5 xl:gap-6 2xl:gap-7.5        
+        p-5 xl:p-10 2xl:p-12.5
         bg-[#1C1C1C] 
         border-r border-[#262626]
         ${isEven ? 'border-r-0 xl:border-r' : ''}

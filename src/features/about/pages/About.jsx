@@ -5,9 +5,16 @@ import HighlightCTA from "../../../shared/components/HighlightCTA";
 import { storySteps } from "../data/aboutData";
 import aboutImg from "../../../assets/images/about/about-main.webp";
 import StepGrid from "../../../shared/components/StepGrid";
+import SEO from "../../../shared/components/SEO";
 
 const About = () => {
   return (
+    <>
+    <SEO
+      title="About Us - SquareUp"
+      description="Discover SquareUp, a leading digital product agency specializing in design, engineering, and project management. Learn about our collaborative process and how we create exceptional digital experiences for businesses."
+      path="/about"
+    />
     <main className="bg-[#1A1A1A]">
       <Container>
       <SectionHeader
@@ -74,6 +81,7 @@ const About = () => {
         </div>
       </Container>
     </main>
+    </>
   );
 };
 

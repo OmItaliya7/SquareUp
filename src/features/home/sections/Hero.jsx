@@ -88,21 +88,19 @@ const Hero = () => {
                   </span>
 
                   {audience.map((item, i) => (
-                    <span
-                      key={i}
-                      className="
-                        text-white text-lg 2xl:text-[22px]
-                        font-normal
-                        bg-[#262626]
-                        border border-[#2A2A2A]
-                        rounded-md
-                        px-2.5 py-2
-                        
-                        2xl:px-3.5 2xl:py-3
-                      "
-                    >
-                      {item}
-                    </span>
+                    <div key={i} className="flex items-center gap-1.5">
+
+                      {i !== 0 && (
+                        <span className="text-[#98989A] text-sm xl:text-lg 2xl:text-[22px]">
+                          {i === audience.length - 1 ? "and" : ","}
+                        </span>
+                      )}
+
+                      <span className="text-white text-sm xl:text-lg 2xl:text-[22px] bg-[#262626] border border-[#2A2A2A] rounded-md px-2.5 py-2 2xl:px-3.5 2xl:py-3">
+                        {item}
+                      </span>
+
+                    </div>
                   ))}
                 </div>
               </div>
@@ -114,9 +112,7 @@ const Hero = () => {
               mt-10 2xl:mt-12.5
               flex 
               gap-3.25
-              justify-center
-              
-            "
+              justify-center"
             >
               <Link
                 to="/work"

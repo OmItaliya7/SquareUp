@@ -22,10 +22,10 @@ const TestimonialsCard = ({ item, index, total }) => {
     >
       {/* Testimonial Content */}
       <div className="flex flex-col gap-5 2xl:gap-6">
-        <h3 className="text-[#D8FF99] text-[18px] xl:text-[20px] 2xl:text-[28px] font-medium leading-[1.5]">
+        <h3 className="text-[#D8FF99] text-[18px] xl:text-[20px] 2xl:text-[28px] font-medium leading-normal">
           {item.title}
         </h3>
-        <p className="text-[#E6E6E6] font-normal text-[14px] xl:text-[16px] 2xl:text-[18px] leading-[1.5]">
+        <p className="text-[#E6E6E6] font-normal text-[14px] xl:text-[16px] 2xl:text-[18px] leading-normal">
           {item.desc}
         </p>
       </div>
@@ -38,9 +38,9 @@ const TestimonialsCard = ({ item, index, total }) => {
             alt={item.name}
             loading="lazy"
             decoding="async"
-            className="object-cover rounded-lg size-[40px] xl:size-[50px] 2xl:size-[60px]"
+            className="object-cover rounded-lg size-10 xl:size-12.5 2xl:size-15"
           />
-          <div className="flex flex-col leading-[1.5]">
+          <div className="flex flex-col leading-normal">
             <span className="text-[16px] 2xl:text-[20px] font-medium text-[#FFFFFF] lg:text-base ">
               {item.name}
             </span>
@@ -50,7 +50,7 @@ const TestimonialsCard = ({ item, index, total }) => {
           </div>
         </div>
 
-        <button className="hidden xl:block bg-[#262626] border border-[#2A2A2A] text-white px-[16px] py-[14px] 2xl:px-[20px] 2xl:py-[18px] rounded-lg font-medium text-[14px] 2xl:text-[18px] hover:bg-[#333] transition-all">
+        <button className="hidden xl:block bg-[#262626] border border-[#2A2A2A] text-white px-4 py-3.5 2xl:px-5 2xl:py-4.5 rounded-lg font-medium text-[14px] 2xl:text-[18px] hover:bg-[#333] transition-all">
           Open Website
         </button>
       </div>

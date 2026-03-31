@@ -6,9 +6,16 @@ import CTABanner from "../../../shared/components/CTABanner";
 import { workData } from "../data/workData";
 import wave from "../../../assets/images/backgrounds/about-wave.webp";
 import IntroBlock from "../../../shared/components/IntroBlock";
+import SEO from "../../../shared/components/SEO";
 
 const Work = () => {
   return (
+    <>
+    <SEO
+      title="Our Work | SquareUp Digital Agency"
+      description="Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise at SquareUp, a leading digital product agency."
+      path="/work"
+    />
     <main className="bg-[#1A1A1A] min-h-screen" id="our-work">
       <Container>
       <SectionHeader 
@@ -17,7 +24,7 @@ const Work = () => {
         bgImage={wave}
       />
       
-        <div className="flex flex-col -mt-[1px]">
+        <div className="flex flex-col -mt-px">
           <IntroBlock 
             title="At SquareUp"
             description="We have had the privilege of working with a diverse range of clients and delivering exceptional digital products that drive success."
@@ -33,6 +40,7 @@ const Work = () => {
       />
       </Container>
     </main>
+    </>
   );
 };
 

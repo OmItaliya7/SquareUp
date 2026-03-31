@@ -15,8 +15,6 @@ const FAQ = () => {
         subtitle="Still you have any questions? Contact our Team via hello@squareup.com"
         bgImage={wave}
       />
-
-      
         <FAQAccordion />
       </Container>
     </section>

@@ -6,8 +6,17 @@
   import { whyWorkData, jobCategories } from "../data/careersData";
  import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 
+import SEO from "../../../shared/components/SEO";
+
   const Careers = () => {
     return (
+      <>
+        <SEO
+          title="Careers - SquareUp"
+          description="Explore career opportunities at SquareUp, a digital product agency dedicated to crafting exceptional digital experiences."
+          path="/careers"
+        />
+      
       <main className="bg-[#1A1A1A]">
         <Container>
         <SectionHeader
@@ -79,6 +88,7 @@
           </div>
         </Container>
       </main>
+      </>
     );
   };
 

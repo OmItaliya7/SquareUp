@@ -1,4 +1,4 @@
-import cubeLogo from "../../assets/logo/brand/logo-highlight.png";
+import cubeLogo from "../../assets/logo/brand/logo-highlight.svg";
 
 
 const HighlightCTA = () => {

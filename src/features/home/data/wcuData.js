@@ -1,7 +1,7 @@
-import expertice from "../../../assets/icons/home/expertise.png"
-import client from "../../../assets/icons/home/client-centric.png"
-import solution from "../../../assets/icons/home/results.png"
-import partenership from "../../../assets/icons/home/collborative.png"
+import expertice from "../../../assets/icons/home/expertise.svg"
+import client from "../../../assets/icons/home/client-centric.svg"
+import solution from "../../../assets/icons/home/results.svg"
+import partenership from "../../../assets/icons/home/collborative.svg"
 
 export const wcuData = [
   {

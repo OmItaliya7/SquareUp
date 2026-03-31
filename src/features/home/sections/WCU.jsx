@@ -9,16 +9,16 @@ import { wcuData } from "../data/wcuData"
 const WCUCard = ({ item, i }) => {
   return (
     <div
-      className={`px-[30px] py-[40px] xl:p-15 2xl:p-20 flex flex-col gap-6 xl:gap-[30px] 2xl:gap-[40px] border-[#262626] border-b last:border-b-0 md:even:border-l md:last:border-b-0 ${i < 2 ? "md:border-b" : ""}`}>
+      className={`px-7.5 py-10 xl:p-15 2xl:p-20 flex flex-col gap-6 xl:gap-7.5 2xl:gap-10 border-[#262626] border-b last:border-b-0 md:even:border-l md:last:border-b-0 ${i < 2 ? "md:border-b" : ""}`}>
       {/* ICON BOX */}
-      <div className="flex items-center gap-[14px] 2xl:gap-5">
+      <div className="flex items-center gap-3.5 2xl:gap-5">
         <div className="shrink-0">
           <img
             src={item.icon}
             alt={item.title}
             loading="lazy"
             decoding="async"
-            className="object-contain size-[58px] xl:size-[70px] 2xl:size-[88px]"
+            className="object-contain size-14.5 xl:size-17.5 2xl:size-22"
           />
         </div>
         <h3 className=" text-[20px] text-white leading-normal tracking-[.6%]  2xl:text-[26px] font-medium">

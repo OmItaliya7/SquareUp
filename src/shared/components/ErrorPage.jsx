@@ -1,8 +1,9 @@
-import { useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { useRouteError, isRouteErrorResponse, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
 
   const error = useRouteError();
+  const navigate = useNavigate();
 
   let title = "Something went wrong";
   let message = "An unexpected error occurred.";
@@ -23,15 +24,15 @@ const ErrorPage = () => {
   }
 
   const goHome = () => {
-    window.location.href = "/";
+    navigate("/");
   };
 
   const goBack = () => {
-    window.history.back();
+    navigate(-1);
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-white bg-gradient-to-b from-black to-gray-900">
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-white bg-linear-to-b from-black to-gray-900">
 
       <div className="max-w-xl space-y-6">
 

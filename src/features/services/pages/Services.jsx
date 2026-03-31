@@ -6,6 +6,7 @@ import { servicesData } from '../data/servicesData';
 import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import CTABanner from '../../../shared/components/CTABanner';
 import { useEffect } from "react";
+import SEO from "../../../shared/components/SEO";
 import { useLocation } from "react-router-dom";
 
 const ServicesPage = () => {
@@ -27,6 +28,12 @@ useEffect(() => {
 
 
   return (
+    <>
+    <SEO
+      title="Services | SquareUp Digital Agency"
+      description="Explore our comprehensive range of services, including UI/UX design, web development, and scalable digital solutions, tailored to meet your unique business needs."
+      path="/services"
+    />
     <main className="bg-[#1A1A1A]">
       <Container>
       <SectionHeader
@@ -36,7 +43,7 @@ useEffect(() => {
       />
       
       
-        <div className="flex flex-col -mt-[1px]">
+        <div className="flex flex-col -mt-px">
           {servicesData.map((service) => (
             <div key={service.id} id={service.id} className="flex flex-col ">
               <IntroBlock 
@@ -64,6 +71,7 @@ useEffect(() => {
       />
       </Container>
     </main>
+    </>
   );
 };
 

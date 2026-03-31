@@ -19,7 +19,7 @@ export const workData = [
     category: "E-Commerce Platform for Fashion Hub",
     image: work1,
     brand: "Chic Boutique",
-    url: "htttps:/www.chicboutique.com",
+    url: "https://www.chicboutique.com",
     description:
       "We developed a visually stunning and user-friendly e-commerce platform for Chic Boutique, a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
   },
@@ -28,7 +28,7 @@ export const workData = [
     category: "Mobile App for Food Delivery Service",
     image: work2,
     brand: "HungryBites",
-    url: "htttps:/www.hungrybites.com",
+    url: "https://www.hungrybites.com",
     description:
       "HungryBites approached us to create a mobile app that streamlined their food delivery service. The app included features like real-time order tracking, easy menu customization, and secure payment options, resulting in improved customer convenience and operational efficiency.",
   },
@@ -37,7 +37,7 @@ export const workData = [
     category: "Booking and Reservation System for Event Management",
     image: work3,
     brand: "EventMasters",
-    url: "htttps:/www.eventmasters.com",
+    url: "https://www.eventmasters.com",
     description:"EventMasters required a comprehensive booking and reservation system for their event management services. We designed a user-friendly platform that allowed seamless event registration, ticketing, and attendee management, resulting in streamlined processes and enhanced customer experiences.",
   },
   {
@@ -45,7 +45,7 @@ export const workData = [
     category: "Custom Software for Workflow Automation",
     image: work4,
     brand: "ProTech Solutions",
-    url: "htttps:/www.protechsolutions.com",
+    url: "https://www.protechsolutions.com",
     description:
       "ProTech Solutions turned to us to automate their workflow processes. We developed a custom software solution that integrated with their existing systems, automating tasks such as data entry, reporting, and communication. This resulted in increased productivity and reduced manual errors.",
   },
@@ -54,7 +54,7 @@ export const workData = [
     category: "Web Portal for Real Estate Listings",
     image: work5,
     brand: "Dream Homes Realty",
-    url: "htttps:/www.dreamhomesrealty.com",
+    url: "https://www.dreamhomesrealty.com",
     description:
         "Dream Homes Realty wanted an intuitive web portal for showcasing their property listings. We created a visually appealing platform with advanced search filters, virtual tours, and a user-friendly interface, enabling potential buyers to find their dream homes easily."
   },
@@ -63,7 +63,7 @@ export const workData = [
     category: "Mobile App for Fitness Tracking",
     image: work6,
     brand: "FitLife Tracker",
-    url: "htttps:/www.fitlifetracker.com",
+    url: "https://www.fitlifetracker.com",
     description:
         "FitLife Tracker approached us to develop a mobile app that tracked fitness activities and provided personalized workout plans. The app included features such as activity tracking, progress monitoring, and social sharing, empowering users to lead healthier lifestyles.",
   },
@@ -72,7 +72,7 @@ export const workData = [
     category: "Custom Software for Supply Chain Management",
     image: work7,
     brand: "Global Logistics Solutions",
-    url: "htttps:/www.globallogisticssolutions.com",
+    url: "https://www.globallogisticssolutions.com",
     description:
         "Global Logistics Solutions required a custom software solution to streamline their supply chain operations. We developed a scalable system that optimized inventory management, automated order processing, and enhanced logistics tracking, resulting in improved efficiency and reduced costs."
   },
@@ -81,7 +81,7 @@ export const workData = [
     category: "Educational Platform for Online Learning",
     image: work8,
     brand: "EduConnect",
-    url: "htttps:/www.educonnect.com",
+    url: "https://www.educonnect.com",
     description:
         "EduConnect sought an educational platform to facilitate online learning. We developed an interactive platform with virtual classrooms, multimedia content, and student progress tracking, providing a seamless and engaging learning experience for students of all ages."
   },
@@ -90,7 +90,7 @@ export const workData = [
     category: "Mobile App for Travel Planning",
     image: work9,
     brand: "WanderWise",
-    url: "htttps:/www.wanderwise.com",
+    url: "https://www.wanderwise.com",
     description:
         "WanderWise wanted a mobile app that simplified travel planning and discovery. We developed an app with features like personalized itineraries, destination guides, and integrated booking options, making it easier for travelers to explore new destinations."
   },
@@ -99,7 +99,7 @@ export const workData = [
     category: "Web Application for Customer Relationship Management",
     image: work10,
     brand: "ConnectCRM",
-    url: "htttps:/www.connectcrm.com",
+    url: "https://www.connectcrm.com",
     description:
         "ConnectCRM needed a web application to manage their customer relationships effectively. We developed a feature-rich CRM platform with lead management, communication tracking, and data analytics, enabling businesses to nurture customer relationships and drive growth."
   },

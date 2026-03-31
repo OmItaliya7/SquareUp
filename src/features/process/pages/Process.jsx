@@ -6,9 +6,16 @@ import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 import { processSteps } from "../data/processData";
 import CTABanner from "../../../shared/components/CTABanner";
 import ContactForm from "../../../shared/components/ContactForm";
+import SEO from "../../../shared/components/SEO";
 
 const Process = () => {
   return (
+    <>
+    <SEO
+      title="Process | SquareUp Digital Agency"
+      description="Discover the process of starting a project with SquareUp, a digital product agency dedicated to crafting exceptional digital experiences through collaboration, expertise, and a client-centric approach."
+      path="/process"
+    />
     <main className="bg-[#1A1A1A] min-h-screen">
       <Container>
       <SectionHeader 
@@ -35,6 +42,7 @@ const Process = () => {
       </Container>
       
     </main>
+    </>
   );
 };
 

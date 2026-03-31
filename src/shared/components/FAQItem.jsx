@@ -11,7 +11,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
     >
       <div
         className={`
-          p-6 md:p-8 xl:px-[40px] xl:py-[24px]
+          p-6 md:p-8 xl:px-10 xl:py-6
           transition-all duration-300
           hover:bg-[#1C1C1C]/40
           ${showBorder ? "border-b border-[#262626]" : ""}
@@ -21,8 +21,8 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
           
           {/* Number */}
           <div className={`
-            shrink-0 size-[52px] xl:size-[62px] rounded-xl 
-            bg-gradient-to-b from-[#242424] to-[#242424]/0
+            shrink-0 size-13 xl:size-15.5 rounded-xl 
+            bg-linear-to-b from-[#242424] to-[#242424]/0
             flex items-center justify-center font-bold text-lg
             ${isOpen ? "text-[#C5FF66]" : "text-white"}
           `}>
@@ -43,7 +43,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                  </h3>
 
                  <div
-                  className={`shrink-0 w-[26px] h-[26px] flex items-center justify-center mt-[2px] ${
+                  className={`shrink-0 w-6.5 h-6.5 flex items-center justify-center mt-0.5 ${
                      isOpen ? "text-[#C5FF66]" : "text-white"
                    }`}
                  >
@@ -56,7 +56,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                  id={`faq-${item.id}`}
                  className={`
                   overflow-hidden transition-all duration-500 ease-in-out
-                   ${isOpen ? "max-h-[200px] opacity-100 mt-4" : "max-h-0 opacity-0"}
+                   ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
                  `}
                >
                  <p className="text-[#E6E6E6] font-normal text-sm lg:text-base 2xl:text-lg leading-normal">

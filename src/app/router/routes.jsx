@@ -48,6 +48,10 @@ const Contact = lazy(() => import("../../features/contact/pages/Contact"))
         {
           path: "contact",
           element: <Contact />
+        },
+        {
+          path: "*",
+          element: <ErrorPage />
         }
       ]
     }

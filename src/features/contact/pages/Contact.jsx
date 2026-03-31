@@ -4,11 +4,12 @@ import ContactForm from "../../../shared/components/ContactForm";
 import HighlightCTA from "../../../shared/components/HighlightCTA";
 import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import facebookIcon from "../../../assets/icons/social/facebook.png";
-import twitterIcon from "../../../assets/icons/social/twitter.png";
-import linkedinIcon from "../../../assets/icons/social/linkedin.png";
+import facebookIcon from "../../../assets/icons/social/facebook.svg";
+import twitterIcon from "../../../assets/icons/social/twitter.svg";
+import linkedinIcon from "../../../assets/icons/social/linkedin.svg";
 import FAQAccordion from "../../../shared/components/FAQAccordion";
 import { memo } from "react";
+import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
   { id: "email", icon: FiMail, text: "hello@squareup.com" },
@@ -17,9 +18,9 @@ const contactInfo = [
 ];
 
 const socialIcons = [
-  { id: "fb", src: facebookIcon, alt: "Facebook" },
-  { id: "tw", src: twitterIcon, alt: "Twitter" },
-  { id: "ln", src: linkedinIcon, alt: "LinkedIn" },
+  { id: "fb", src: facebookIcon, alt: "Follow us on Facebook", url: "https://www.facebook.com/people/Enthusia-Softech/61555192523657/" },
+  { id: "tw", src: twitterIcon, alt: "Follow us on Twitter", url: "https://enthusiasoftech.com/"},
+  { id: "ln", src: linkedinIcon, alt: "Connect with us on LinkedIn", url: "https://www.linkedin.com/company/enthusia-softech/"},
 ];
 
 const ContactInfoCard = memo(({ Icon, text }) => (
@@ -43,6 +44,12 @@ const ContactInfoCard = memo(({ Icon, text }) => (
 
 const Contact = () => {
   return (
+    <>
+    <SEO
+      title="Contact | SquareUp Digital Agency"
+      description="Get in touch with us today and let us help you with any questions or inquiries you may have."
+      path="/contact"
+    />
     <main className="bg-[#1A1A1A]">
       <Container>
         <SectionHeader
@@ -90,15 +97,16 @@ const Contact = () => {
 
                   {/* Icon Group  */}
                   <div className="flex items-center gap-2.5 2xl:gap-3.5">
-                    {socialIcons.map(({ id, src, alt }) => (
-                      <img
-                        key={id}
-                        src={src}
-                        alt={alt}
-                        decoding="async"
-                        className="size-13 2xl:size-16"
-                        loading="lazy"
-                      />
+                    {socialIcons.map(({ id, src, alt, url }) => (
+                      <a key={id} href={url} target="_blank" rel="noopener noreferrer" aria-label={alt}>
+                        <img
+                          src={src}
+                          alt={alt}
+                          decoding="async"
+                          className="size-13 2xl:size-16"
+                          loading="lazy"
+                        />
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -123,6 +131,7 @@ const Contact = () => {
         </div>
       </Container>
     </main>
+    </>
   );
 };
 

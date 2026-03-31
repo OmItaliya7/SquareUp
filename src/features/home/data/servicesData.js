@@ -1,6 +1,6 @@
-import designIcon from "../../../assets/icons/home/design.png";
-import engineeringIcon from "../../../assets/icons/home/engineering.png";
-import pmIcon from "../../../assets/icons/home/project-management.png";
+import designIcon from "../../../assets/icons/home/design.svg";
+import engineeringIcon from "../../../assets/icons/home/engineering.svg";
+import pmIcon from "../../../assets/icons/home/project-management.svg";
 
 
 export const servicesData = [

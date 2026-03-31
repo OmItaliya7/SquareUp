@@ -1,9 +1,9 @@
-import logo from "../../assets/logo/brand/logo-main.png";
-import facebookIcon from "../../assets/icons/social/facebook.png";
-import twitterIcon from "../../assets/icons/social/twitter.png";
-import linkedinIcon from "../../assets/icons/social/linkedin.png";
+import logo from "../../assets/logo/brand/logo-main.svg";
+import facebookIcon from "../../assets/icons/social/facebook.svg";
+import twitterIcon from "../../assets/icons/social/twitter.svg";
+import linkedinIcon from "../../assets/icons/social/linkedin.svg";
 
-import { footerLinks } from "../../shared/data/footerData";
+import { footerLinks, socialLinks } from "../../shared/data/footerData";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import Container from "../../shared/ui/Container"
 import { NavLink } from "react-router-dom";
@@ -15,23 +15,30 @@ const Footer = () => {
     { icon: FiMapPin, text: "Remote-first, Globally Available" },
   ];
 
+  const socialIcons = {
+  facebook: facebookIcon,
+  twitter: twitterIcon,
+  linkedin: linkedinIcon,
+};
+
+
   return (
     <footer className="bg-[#1A1A1A] border-t border-[#262626]">
       <Container>
         
           {/* ================= TOP SECTION ================= */}
-          <div className="flex flex-col items-center gap-10 py-[30px] xl:py-[40px] 2xl:py-[50px] lg:flex-row lg:justify-between">
+          <div className="flex flex-col items-center gap-10 py-7.5 xl:py-10 2xl:py-12.5 lg:flex-row lg:justify-between">
 
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <img src={logo} alt="SquareUp" className="size-[50px] xl:size-10 2xl:size-[60px]" />
+              <img src={logo} alt="SquareUp" className="size-12.5 xl:size-10 2xl:size-15" />
               <span className="text-lg font-semibold text-white xl:text-md">
                 SquareUp
               </span>
             </div>
 
             {/* Navigation */}
-            <nav className="flex flex-wrap justify-center gap-x-5 2xl:gap-x-[30px] gap-y-5 text-[#E6E6E6]">
+            <nav className="flex flex-wrap justify-center gap-x-5 2xl:gap-x-7.5 gap-y-5 text-[#E6E6E6]">
               {footerLinks.map((item) => (
                 <NavLink
                   key={item.path}
@@ -44,18 +51,20 @@ const Footer = () => {
             </nav>
 
             {/* Social Capsule */}
-            <div className="flex flex-col items-center gap-[14px] md:gap-4 md:flex-row 
+            <div className="flex flex-col items-center gap-3.5 md:gap-4 md:flex-row 
                             bg-[#1C1C1C] border border-[#262626] 
-                            rounded-lg px-[80px] py-4 md:p-[10px] md:pl-5 2xl:p-[14px] 2xl:pl-[24px]">
+                            rounded-lg px-20 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6">
 
               <span className="text-base 2xl:text-lg font-medium leading-normal text-[#E6E6E6]">
                 Stay Connected
               </span>
 
-              <div className="flex gap-[10px] 2xl:gap-[14px]">
-                <img src={facebookIcon} alt="Follow us on Facebook" className="size-[52px] 2xl:size-[64px]" />
-                <img src={twitterIcon} alt="Follow us on Twitter" className="size-[52px] 2xl:size-[64px]" />
-                <img src={linkedinIcon} alt="connect to LinkedIn" className="size-[52px] 2xl:size-[64px]" />
+              <div className="flex gap-2.5 2xl:gap-3.5 ">
+                {socialLinks.map((item) => (
+                  <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.alt}>
+                    <img src={socialIcons[item.icon]} alt={item.alt} className="transition duration-300 size-13 2xl:size-16 hover:scale-110 hover:brightness-125" />
+                  </a>
+                ))}
               </div>
 
             </div>
@@ -66,13 +75,13 @@ const Footer = () => {
           
 
           {/* ================= BOTTOM SECTION ================= */}
-          <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-[50px] lg:flex-row lg:justify-between sm:items-center">
+          <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-12.5 lg:flex-row lg:justify-between sm:items-center">
 
             {/* Contact Info */}
-            <div className="flex flex-col gap-5 sm:flex-row md:gap-[22px] 2xl:gap-[30px]">
+            <div className="flex flex-col gap-5 sm:flex-row md:gap-5.5 2xl:gap-7.5">
 
               {contactData.map(({ icon: Icon, text }, i) => (
-                <div key={i} className="flex items-center justify-center  gap-[10px] md:gap-[6px] 2xl:gap-[10px] border-b border-[#262626] pb-[20px] md:pb-3 2xl:pb-[16px]">
+                <div key={i} className="flex items-center justify-center  gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4">
                   <Icon className="text-[#9EFF00] text-2xl md:text-xl 2xl:text-2xl shrink-0" />
                   <span className="text-lg md:text-base 2xl:text-lg text-[#E6E6E6] font-normal leading-normal">{text}</span>
                 </div>

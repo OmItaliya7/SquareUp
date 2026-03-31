@@ -1,5 +1,5 @@
 import grid from "../../assets/images/backgrounds/grid.webp";
-import logo from "../../assets/logo/brand/logo-main.png";
+import logo from "../../assets/logo/brand/logo-main.svg";
 import wave from "../../assets/images/backgrounds/about-wave.webp";
 
 const CTABanner = ({ title, subtitle }) => {
@@ -30,7 +30,7 @@ const CTABanner = ({ title, subtitle }) => {
           />
           <div className="absolute inset-0 bg-[#ACFF24] opacity-[0.02] mix-blend-color-dodge pointer-events-none" />
 
-          {/* CONTENT LAYER - Using your exact pixel gaps */}
+          {/* CONTENT LAYER  */}
           <div className="relative z-10 flex flex-col items-center text-center gap-5.75 xl:gap-[25.5px] 2xl:gap-[52.2px]">
             
             {/* Logo Box */}

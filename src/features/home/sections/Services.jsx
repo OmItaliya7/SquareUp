@@ -6,7 +6,7 @@ import { servicesData } from "../data/servicesData";
 
 const ServiceCard = ({ item, index }) => {
   return (
-    <div className={`flex flex-col justify-between p-[30px] xl:p-[40px] 2xl:p-[50px]  border-[#262626] 
+    <div className={`flex flex-col justify-between p-7.5 xl:p-10 2xl:p-12.5 border-[#262626] 
       border-b 
       md:border-r md:border-b
       ${(index + 1) % 2 === 0 ? "md:border-r-0" : ""} 
@@ -15,19 +15,19 @@ const ServiceCard = ({ item, index }) => {
       lg:border-r lg:border-b-0
       ${(index + 1) % 3 === 0 ? "lg:border-r-0" : ""}
       ${index >= 3 ? "lg:border-b-0" : ""}
-
-     bg-[#1C1C1C] gap-[24px] xl:gap-[40px]  `}> 
+      
+     bg-[#1C1C1C] gap-6 xl:gap-10  `}> 
      
-      <div className="flex flex-col gap-[30px] 2xl:gap-[40px]">
+      <div className="flex flex-col gap-7.5 2xl:gap-10">
         {/* HEADER SECTION: Icon + Title */}
-        <div className="flex flex-row md:flex-col items-center md:items-start gap-[14px] md:gap-[30px] 2xl:gap-[40px]">
+        <div className="flex flex-row md:flex-col items-center md:items-start gap-3.5 md:gap-7.5 2xl:gap-10">
           <div className="shrink-0">
             <img
               src={item.icon}
               alt={item.title}
               loading="lazy"
               decoding="async"
-              className="size-[58px] xl:size-[70px] 2xl:size-[88px] object-contain"
+              className="size-14.5 xl:size-17.5 2xl:size-22 object-contain"
             />
           </div>
 
@@ -37,18 +37,18 @@ const ServiceCard = ({ item, index }) => {
         </div>
 
         {/* DESCRIPTION SECTION */}
-        <div className="flex flex-col gap-[14px]">
-          <p className="text-[#E6E6E6] text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal leading-normal 2xl:leading-[24px] tracking-[-.6%]">
-            {item.desc}
-          </p>
-        </div>
+        
+        <p className="text-[#E6E6E6] text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal leading-normal 2xl:leading-6 tracking-[-.6%]">
+          {item.desc}
+        </p>
+        
       </div>
 
       <div>
         <Link
           to={`/services#${item.slug}`}
           aria-label={`Learn more about ${item.title} service`}
-          className="px-[16px] py-[14px] 2xl:py-[18px] rounded-md text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full text-center block"
+          className="px-4 py-3.5 2xl:py-4.5 rounded-md text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full text-center block"
         >
           Learn More
         </Link>
@@ -70,7 +70,7 @@ const Services = () => {
         
         <div
           className="
-          border border-[#262626] mt-[-1px]       
+          border border-[#262626] mt-px       
         "
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
