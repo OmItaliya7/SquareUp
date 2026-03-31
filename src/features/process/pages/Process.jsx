@@ -3,7 +3,7 @@ import SectionHeader from "../../../shared/components/SectionHeader";
 import IntroBlock from "../../../shared/components/IntroBlock";
 import StepGrid from "../../../shared/components/StepGrid";
 import wave from "../../../assets/images/backgrounds/faq-wave.webp";
-import { processSteps } from "../../../shared/data/processData";
+import { processSteps } from "../data/processData";
 import CTABanner from "../../../shared/components/CTABanner";
 import ContactForm from "../../../shared/components/ContactForm";
 
@@ -19,27 +19,21 @@ const Process = () => {
       
       
         <div className="flex flex-col -mt-px">
-          {/* Reusable Intro Block */}
+          {/*  Intro Block */}
           <IntroBlock 
             title="At SquareUp"
             description="We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach."
             label="Here's an overview of our typical process:"
           />
           
-          {/* The Steps Grid (Reusable for 'Our Story' on About page) */}
-          <StepGrid items={processSteps}  />
+          {/* The Steps Grid  */}
+          <StepGrid items={processSteps} variant="default" />
 
         </div>
-        <div>
         <CTABanner title="Thank you for your Interest in SquareUp."  subtitle="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."/>
-      </div>
-      <div>
-        <ContactForm />
-      </div>
+      <ContactForm />
       </Container>
       
-
-      {/* <ContactUs /> */}
     </main>
   );
 };

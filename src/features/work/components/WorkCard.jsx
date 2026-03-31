@@ -1,15 +1,14 @@
-
-
-
-import squareIcon from "../../../assets/images/work/link-btn.png";
+import { memo } from "react";
+import squareIcon from "../../../assets/images/work/link-btn.webp";
 
 const WorkCard = ({ category, image, brand, url, description, index }) => {
+  const isLeft = index % 2 === 0; 
   return (
     <div className={`
       group flex flex-col bg-[#1A1A1A] border-[#262626]
-      lg:border-r ${index % 2 === 0 ? 'lg:border-r' : 'lg:border-r-0'}
+      lg:border-r ${isLeft ? 'lg:border-r' : ''}
       border-b
-      gap-[20px]  xl:gap-[30px]
+      gap-5  xl:gap-7.5
     `}>
       
       {/* PART 1: Category Title Box (Matches Figma 'Hug' block) */}
@@ -24,11 +23,13 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
         
       
         {/* Project Image */}
-        <div className="overflow-hidden rounded-[10px] border border-[#262626] bg-[#1C1C1C]">
+        <div className="overflow-hidden rounded-[10px] 2xl:rounded-xl border border-[#262626] bg-[#1C1C1C]">
           <img 
             src={image} 
             alt={brand} 
             className="object-cover w-full aspect-16/10" 
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -41,14 +42,14 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
             </span>
           </div>
     
-          <div>
-            <img src={squareIcon} alt="Visit" className="size-[46px] 2xl:size-[54px] cursor-pointer "/>
-          </div>
+          <a href={url} target="_blank" rel="noopener noreferrer" >
+            <img src={squareIcon} alt="Visit" className="size-[46px] 2xl:size-[54px]"  loading="lazy"/>
+          </a>
         </div>
 
         {/* Project Description */}
         <div>
-          <p className= "r text-[#98989A] text-[14px] xl:text-base 2xl:text-lg font-normal leading-[150%]">
+          <p className= " text-[#98989A] text-[14px] xl:text-base 2xl:text-lg font-normal leading-[150%]">
             {description}
           </p>
         </div>
@@ -59,4 +60,4 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
   );
 };
 
-export default WorkCard;
+export default memo(WorkCard);

@@ -1,25 +1,29 @@
+import { memo } from "react";
 
 
 const ServiceCard = ({ icon, title, index, total }) => {
+  const isEven = (index + 1) % 2 === 0
+  const isFourth = (index + 1) % 4 === 0
+  const isLastRowMobile = index >= total - 2
+  const isLastRowDesktop = index >= total - 4
   return (
     <div
       className={`
         
         flex flex-col gap-5 xl:gap-6 2xl:gap-[30px]        
         p-5 xl:p-10 2xl:p-[50px]
-        bg-[#1C1C1C] hover:bg-[#202020]
-        transition-colors duration-300
+        bg-[#1C1C1C] 
         border-r border-[#262626]
-        ${(index + 1) % 2 === 0 ? 'border-r-0 xl:border-r' : ''}
-        ${(index + 1) % 4 === 0 ? 'xl:border-r-0' : ''}
+        ${isEven ? 'border-r-0 xl:border-r' : ''}
+        ${isFourth ? 'xl:border-r-0' : ''}
         border-b border-[#262626]
-        ${index >= total - 2 ? 'border-b-0 xl:border-b' : ''}
-        ${index >= total - 4 ? 'xl:border-b-0' : ''}
+        ${isLastRowMobile ? 'border-b-0 xl:border-b' : ''}
+        ${isLastRowDesktop ? 'xl:border-b-0' : ''}
       `}
     >
       {/* Icon */}
       <div className="size-14 xl:size-16 2xl:size-22 shrink-0">
-        <img src={icon} alt={title} className="object-contain w-full h-full" />
+        <img src={icon} alt={title} loading="lazy" decoding="async" className="object-contain w-full h-full" />
       </div>
 
       {/* Title */}
@@ -30,4 +34,4 @@ const ServiceCard = ({ icon, title, index, total }) => {
   );
 };
 
-export default ServiceCard;
+export default memo(ServiceCard);

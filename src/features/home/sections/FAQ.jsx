@@ -2,7 +2,7 @@
 import Container from "../../../shared/ui/Container";
 import SectionHeader from "../../../shared/components/SectionHeader";
 import wave from "../../../assets/images/backgrounds/faq-wave.webp";
-import FrqAskQue from "../../../shared/components/FrqAskQue";
+import FAQAccordion from "../../../shared/components/FAQAccordion";
 
 
 
@@ -17,7 +17,7 @@ const FAQ = () => {
       />
 
       
-        <FrqAskQue />
+        <FAQAccordion />
       </Container>
     </section>
   );

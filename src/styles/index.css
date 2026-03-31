@@ -1,25 +1,16 @@
-    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
     @import "tailwindcss";
 
     :root {
-    /* Backgrounds */
-    --color-bg-main:   #0B0F19;   /* page body            */
-    --color-bg-card:   #1A1A1A;   /* navbar, sections     */
-    --color-bg-soft:   #262626;   /* cards, active states */
+    
+    --color-bg-main:   #0B0F19;   
+    --color-bg-card:   #1A1A1A;   
+    --color-bg-soft:   #262626;   
 
-    /* Text */
+ 
     --color-text-primary:   #FFFFFF;
     --color-text-secondary: #E6E6E6;
-    --color-text-muted:     #A3A3A3;
-        
-    /* Brand */
-    --color-accent: #9EFF00;
-
-    /* Borders */
-    --color-border: #262626;
-
-    /* Radius */
-    --radius-primary: 8px;
+    
     }
     *,
     *::before,
@@ -34,7 +25,6 @@
     body {
     background-color: var(--color-bg-main);
     color: var(--color-text-primary);
-    /* font-family: "Barlow"; */
     font-family: "Barlow";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,43 +45,47 @@
     button {
     cursor: pointer;
     font-family: inherit;
+    } */
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    @import "tailwindcss";
+
+    :root {
+    
+      /* Backgrounds */
+  --color-bg-main: #262626;
+  --color-bg-card: #1A1A1A;
+  --color-bg-soft: #262626;
+    
+    }
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
     }
 
-    /* ================================================
-    UTILITY CLASSES
-    ================================================ */
-
-    @layer components {
-
-    .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--color-accent);
-        color: #262626;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 10px 22px;
-        border-radius: var(--radius-primary);
-        transition: background 0.2s ease;
-        white-space: nowrap;
-        
+    html {
+    scroll-behavior: smooth;
     }
 
-    .btn-primary:hover {
-        background: #baff33;
+    body {
+  background-color: var(--color-bg-main);
+
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
     }
 
-    .section-space {
-        padding-top: 80px;
-        padding-bottom: 80px;
+    img,
+    svg {
+    display: block;
+    max-width: 100%;
     }
 
-    @media (min-width: 1024px) {
-        .section-space {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        }
+    a {
+    text-decoration: none;
     }
 
+    button {
+    cursor: pointer;
     }

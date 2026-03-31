@@ -19,7 +19,6 @@ const Footer = () => {
     <footer className="bg-[#1A1A1A] border-t border-[#262626]">
       <Container>
         
-
           {/* ================= TOP SECTION ================= */}
           <div className="flex flex-col items-center gap-10 py-[30px] xl:py-[40px] 2xl:py-[50px] lg:flex-row lg:justify-between">
 
@@ -64,6 +63,7 @@ const Footer = () => {
 
           {/* Divider */}
           <div className="md:border-b md:border-[#262626]" />
+          
 
           {/* ================= BOTTOM SECTION ================= */}
           <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-[50px] lg:flex-row lg:justify-between sm:items-center">

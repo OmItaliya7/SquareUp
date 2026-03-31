@@ -7,9 +7,8 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import facebookIcon from "../../../assets/icons/social/facebook.png";
 import twitterIcon from "../../../assets/icons/social/twitter.png";
 import linkedinIcon from "../../../assets/icons/social/linkedin.png";
-import FrqAskQue from "../../../shared/components/FrqAskQue";
-
-
+import FAQAccordion from "../../../shared/components/FAQAccordion";
+import { memo } from "react";
 
 const contactInfo = [
   { id: "email", icon: FiMail, text: "hello@squareup.com" },
@@ -17,17 +16,13 @@ const contactInfo = [
   { id: "location", icon: FiMapPin, text: "Get Location" },
 ];
 
-
 const socialIcons = [
   { id: "fb", src: facebookIcon, alt: "Facebook" },
   { id: "tw", src: twitterIcon, alt: "Twitter" },
   { id: "ln", src: linkedinIcon, alt: "LinkedIn" },
 ];
 
-
-
-
-const ContactInfoCard = ({ Icon, text }) => (
+const ContactInfoCard = memo(({ Icon, text }) => (
   <div
     className="
       inline-flex items-center justify-center  gap-3.5
@@ -35,7 +30,7 @@ const ContactInfoCard = ({ Icon, text }) => (
       rounded-md
       bg-[#262626]
       w-full
-      md:w-fit
+      md:w-auto
     "
   >
     <Icon className="text-[#9EFF00] text-[24px] 2xl:text-[30px] shrink-0" />
@@ -44,23 +39,22 @@ const ContactInfoCard = ({ Icon, text }) => (
       {text}
     </span>
   </div>
-);
+));
 
 const Contact = () => {
   return (
     <main className="bg-[#1A1A1A]">
       <Container>
-      <SectionHeader
-        title="Contact Us"
-        subtitle="Get in touch with us today and let us help you with any questions or inquiries you may have."
-        bgImage={wave}
-      />
+        <SectionHeader
+          title="Contact Us"
+          subtitle="Get in touch with us today and let us help you with any questions or inquiries you may have."
+          bgImage={wave}
+        />
 
-      
         <div className="flex flex-col -mt-px">
           {/* Contact Info Strip */}
-          <div className="border-x border-b border-[#262626] px-6 py-7.5 xl:py-10 2xl:py-12.5">
-            <div className="mx-auto max-w-200 ">
+          <div className="border-x  border-[#262626] px-6 py-7.5 xl:py-10 2xl:py-12.5">
+            <div className="max-w-5xl mx-auto ">
               <div className="flex flex-col items-center gap-5 2xl:gap-7.5 md:flex-row md:justify-center">
                 {contactInfo.map(({ id, icon: Icon, text }) => (
                   <ContactInfoCard key={id} Icon={Icon} text={text} />
@@ -70,7 +64,7 @@ const Contact = () => {
           </div>
 
           {/* Section 2: Contact Form */}
-          <div className="border-x border-b border-[#262626] ">
+          <div className=" border-b border-[#262626] ">
             <ContactForm />
           </div>
 
@@ -96,31 +90,32 @@ const Contact = () => {
 
                   {/* Icon Group  */}
                   <div className="flex items-center gap-2.5 2xl:gap-3.5">
-                     {socialIcons.map(({ id, src, alt }) => (
-                        <img
-                          key={id}
-                          src={src}
-                          alt={alt}
-                          className="size-13 2xl:size-16"
-                          loading="lazy"
-                        />
-                      ))}
+                    {socialIcons.map(({ id, src, alt }) => (
+                      <img
+                        key={id}
+                        src={src}
+                        alt={alt}
+                        decoding="async"
+                        className="size-13 2xl:size-16"
+                        loading="lazy"
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Section 4: FAQ */}
-          
-            <SectionHeader
+
+          <SectionHeader
             title="Frequently Asked Questions"
-              subtitle="Still you have any questions? Contact our Team via hello@squareup.com"
-              bgImage={wave}
-            />
-          
+            subtitle="Still you have any questions? Contact our Team via hello@squareup.com"
+            bgImage={wave}
+          />
+
           <div>
-            <FrqAskQue />
+            <FAQAccordion />
           </div>
 
           {/* Section 5: Highlight CTA */}

@@ -2,7 +2,7 @@ import Container from '../../../shared/ui/Container';
 import SectionHeader from '../../../shared/components/SectionHeader';
 import IntroBlock from '../../../shared/components/IntroBlock';
 import ServiceCategoryGrid from '../components/ServiceCategoryGrid';
-import { servicesData } from '../../../shared/data/servicesData';
+import { servicesData } from '../data/servicesData';
 import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import CTABanner from '../../../shared/components/CTABanner';
 import { useEffect } from "react";
@@ -25,6 +25,7 @@ useEffect(() => {
   }
 }, [location])
 
+
   return (
     <main className="bg-[#1A1A1A]">
       <Container>
@@ -38,7 +39,6 @@ useEffect(() => {
         <div className="flex flex-col -mt-[1px]">
           {servicesData.map((service) => (
             <div key={service.id} id={service.id} className="flex flex-col ">
-              {/* Reuse IntroBlock for each major service section */}
               <IntroBlock 
                 title={service.mainTitle}
                 description={service.description}

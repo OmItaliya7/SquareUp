@@ -1,21 +1,28 @@
+import {lazy, Suspense} from "react";
+
 import Hero from "../sections/Hero";
 import LogoStrip from "../sections/LogoStrip";
-import Services from "../sections/Services";
-import WCU from "../sections/WCU";
-import AboutUs from "../sections/AboutUs";
-import FAQ from "../sections/FAQ";
-import ContactUs from "../sections/ContactUs";
+import Loader from "../../../shared/ui/Loader";
+
+const Services = lazy(() => import("../sections/Services"));
+const WCU = lazy(() => import("../sections/WCU"));
+const AboutUs = lazy(() => import("../sections/AboutUs"));
+const FAQ = lazy(() => import("../sections/FAQ"));
+const ContactUs = lazy(() => import("../sections/ContactUs"));
 
 const Home = () => {
     return(
         <>
-        <Hero />
-        <LogoStrip />
-        <Services />
-        <WCU />
-        <AboutUs />
-        <FAQ />
-        <ContactUs />
+            <Hero />
+            <LogoStrip />
+
+            <Suspense fallback={<Loader />} >
+                <Services />
+                <WCU />
+                <AboutUs />
+                <FAQ />
+                <ContactUs />
+            </Suspense>
         </>
     )
 }

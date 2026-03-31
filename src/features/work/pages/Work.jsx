@@ -1,10 +1,9 @@
-
 import Container from "../../../shared/ui/Container";
 import SectionHeader from "../../../shared/components/SectionHeader";
 
 import WorkGrid from "../components/WorkGrid";
 import CTABanner from "../../../shared/components/CTABanner";
-import { workData } from "../../../shared/data/workData";
+import { workData } from "../data/workData";
 import wave from "../../../assets/images/backgrounds/about-wave.webp";
 import IntroBlock from "../../../shared/components/IntroBlock";
 
@@ -18,8 +17,6 @@ const Work = () => {
         bgImage={wave}
       />
       
-      
-        {/* Negative margin ensures the first section line sits exactly on the header bottom border */}
         <div className="flex flex-col -mt-[1px]">
           <IntroBlock 
             title="At SquareUp"

@@ -1,13 +1,10 @@
-
-
-  
   import Container from "../../../shared/ui/Container";
   import SectionHeader from "../../../shared/components/SectionHeader";
   import IntroBlock from "../../../shared/components/IntroBlock";
   import HighlightCTA from "../../../shared/components/HighlightCTA";
   import JobGrid from "../components/JobGrid";
-  import { whyWorkData, jobCategories } from "../../../shared/data/careersData";
-  import wave from "../../../assets/images/backgrounds/services-wave.webp";
+  import { whyWorkData, jobCategories } from "../data/careersData";
+ import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 
   const Careers = () => {
     return (
@@ -29,20 +26,20 @@
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="border-x border-[#262626] grid grid-cols-1 lg:grid-cols-2 bg-[#1A1A1A]">
+            <div className="border-x border-b border-[#262626] grid grid-cols-1 lg:grid-cols-2 divide-y divide-[#262626] lg:divide-y-0 lg:divide-x bg-[#1A1A1A]">
               {whyWorkData.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col bg-[#1A1A1A] border-[#262626] border-b lg:border-r ${idx % 2 === 0 ? "lg:border-r" : "lg:border-r-0"}`}
+                  className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col bg-[#1A1A1A] border-[#262626] `}
                 >
-                  {/* 1. Title Container with Border (Figma: 560px Fill x 88px Hug) */}
+                  {/* 1. Title Container with Border  */}
                   <div className="border-b border-[#262626] pb-4 md:pb-6 lg:pb-8">
                     <h3 className="text-[#D8FF99] text-[26px] xl:text-[32px] 2xl:text-[40px] font-medium  leading-normal">
                       {item.title}
                     </h3>
                   </div>
 
-                  {/* 2. Description Container (Figma: 560px Fill x 120px Hug) */}
+                  {/* 2. Description Container*/}
                   <div className="pt-4 md:pt-6 lg:pt-8">
                     <p className="text-[#98989A] text-sm xl:text-base 2xl:text-lg leading-normal font-normal">
                       {item.description}
@@ -51,8 +48,7 @@
                 </div>
               ))}
             </div>
-
-          
+         
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
             <div className="border-x border-[#262626] py-10 pl-4 xl:pl-10 xl:pb-10 xl:pt-20 border-b">
               <div className="flex flex-col gap-1.5 xl:gap-2.5 2xl:gap-3.5">
@@ -87,11 +83,3 @@
   };
 
   export default Careers;
-
-
-
-
-
-
-
-

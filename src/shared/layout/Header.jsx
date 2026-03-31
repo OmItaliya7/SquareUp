@@ -23,10 +23,8 @@
         <header className="w-full bg-[#1A1A1A] lg:border-b border-[#262626]">
           <Container>
 
-            {/* ⭐ Parent Flex Row */}
             <div className="flex items-center justify-between pt-[40px] pb-[20px] xl:py-5">
-
-              {/* ⭐ Child 1 → Logo */}
+              
               <div className="flex items-center">
                 <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
                   <img src={logo} alt="SquareUp logo" className="size-[40px] 2xl:size-[60px]" />
@@ -34,7 +32,6 @@
                 </Link>
               </div>
 
-              {/* ⭐ Child 2 → Navigation */}
               <nav aria-label="Main navigation" className="items-center hidden lg:flex xl:gap-1 2xl:gap-5">
 
                 {navLinks.map((item) => (
@@ -43,8 +40,8 @@
                     to={item.path}
                     className={
                       isActive(item.path)
-                        ? "bg-[#262626] text-white px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-semibold "
-                        : "text-[#262626] hover:text-[#E6E6E6] hover:bg-[#262626] px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-medium"
+                        ? "bg-[#262626] text-white px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-semibold transition-all"
+                        : "text-[#E6E6E6] hover:text-white hover:bg-[#262626] px-[22px] py-3 rounded-md text-sm 2xl:text-lg font-medium transition-all"
                     }
                   >
                     {item.name}
@@ -53,13 +50,12 @@
 
               </nav>
 
-              {/* ⭐ Child 3 → Actions */}
               <div className="flex items-center gap-3">
 
                 {/* Desktop Contact */}
                 <Link
                   to="/contact"
-                  className="hidden lg:flex bg-[#9EFF00] !text-[#262626]  px-[18px] py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium"
+                  className="hidden lg:flex bg-[#9EFF00]   px-[18px] py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium text-soft"
                 >
                   Contact Us
                 </Link>
@@ -120,7 +116,7 @@
               <Link
                 to="/contact"
                 onClick={closeMenu}
-                className="mt-3 bg-[#9EFF00] text-[#262626]! w-full py-5 rounded-md text-center font-medium"
+                className="mt-3 bg-[#9EFF00] text-[#262626] w-full py-5 rounded-md text-center font-medium"
                 
               >
                Contact Us

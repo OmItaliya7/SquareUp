@@ -1,0 +1,10 @@
+export const faqData = [
+  { id: "01", question: "What services does SquareUp provide?", answer: "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more." },
+  { id: "02", question: "How can SquareUp help my business?", answer: "We help businesses scale by providing high-quality digital products, optimizing user journeys, and implementing modern technology stacks that drive efficiency and growth." },
+  { id: "03", question: "What industries does SquareUp work with?", answer: "We work across various sectors including Fintech, HealthTech, E-commerce, EdTech, and more. Our multidisciplinary team has experience in creating tailored solutions for a wide range of industries." },
+  { id: "04", question: "How long does it take to complete a project with SquareUp?", answer: "The timeline for completing a project with SquareUp depends on the scope and complexity of the work involved. We typically provide a detailed project plan and timeline during the initial consultation phase." },
+  { id: "05", question: "Do you offer ongoing support and maintenance after the project is completed?", answer: "Yes, we offer flexible maintenance contracts for bug fixes, performance updates, and feature additions." },
+  { id: "06", question: "Can you work with existing design or development frameworks?", answer: "Absolutely, we can integrate with your existing design systems and development workflows to ensure a seamless collaboration process." },
+  { id: "07", question: "How involved will I be in the project development process?", answer: "We believe in maintaining open communication throughout the development process. You will have regular opportunities to provide feedback and participate in key decision-making moments." },
+  { id: "08", question: "Can you help with website or app maintenance and updates?", answer: "Yes, we offer comprehensive maintenance services to keep your digital assets up-to-date and performing optimally." },
+];

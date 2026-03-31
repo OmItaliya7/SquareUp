@@ -1,19 +1,21 @@
+import { memo } from "react";
 import StepCard from "./StepCard";
 
-const StepGrid = ({ items }) => (
+const StepGrid = ({ items, variant = "default" }) => (
   <div className="border-x border-[#262626] bg-[#1A1A1A]">
     <div className="grid grid-cols-1 lg:grid-cols-2">
       {items.map((item, index) => (
         <StepCard 
-          key={index} 
+          key={item.number} 
           index={index} 
-          total={items.length} 
-          
-          {...item} 
+          variant={variant}
+          number={item.number} 
+          title={item.title}
+          description={item.description}
         />
       ))}
     </div>
   </div>
 );
 
-export default StepGrid;
+export default memo(StepGrid);

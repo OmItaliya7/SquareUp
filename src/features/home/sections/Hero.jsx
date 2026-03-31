@@ -3,13 +3,17 @@ import grid from "../../../assets/images/backgrounds/grid.webp";
 import Container from "../../../shared/ui/Container";
 import { Link } from "react-router-dom";
 
+const audience = [
+  "Startups",
+  "Enterprise leaders",
+  "Media & Publishers",
+  "Social Good",
+];
 
 const Hero = () => {
   return (
-    
     <section className="w-full bg-[#1A1A1A]">
       <Container>
-        {/* INNER HERO BOX  */}
         <div
           className="
           relative overflow-hidden
@@ -34,7 +38,10 @@ const Hero = () => {
           {/* MOUNTAIN */}
           <img
             src={heroBg}
+            alt="hero background"
             className="absolute bottom-0 -translate-x-1/2 pointer-events-none left-1/2 w-225 md:w-300 xl:w-350 opacity-80 mix-blend-screen"
+            decoding="async"
+            loading="lazy"
           />
 
           {/* CONTENT */}
@@ -56,7 +63,6 @@ const Hero = () => {
                 </h1>
               </div>
 
-              {/* CAPSULE */}
               <div
                 className="
                 bg-[#24242433] backdrop-blur-md z-10
@@ -68,24 +74,19 @@ const Hero = () => {
                 inline-flex mx-auto
               "
               >
-                {/* MOBILE → paragraph */}
+                {/* MOBILE -> paragraph */}
                 <p className="text-[#98989A] text-base font-normal leading-normal md:hidden">
                   For startups, enterprise leaders, media & publishers, and
                   social good.
                 </p>
 
-                {/* DESKTOP → pills */}
+                {/* DESKTOP -> pills */}
                 <div className="hidden gap-3 md:flex ">
                   <span className="text-[#98989A] text-lg 2xl:text-[22px] flex items-center justify-center">
                     For
                   </span>
 
-                  {[
-                    "Startups",
-                    "Enterprise leaders",
-                    "Media & Publishers",
-                    "Social Good",
-                  ].map((item, i) => (
+                  {audience.map((item, i) => (
                     <span
                       key={i}
                       className="
@@ -95,15 +96,13 @@ const Hero = () => {
                         border border-[#2A2A2A]
                         rounded-md
                         px-2.5 py-2
+                        
                         2xl:px-3.5 2xl:py-3
                       "
                     >
                       {item}
-                          
                     </span>
-                    
                   ))}
-                  
                 </div>
               </div>
             </div>
@@ -118,16 +117,18 @@ const Hero = () => {
               
             "
             >
-            <Link to="/work">
-                <button className="bg-[#24242433] backdrop-blur-md border border-[#333333] px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-white text-sm rounded-lg">
-                  Our Works
-                </button>
+              <Link
+                to="/work"
+                className="bg-[#24242433] backdrop-blur-md border border-[#333333] px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-white text-sm rounded-lg"
+              >
+                Our Works
               </Link>
 
-              <Link to="/contact">
-                <button className="bg-[#9EFF00] text-[#262626] font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg">
-                  Contact Us
-                </button>
+              <Link
+                to="/contact"
+                className="bg-[#9EFF00] text-[#262626] font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg"
+              >
+                Contact Us
               </Link>
             </div>
           </div>

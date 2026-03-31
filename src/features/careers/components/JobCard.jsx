@@ -1,28 +1,39 @@
+import { memo } from "react";
+
 const JobCard = ({ title, icon, description, index }) => {
+
+  const isOdd = (index + 1) % 2 !== 0;
+  const isThird = (index + 1) % 3 !== 0;
+
+  
   return (
     <div
       className={`
         flex flex-col justify-between
-        p-[30px] xl:p-[40px] 2xl:p-[50px]
+        p-7.5 xl:p-10 2xl:p-12.5
         bg-[#1C1C1C]
-        gap-[24px] xl:gap-[40px]
+        gap-6 xl:gap-10 
         border-b border-[#262626]
-        ${(index + 1) % 2 !== 0 ? 'md:border-r' : 'md:border-r-0'} 
-        ${(index + 1) % 3 !== 0 ? 'lg:border-r' : 'lg:border-r-0'}
-        last:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0
+         ${isOdd ? 'md:border-r' : 'md:border-r-0'} 
+         ${isThird ? 'lg:border-r' : 'lg:border-r-0'}
+         last:border-b-0 
+         lg:nth-last-[-n+3]:border-b-0
+       
       `}
     >
-      <div className="flex flex-col gap-[18px] 2xl:gap-[30px]">
-        {/* ICON CONTAINER: Matches Figma background/border */}
+      <div className="flex flex-col gap-4.5 2xl:gap-7.5">
+        {/* ICON CONTAINER*/}
         <div className="size-14 xl:size-18.5 2xl:size-22 shrink-0 ">
           <img
             src={icon}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="object-contain w-full h-full"
           />
         </div>
 
-        <div className="flex flex-col gap-[14px] 2xl:gap-[20px]">
+        <div className="flex flex-col gap-3.5 2xl:gap-5">
           <h3 className="text-white text-[20px] 2xl:text-[24px] font-medium leading-normal tracking-[.6%]">
             {title}
           </h3>
@@ -33,7 +44,7 @@ const JobCard = ({ title, icon, description, index }) => {
       </div>
 
       <div>
-        <button className="px-[16px] py-[14px] 2xl:py-[18px] rounded-lg text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full leading-[24px]">
+        <button className="px-4 py-3.5 2xl:py-4.5 rounded-lg text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full leading-6">
           Apply Now
         </button>
       </div>
@@ -41,4 +52,4 @@ const JobCard = ({ title, icon, description, index }) => {
   );
 };
 
-export default JobCard;
+export default memo(JobCard);
