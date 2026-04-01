@@ -24,13 +24,13 @@ useEffect(() => {
       })
     }
   }
-}, [location])
+}, [location.hash])
 
 
   return (
     <>
     <SEO
-      title="Services | SquareUp Digital Agency"
+      title="Services | SquareUp"
       description="Explore our comprehensive range of services, including UI/UX design, web development, and scalable digital solutions, tailored to meet your unique business needs."
       path="/services"
     />
@@ -45,7 +45,7 @@ useEffect(() => {
       
         <div className="flex flex-col -mt-px">
           {servicesData.map((service) => (
-            <div key={service.id} id={service.id} className="flex flex-col ">
+            <div key={service.slug} id={service.slug} className="flex flex-col ">
               <IntroBlock 
                 title={service.mainTitle}
                 description={service.description}

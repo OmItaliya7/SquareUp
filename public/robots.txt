@@ -1,6 +1,3 @@
-/* https://squareup.com replace with real domain*/
-
-
 User-agent: *
 Allow: /
 

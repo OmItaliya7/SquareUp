@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <>
     <SEO
-      title="Contact | SquareUp Digital Agency"
+      title="Contact Us | SquareUp"
       description="Get in touch with us today and let us help you with any questions or inquiries you may have."
       path="/contact"
     />

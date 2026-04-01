@@ -12,7 +12,7 @@ const Work = () => {
   return (
     <>
     <SEO
-      title="Our Work | SquareUp Digital Agency"
+      title="Our Work | SquareUp"
       description="Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise at SquareUp, a leading digital product agency."
       path="/work"
     />

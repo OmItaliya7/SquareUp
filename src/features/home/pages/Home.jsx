@@ -17,7 +17,7 @@ const Home = () => {
     return(
         <>
             <SEO
-                title="SquareUp | Digital Agency for Web, UI/UX & Scalable Solutions"
+                title="SquareUp | Digital Agency"
                 description="SquareUp is a modern digital agency delivering UI/UX design, web development, and scalable digital solutions."
                 path="/" 
             />

@@ -9,9 +9,24 @@ const AppLayout = () => {
 
     const location = useLocation();
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-    }, [location.pathname])
+    // useEffect(() => {
+    //     window.scrollTo({ top: 0, behavior: "smooth" })
+    // }, [location.pathname])
+
+useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.replace("#", "");
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+  }
+
+  //  scroll to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [location.pathname, location.hash]);
 
 
     return(
