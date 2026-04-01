@@ -21,12 +21,14 @@ const LogoStrip = () => {
               <div
                 key={i}
                 className={` flex items-center justify-center border-[#262626] ${i % 2 === 0 ? "border-r md:border-r-0" : ""} ${i < 4 ? "border-b md:border-b-0" : ""} p-7.5 md:px-7.5 md:py-4 2xl:px-10 2xl:py-5`}>
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="object-contain h-7 md:h-9" />
+                 <div className="h-8  xl:h-10 aspect-[3/1]"> 
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="object-contain w-full h-full" />
+                  </div>
               </div>
             ))}
           </div>
