@@ -7,8 +7,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://192.168.1.7:5173",
+    "https://squaree-up.vercel.app/"
+  ]
+}));
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("backend is running!");
+});
 
 app.use("/contact", contactRoute);
 
