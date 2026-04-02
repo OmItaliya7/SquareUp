@@ -11,8 +11,9 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://192.168.1.7:5173",
-    "https://squaree-up.vercel.app/"
-  ]
+    "https://square-upp.vercel.app/"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 
