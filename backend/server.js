@@ -11,16 +11,19 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://192.168.1.7:5173",
-    "https://square-upp.vercel.app/"
+    "https://square-upp.vercel.app"
   ],
   credentials: true
 }));
 app.use(express.json());
 
+app.options("*", cors()); // Enable pre-flight for all routes
+
 app.get("/", (req, res) => {
   res.send("backend is running!");
 });
 
+// Routes
 app.use("/contact", contactRoute);
 
 app.listen(process.env.PORT, "0.0.0.0", () => {

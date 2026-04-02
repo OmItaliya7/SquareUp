@@ -50,30 +50,30 @@ router.post("/", async (req, res) => {
 
     const autoResponseOptions = {
       from: `"SquareUp Team" <${process.env.EMAIL_USER}>`,
-  to: email, // 👉 USER EMAIL
-  subject: "We received your request 🚀",
-  html: `
-    <div style="font-family: Arial; padding:20px;">
-      <h2 style="color:#9EFF00;">Thanks for contacting SquareUp 🚀</h2>
-      
-      <p>Hi ${name},</p>
+      to: email, // 👉 USER EMAIL
+      subject: "We received your request 🚀",
+      html: `
+        <div style="font-family: Arial; padding:20px;">
+          <h2 style="color:#9EFF00;">Thanks for contacting SquareUp 🚀</h2>
+          
+          <p>Hi ${name},</p>
 
-      <p>We’ve received your request regarding <b>${services.join(", ") || "your inquiry"}</b>.</p>
+          <p>We’ve received your request regarding <b>${services.join(", ") || "your inquiry"}</b>.</p>
 
-      <p>Our team will review your message and get back to you within <b>24 hours</b>.</p>
+          <p>Our team will review your message and get back to you within <b>24 hours</b>.</p>
 
-      <br/>
+          <br/>
 
-      <p><b>Your Message:</b></p>
-      <div style="background:#f5f5f5; padding:10px; border-radius:6px;">
-        ${message}
-      </div>
+          <p><b>Your Message:</b></p>
+          <div style="background:#f5f5f5; padding:10px; border-radius:6px;">
+            ${message}
+          </div>
 
-      <br/>
+          <br/>
 
-      <p>Best regards,<br/>SquareUp Team</p>
-    </div>
-  `,
+          <p>Best regards,<br/>SquareUp Team</p>
+        </div>
+      `,
     }
 
     await transporter.sendMail(mailOptions);
