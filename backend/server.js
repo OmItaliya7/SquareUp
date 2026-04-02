@@ -6,9 +6,9 @@ import contactRoute from "./routes/contact.js";
 dotenv.config();
 
 const app = express();
+app.use(express.json());
 
-const PORT = process.env.PORT || 8080;
-
+const PORT = process.env.PORT;
 
 app.use(cors({
   origin: [
@@ -18,13 +18,6 @@ app.use(cors({
   ],
   credentials: true
 }));
-app.use(express.json());
-
-app.options("*", cors()); // Enable pre-flight for all routes
-
-app.get("/", (req, res) => {
-  res.send("backend is running!");
-});
 
 // Routes
 app.use("/contact", contactRoute);
