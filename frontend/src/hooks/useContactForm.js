@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { validateContactForm } from "../utils/validateContactForm";
 import api from "../services/api";
 
+
 export const useContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -87,6 +88,7 @@ export const useContactForm = () => {
 
     try {
      const res = await api.post("/contact", formData);
+    // const res = await axios.post("http://localhost:5000/contact", formData);
      console.log("Server Response:", res.data);
 
       // RESET FORM
@@ -102,7 +104,7 @@ export const useContactForm = () => {
       alert("Message sent successfully!");
 
     } catch (err) {
-      console.error(err);
+      console.log(err);
       alert("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
