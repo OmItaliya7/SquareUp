@@ -11,16 +11,28 @@ const app = express();
 // ✅ Connect DB
 connectDB();
 
-// ✅ Middleware
+
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://192.168.1.7:5173",
-    "https://square-upp.vercel.app"
-  ],
+  origin: (origin, callback) => {
+    if (!origin) {
+      callback(null, true);
+    } 
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    }
+    
+    else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST"],
   credentials: true
 }));
+
+
 app.use(express.json());
 
 // ✅ Routes

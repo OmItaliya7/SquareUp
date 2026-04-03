@@ -5,7 +5,7 @@ const leadSchema = new mongoose.Schema({
   email: { type: String, required: true },
   message: { type: String, required: true },
   services: [String],
-  budget: Number,
+  budget: { type: String},
 }, { timestamps: true });
 
 export default mongoose.model("Lead", leadSchema);
