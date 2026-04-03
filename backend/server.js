@@ -11,22 +11,34 @@ const app = express();
 // ✅ Connect DB
 connectDB();
 
+// ✅ Middleware
+// app.use(cors({
+//   origin: [
+//     "http://localhost:5173",
+//     "http://192.168.1.7:5173",
+//     "https://square-upp.vercel.app"
+//   ],
+//   methods: ["GET", "POST"],
+//   credentials: true
+// }));
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) {
-      callback(null, true);
-    } 
+  origin: function (origin, callback) {
 
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
+    // allow requests with no origin (Postman, mobile apps)
+    if (!origin) return callback(null, true);
+
+    // 🔥 FIX: normalize origin
+    const normalizedOrigin = origin.replace(/\/$/, "");
+
+    if (allowedOrigins.includes(normalizedOrigin)) {
+      return callback(null, true);
     }
-    
-    else {
-      callback(new Error("Not allowed by CORS"));
-    }
+
+    console.log("❌ Blocked by CORS:", origin); // debug
+    return callback(null, false); // ⚠️ IMPORTANT CHANGE
   },
   methods: ["GET", "POST"],
   credentials: true
