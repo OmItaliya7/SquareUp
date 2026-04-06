@@ -7,12 +7,12 @@ router.post("/", async (req, res) => {
   try {
     const { name, email, message, services, budget } = req.body;
 
-    // ✅ Validation
+    //  Validation
     if (!name || !email || !message) {
       return res.status(400).json({ error: "All fields required" });
     }
 
-    // ✅ Save to DB
+    //  Save to DB
     const lead = await Lead.create({
       name,
       email,

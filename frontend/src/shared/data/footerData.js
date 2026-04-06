@@ -9,6 +9,7 @@ export const footerLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
+
 export const contactInfo = [
   {
     id: 1,
@@ -23,9 +24,10 @@ export const contactInfo = [
   {
     id: 3,
     type: "location",
-    text: "Somewhere in the World",
+    text: "Remote-first, Globally Available",
   },
 ]
+
 
 export const socialLinks = [
   {

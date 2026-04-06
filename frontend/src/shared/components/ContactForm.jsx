@@ -8,26 +8,40 @@ const contactOptions = [
 ];
 
 const ContactForm = () => {
-  
-const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit, isSubmitting, errors, isFlexible, handleFlexibleToggle } = useContactForm();
+  const {
+    formData,
+    handleChange,
+    handleCheckbox,
+    handleBudgetChange,
+    handleSubmit,
+    isSubmitting,
+    errors,
+    isFlexible,
+    handleFlexibleToggle,
+  } = useContactForm();
 
   return (
     <section className="w-full bg-[#1A1A1A] border-x border-t  border-[#262626]">
       <div className="px-6 md:px-16 xl:px-54.25 2xl:px-67">
         <div className="bg-[#1A1A1A] xl:border border-[#262626] p-6 px-0 md:p-10 xl:p-15 2xl:p-20">
-          <form onSubmit={handleSubmit} className="flex flex-col  mx-auto gap-7.5 2xl:gap-10">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col  mx-auto gap-7.5 2xl:gap-10"
+          >
             <div className="grid grid-cols-1  md:grid-cols-2 gap-7.5 2xl:gap-10">
               {/* Honeypot Field */}
               <input
-                type="text"
+                type="hidden"
                 name="company"
-                className="hidden"
                 autoComplete="off"
                 tabIndex={-1}
               />
               {/* Name */}
               <div className="bg-[#24242480] border border-[#262626] rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
-                <label htmlFor="name" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
+                <label
+                  htmlFor="name"
+                  className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white"
+                >
                   Full Name
                 </label>
 
@@ -37,15 +51,22 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  
                   placeholder="Type here"
-                  className=" w-full  bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none  focus:border-[#C5FF66] transition-colors  font-normal text-base 2xl:text-lg leading-normal" />
-                {errors.name && (<span className="mt-1 text-sm text-red-500">{errors.name}</span>)}
+                  className=" w-full  bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none  focus:border-[#C5FF66] transition-colors  font-normal text-base 2xl:text-lg leading-normal"
+                />
+                {errors.name && (
+                  <span className="mt-1 text-sm text-red-500">
+                    {errors.name}
+                  </span>
+                )}
               </div>
 
               {/* Email */}
               <div className="bg-[#24242480] border border-[#262626] rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
-                <label htmlFor="email" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
+                <label
+                  htmlFor="email"
+                  className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white"
+                >
                   Email
                 </label>
 
@@ -55,11 +76,14 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  
                   placeholder="Type here"
-                  className=" w-full bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none focus:border-[#C5FF66] transition-colors font-normal text-base 2xl:text-lg leading-normal" />
-                  {errors.email && (<span className="mt-1 text-sm text-red-500">{errors.email}</span>)}
-
+                  className=" w-full bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none focus:border-[#C5FF66] transition-colors font-normal text-base 2xl:text-lg leading-normal"
+                />
+                {errors.email && (
+                  <span className="mt-1 text-sm text-red-500">
+                    {errors.email}
+                  </span>
+                )}
               </div>
             </div>
 
@@ -71,7 +95,7 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {contactOptions.map((item) => (
                   <label
-                    key={item}                  
+                    key={item}
                     className="flex items-center cursor-pointer gap-2.5"
                   >
                     <div className="relative flex items-center justify-center">
@@ -82,7 +106,6 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                         onChange={() => handleCheckbox(item)}
                         className="peer appearance-none size-7 border border-[#333333] rounded-sm bg-[#262626] checked:bg-[#262626] transition-all"
                       />
-                      
 
                       <span className="absolute text-[#9EFF00] text-md font-extralight opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none mb-1">
                         ✓
@@ -91,11 +114,13 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                     <span className="text-[#FDFFFA] text-base 2xl:text-lg font-normal leading-normal group-hover:text-white transition-colors">
                       {item}
                     </span>
-                    
                   </label>
-                  
                 ))}
-                {errors.services && (<span className="mt-2 text-sm text-red-500">{errors.services}</span>)}
+                {errors.services && (
+                  <span className="mt-2 text-sm text-red-500">
+                    {errors.services}
+                  </span>
+                )}
               </div>
             </div>
 
@@ -134,15 +159,15 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                   </span>
                 </div>
                 <label className="flex items-center gap-2 mt-4 cursor-pointer">
-  <input
-    type="checkbox"
-    checked={isFlexible}
-    onChange={handleFlexibleToggle}
-  />
-  <span className="text-sm text-[#E6E6E6]">
-    Not sure / Flexible
-  </span>
-</label>
+                  <input
+                    type="checkbox"
+                    checked={isFlexible}
+                    onChange={handleFlexibleToggle}
+                  />
+                  <span className="text-sm text-[#E6E6E6]">
+                    Not sure / Flexible
+                  </span>
+                </label>
               </div>
             </div>
 
@@ -160,10 +185,13 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
                   onChange={handleChange}
                   placeholder="Type here"
                   rows="1"
-                  
                   className="w-full bg-transparent text-[#98989A] focus:outline-none resize-none placeholder:text-[#656567] border-b border-[#262626] pb-4 leading-normal transition-colors focus:border-[#9EFF00]"
                 />
-                {errors.message && <span className="mt-1 text-sm text-red-500">{errors.message}</span>}
+                {errors.message && (
+                  <span className="mt-1 text-sm text-red-500">
+                    {errors.message}
+                  </span>
+                )}
 
                 {/* Second Line: The decorative empty line  */}
                 <div className="w-full pt-10 border-b border-[#262626]"></div>
@@ -172,10 +200,10 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
 
             {/* SUBMIT BUTTON */}
             <div className="flex justify-center">
-              <button 
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-[#9EFF00] text-[#1A1A1A]
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-[#9EFF00] text-[#1A1A1A]
                                w-full md:w-auto
                                font-medium
                                px-9 py-3.5 xl:px-9 xl:py-3.5 2xl:px-11 2xl:py-4.5
@@ -199,5 +227,3 @@ const { formData, handleChange, handleCheckbox, handleBudgetChange, handleSubmit
 };
 
 export default ContactForm;
-
-

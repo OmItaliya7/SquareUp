@@ -1,4 +1,3 @@
-import heroBg from "../../../assets/images/hero/hero-bg.webp";
 import grid from "../../../assets/images/backgrounds/grid.webp";
 import Container from "../../../shared/ui/Container";
 import { Link } from "react-router-dom";
@@ -37,7 +36,7 @@ const Hero = () => {
 
           {/* MOUNTAIN */}
           <img
-            src={heroBg}
+            src="/images/hero-bg.webp"
             alt="hero background"
             className="absolute bottom-0 -translate-x-1/2 pointer-events-none left-1/2 w-225 md:w-300 xl:w-350 opacity-80 mix-blend-screen"
             decoding="async"

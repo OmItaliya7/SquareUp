@@ -1,23 +1,8 @@
-import work1 from "../../../assets/images/work/work1.webp";
-import work2 from "../../../assets/images/work/work2.webp";
-import work3 from "../../../assets/images/work/work3.webp";
-import work4 from "../../../assets/images/work/work4.webp";
-import work5 from "../../../assets/images/work/work5.webp";
-import work6 from "../../../assets/images/work/work6.webp";
-import work7 from "../../../assets/images/work/work7.webp";
-import work8 from "../../../assets/images/work/work8.webp";
-import work9 from "../../../assets/images/work/work9.webp";
-import work10 from "../../../assets/images/work/work10.webp";
-
-
-
-
-
 export const workData = [
   {
     id: 1,
     category: "E-Commerce Platform for Fashion Hub",
-    image: work1,
+    image: "/images/work/work1.webp",
     brand: "Chic Boutique",
     url: "https://www.chicboutique.com",
     description:
@@ -26,7 +11,7 @@ export const workData = [
   {
     id: 2,
     category: "Mobile App for Food Delivery Service",
-    image: work2,
+    image: "/images/work/work2.webp",
     brand: "HungryBites",
     url: "https://www.hungrybites.com",
     description:
@@ -35,7 +20,7 @@ export const workData = [
   {
     id: 3,
     category: "Booking and Reservation System for Event Management",
-    image: work3,
+    image: "/images/work/work3.webp",
     brand: "EventMasters",
     url: "https://www.eventmasters.com",
     description:"EventMasters required a comprehensive booking and reservation system for their event management services. We designed a user-friendly platform that allowed seamless event registration, ticketing, and attendee management, resulting in streamlined processes and enhanced customer experiences.",
@@ -43,7 +28,7 @@ export const workData = [
   {
     id: 4,
     category: "Custom Software for Workflow Automation",
-    image: work4,
+    image: "/images/work/work4.webp",
     brand: "ProTech Solutions",
     url: "https://www.protechsolutions.com",
     description:
@@ -52,7 +37,7 @@ export const workData = [
   {
     id: 5,
     category: "Web Portal for Real Estate Listings",
-    image: work5,
+    image: "/images/work/work5.webp",
     brand: "Dream Homes Realty",
     url: "https://www.dreamhomesrealty.com",
     description:
@@ -61,7 +46,7 @@ export const workData = [
   {
     id: 6,
     category: "Mobile App for Fitness Tracking",
-    image: work6,
+    image: "/images/work/work6.webp",
     brand: "FitLife Tracker",
     url: "https://www.fitlifetracker.com",
     description:
@@ -70,7 +55,7 @@ export const workData = [
   {
     id: 7,
     category: "Custom Software for Supply Chain Management",
-    image: work7,
+    image: "/images/work/work7.webp",
     brand: "Global Logistics Solutions",
     url: "https://www.globallogisticssolutions.com",
     description:
@@ -79,7 +64,7 @@ export const workData = [
   {
     id: 8,
     category: "Educational Platform for Online Learning",
-    image: work8,
+    image: "/images/work/work8.webp",
     brand: "EduConnect",
     url: "https://www.educonnect.com",
     description:
@@ -88,7 +73,7 @@ export const workData = [
   {
     id: 9,
     category: "Mobile App for Travel Planning",
-    image: work9,
+    image: "/images/work/work9.webp",
     brand: "WanderWise",
     url: "https://www.wanderwise.com",
     description:
@@ -97,7 +82,7 @@ export const workData = [
   {
     id: 10,
     category: "Web Application for Customer Relationship Management",
-    image: work10,
+    image: "/images/work/work10.webp",
     brand: "ConnectCRM",
     url: "https://www.connectcrm.com",
     description:

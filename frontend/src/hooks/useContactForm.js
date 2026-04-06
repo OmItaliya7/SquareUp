@@ -1,8 +1,7 @@
 import { useState, useCallback } from "react";
 import { validateContactForm } from "../utils/validateContactForm";
 import api from "../services/api";
-
-
+import toast from "react-hot-toast";
 
 export const useContactForm = () => {
   const [formData, setFormData] = useState({
@@ -54,8 +53,6 @@ export const useContactForm = () => {
   const handleFlexibleToggle = useCallback(() => {
   setIsFlexible((prev) => {
     const newValue = !prev;
-
-    // 👉 If turning ON flexible → reset budget
     if (newValue) {
       setFormData((prevData) => ({
         ...prevData,
@@ -88,8 +85,12 @@ export const useContactForm = () => {
     setIsSubmitting(true);
 
     try {
-        const res = await api.post("/contact", formData);
-        console.log("Form Data Submitted:", res.data);
+        const payload = {
+          ...formData,
+          budget: isFlexible ? "Flexible" : formData.budget,
+        }
+        const res = await api.post("/contact", payload);
+        // console.log("Form Data Submitted:", res.data);
 
       // RESET FORM
       setFormData({
@@ -101,11 +102,15 @@ export const useContactForm = () => {
       });
 
       setIsFlexible(false);
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
 
     } catch (err) {
       console.log(err);
-      alert("Something went wrong. Please try again later.");
+      if(err.response?.status === 429){
+        toast.error("Too many requests. Please wait 15 minutes and try again.");
+      }else{
+        toast.error("Something went wrong. Please try again.");
+      } 
     } finally {
       setIsSubmitting(false);
     }

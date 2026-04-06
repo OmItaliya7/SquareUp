@@ -1,23 +1,27 @@
 import logo from "../../assets/logo/brand/logo-main.svg";
+
 import facebookIcon from "../../assets/icons/social/facebook.svg";
 import twitterIcon from "../../assets/icons/social/twitter.svg";
 import linkedinIcon from "../../assets/icons/social/linkedin.svg";
+
 
 import mailIcon from "../../assets/icons/social/mail.svg";
 import phoneIcon from "../../assets/icons/social/phone.svg";
 import locationIcon from "../../assets/icons/social/location.svg";
 
-import { footerLinks, socialLinks } from "../../shared/data/footerData";
+
+import { footerLinks, socialLinks, contactInfo } from "../../shared/data/footerData";
 
 import Container from "../../shared/ui/Container"
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-  const contactData = [
-    { icon: mailIcon, text: "hello@squareup.com" },
-    { icon: phoneIcon, text: "+91 91813 23 2309" },
-    { icon: locationIcon, text: "Remote-first, Globally Available" },
-  ];
+
+  const contactIcons = {
+    mail: mailIcon,
+    phone: phoneIcon,
+    location: locationIcon,
+  }
 
   const socialIcons = {
   facebook: facebookIcon,
@@ -84,10 +88,10 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="flex flex-col gap-5 sm:flex-row md:gap-5.5 2xl:gap-7.5">
 
-              {contactData.map(({ icon: Icon, text }, i) => (
-                <div key={i} className="flex items-center justify-center  gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4">
+              {contactInfo.map(({id, type, text}) => (
+                <div key={id} className="flex items-center justify-center  gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4">
                   {/* <Icon className="text-[#9EFF00] text-2xl md:text-xl 2xl:text-2xl shrink-0" /> */}
-                  <img src={Icon} alt={text} loading="lazy" className="size-6 md:size-5 2xl:size-6 shirnk-0" />
+                  <img src={contactIcons[type]} alt={text} loading="lazy" className="size-6 md:size-5 2xl:size-6 shirnk-0" />
                   <span className="text-lg sm:text-sm md:text-base 2xl:text-lg text-[#E6E6E6] font-normal leading-normal">{text}</span>
                 </div>
               ))}

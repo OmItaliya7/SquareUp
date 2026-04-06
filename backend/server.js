@@ -4,23 +4,21 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import contactRoute from "./routes/contact.js";
 
+import rateLimit from "express-rate-limit";
+import helmet from "helmet";
+
 dotenv.config();
 
+// Trust first proxy (for rate limiting behind proxies)
 const app = express();
 
-// ✅ Connect DB
+app.set("trust proxy", 1); 
+
+//  Connect DB
 connectDB();
 
-// ✅ Middleware
-// app.use(cors({
-//   origin: [
-//     "http://localhost:5173",
-//     "http://192.168.1.7:5173",
-//     "https://square-upp.vercel.app"
-//   ],
-//   methods: ["GET", "POST"],
-//   credentials: true
-// }));
+app.use(helmet());
+
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [];
 
@@ -41,14 +39,27 @@ app.use(
   })
 );
 
+//body parser
+app.use(express.json({ limit: "10kb" }));
+app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 
-app.use(express.json());
+// Rate Limiting(contact only)
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  message: {
+    success: false,
+    message: "Too many requests. Please wait 15 minutes and try again..",
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
-// ✅ Routes
-app.use("/contact", contactRoute);
+//  Routes
+app.use("/contact", contactLimiter , contactRoute);
 
 app.get("/", (req, res) => {
-  res.send("API running 🚀");
+  res.send("API running");
 });
 
 const PORT = process.env.PORT || 8080;
