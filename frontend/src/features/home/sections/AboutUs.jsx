@@ -1,7 +1,7 @@
 import wave from "../../../assets/images/backgrounds/about-wave.webp"
 import Container from "../../../shared/ui/Container"
 import SectionHeader from "../../../shared/components/SectionHeader"
-import { testimonials } from "../data/aboutData"
+import { testimonials } from "../data/homeaboutData"
 
 
 

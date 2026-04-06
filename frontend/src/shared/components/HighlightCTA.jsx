@@ -35,7 +35,7 @@ const HighlightCTA = () => {
             {/* Added max-width and flex-shrink to prevent pushing the button off-screen */}
             <div className="bg-[#262626] px-4 py-3 xl:px-3.5 xl:py-2.5 2xl:px-5 2xl:py-3.5 rounded-lg border border-[#2A2A2A] w-full md:w-auto xl:max-w-187.5 2xl:max-w-237.5  ">
               <p className="text-[16px] 2xl:text-[20px] font-normal text-white leading-normal text-center md:text-left">
-                Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital innvation
+                Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation
               </p>
             </div>
           </div>
