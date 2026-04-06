@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async"
 
-const baseUrl = import.meta.env.VITE_SITE_URL
+const baseUrl = import.meta.env.VITE_SITE_URL || "https://square-upp.vercel.app";
 
-const SEO = ({ title, description, path = "/" }) => {
+const defaultImage = `${baseUrl}/og-image.webp`;
+
+const SEO = ({ title, description, path = "/", image = defaultImage, type = "website" }) => {
   const url = `${baseUrl}${path}`
 
   return (
@@ -15,6 +17,16 @@ const SEO = ({ title, description, path = "/" }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:type" content={type} />
+
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={image} />
+
     </Helmet>
   )
 }

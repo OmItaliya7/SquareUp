@@ -12,14 +12,14 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
       gap-5  xl:gap-7.5
     `}
     >
-      {/* PART 1: Category Title Box  */}
+      {/*  Category Title Box  */}
       <div className=" p-6 xl:px-10 xl:py-6 2xl:px-12.5 2xl:py-7.5 border-b border-[#262626]">
         <h4 className="text-[#98989A] text-xl 2xl:text-[26px] font-medium ">
           {category}
         </h4>
       </div>
 
-      {/* PART 2: Main Content Block */}
+      {/*  Main Content Block */}
       <div className="flex flex-col px-6 pb-10 xl:px-10 xl:pb-20 2xl:px-12.5 2xl:pb-25 gap-5 xl:gap-6 2xl:gap-7.5">
         {/* Project Image */}
         <div className="overflow-hidden rounded-[10px] 2xl:rounded-xl border border-[#262626] bg-[#1C1C1C]">

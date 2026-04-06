@@ -1,6 +1,5 @@
 import { memo } from "react";
 
-
 const ServiceCard = ({ icon, title, index, total }) => {
   const isEven = (index + 1) % 2 === 0
   const isFourth = (index + 1) % 4 === 0
@@ -8,8 +7,7 @@ const ServiceCard = ({ icon, title, index, total }) => {
   const isLastRowDesktop = index >= total - 4
   return (
     <div
-      className={`
-        
+      className={` 
         flex flex-col gap-5 xl:gap-6 2xl:gap-7.5        
         p-5 xl:p-10 2xl:p-12.5
         bg-[#1C1C1C] 

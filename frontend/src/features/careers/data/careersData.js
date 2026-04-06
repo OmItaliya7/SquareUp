@@ -22,7 +22,7 @@ export const whyWorkData = [
   },
   {
     title: "Supportive Environment",
-    description: "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference.",
+    description: "We foster a supportive and inclusive work environment where collaboration and teamwork thrive. We believe in open communication, mutual respect, and valuing diverse perspectives. At SquareUp, you'll be surrounded by talented individuals who are passionate about their work and eager to support each other's growth.",
   },
   {
     title: "Continuous Learning and Growth",

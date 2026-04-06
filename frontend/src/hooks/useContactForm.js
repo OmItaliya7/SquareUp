@@ -9,7 +9,7 @@ export const useContactForm = () => {
     email: "",
     message: "",
     services: [],
-    budget: 0, 
+    budget: 0,
   });
 
   const [errors, setErrors] = useState({});
@@ -51,18 +51,18 @@ export const useContactForm = () => {
   }, []);
 
   const handleFlexibleToggle = useCallback(() => {
-  setIsFlexible((prev) => {
-    const newValue = !prev;
-    if (newValue) {
-      setFormData((prevData) => ({
-        ...prevData,
-        budget: 0,
-      }));
-    }
+    setIsFlexible((prev) => {
+      const newValue = !prev;
+      if (newValue) {
+        setFormData((prevData) => ({
+          ...prevData,
+          budget: 0,
+        }));
+      }
 
-    return newValue;
-  });
-}, []);
+      return newValue;
+    });
+  }, []);
 
   // SUBMIT
   const handleSubmit = async (e) => {
@@ -85,12 +85,12 @@ export const useContactForm = () => {
     setIsSubmitting(true);
 
     try {
-        const payload = {
-          ...formData,
-          budget: isFlexible ? "Flexible" : formData.budget,
-        }
-        const res = await api.post("/contact", payload);
-        // console.log("Form Data Submitted:", res.data);
+      const payload = {
+        ...formData,
+        budget: isFlexible ? "Flexible" : formData.budget,
+      };
+      const res = await api.post("/contact", payload);
+      // console.log("Form Data Submitted:", res.data);
 
       // RESET FORM
       setFormData({
@@ -103,14 +103,13 @@ export const useContactForm = () => {
 
       setIsFlexible(false);
       toast.success("Message sent successfully!");
-
     } catch (err) {
       console.log(err);
-      if(err.response?.status === 429){
+      if (err.response?.status === 429) {
         toast.error("Too many requests. Please wait 15 minutes and try again.");
-      }else{
+      } else {
         toast.error("Something went wrong. Please try again.");
-      } 
+      }
     } finally {
       setIsSubmitting(false);
     }

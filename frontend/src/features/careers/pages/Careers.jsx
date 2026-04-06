@@ -12,7 +12,7 @@ import SEO from "../../../shared/components/SEO";
     return (
       <>
         <SEO
-          title="Careers - SquareUp"
+          title="Careers | Join Our Team - SquareUp"
           description="Explore career opportunities at SquareUp, a digital product agency dedicated to crafting exceptional digital experiences."
           path="/careers"
         />

@@ -1,3 +1,5 @@
+import validator from "validator";
+
 export const validateContactForm = (formData) => {
   const errors = {};
 
@@ -7,8 +9,8 @@ export const validateContactForm = (formData) => {
 
   if (!formData.email.trim()) {
     errors.email = "Email is required";
-  } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-    errors.email = "Invalid email";
+  } else if (!validator.isEmail(formData.email)) {
+    errors.email = "Enter a valid email";
   }
 
   if (!formData.message.trim()) {

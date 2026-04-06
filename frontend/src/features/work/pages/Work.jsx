@@ -12,8 +12,8 @@ const Work = () => {
   return (
     <>
     <SEO
-      title="Our Work | SquareUp"
-      description="Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise at SquareUp, a leading digital product agency."
+      title="Our Work | Web Development & UI/UX Portfolio - SquareUp"
+      description="Explore our portfolio of web development and UI/UX design projects delivering scalable and impactful digital solutions."
       path="/work"
     />
     <main className="bg-[#1A1A1A] min-h-screen" id="our-work">

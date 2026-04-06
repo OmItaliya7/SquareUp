@@ -19,7 +19,7 @@ export const contactInfo = [
   {
     id: 2,
     type: "phone",
-    text: "+91 91813 23 2309",
+    text: "+91 91813 22309",
   },
   {
     id: 3,

@@ -3,9 +3,6 @@ import Container from "../../../shared/ui/Container"
 import SectionHeader from "../../../shared/components/SectionHeader"
 import { wcuData } from "../data/wcuData"
 
-
-
-
 const WCUCard = ({ item, i }) => {
   return (
     <div
@@ -33,9 +30,6 @@ const WCUCard = ({ item, i }) => {
     </div>
   );
 };
-
-
-
 
 const WCU = () => {
   return (

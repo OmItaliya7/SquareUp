@@ -18,7 +18,7 @@ import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
   { id: "email", icon: mailIcon, text: "hello@squareup.com" },
-  { id: "phone", icon: phoneIcon, text: "+91 91813 23 2309" },
+  { id: "phone", icon: phoneIcon, text: "+91 91813 22309" },
   { id: "location", icon: locationIcon, text: "Get Location" },
 ];
 
@@ -53,7 +53,7 @@ const Contact = () => {
   return (
     <>
     <SEO
-      title="Contact Us | SquareUp"
+      title="Contact Us | Get in Touch with SquareUp Digital Agency"
       description="Get in touch with us today and let us help you with any questions or inquiries you may have."
       path="/contact"
     />

@@ -30,8 +30,8 @@ useEffect(() => {
   return (
     <>
     <SEO
-      title="Services | SquareUp"
-      description="Explore our comprehensive range of services, including UI/UX design, web development, and scalable digital solutions, tailored to meet your unique business needs."
+      title="Services | Web Development & UI/UX Design Solutions - SquareUp"
+      description="Explore our services including web development, UI/UX design, mobile apps, and custom software solutions tailored for startups and businesses."
       path="/services"
     />
     <main className="bg-[#1A1A1A]">
@@ -51,8 +51,7 @@ useEffect(() => {
                 description={service.description}
                 label={service.label}
               />
-              
-              {/* Render the grid of categories for this specific service */}
+          
               {service.categories.map((cat, index) => (
                 <ServiceCategoryGrid 
                   key={index} 

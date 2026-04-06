@@ -50,6 +50,7 @@ const ContactForm = () => {
                   id="name"
                   name="name"
                   value={formData.name}
+                  maxLength={100}
                   onChange={handleChange}
                   placeholder="Type here"
                   className=" w-full  bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none  focus:border-[#C5FF66] transition-colors  font-normal text-base 2xl:text-lg leading-normal"
@@ -74,6 +75,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
+                  maxLength={254}
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Type here"
@@ -127,7 +129,7 @@ const ContactForm = () => {
             {/* ROW 3: Budget Range Slider */}
             <div className="flex flex-col gap-7.5 2xl:gap-10  bg-[#24242480] border border-[#262626] rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
               <div className="flex flex-col gap-1.5 xl:gap-3.5">
-                <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
+                <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
                   Your Budget
                 </label>
                 <p className="text-[#E6E6E6] text-sm xl:text-base 2xl:text-lg leading-normal tracking-[.6%]">
@@ -137,6 +139,7 @@ const ContactForm = () => {
 
               <div className="relative">
                 <input
+                  id="budget-slider"
                   type="range"
                   min="0"
                   max="10000"
@@ -158,9 +161,10 @@ const ContactForm = () => {
                     $10,000
                   </span>
                 </div>
-                <label className="flex items-center gap-2 mt-4 cursor-pointer">
+                <label htmlFor="flexible-toggle" className="flex items-center gap-2 mt-4 cursor-pointer">
                   <input
                     type="checkbox"
+                    id="flexible-toggle"
                     checked={isFlexible}
                     onChange={handleFlexibleToggle}
                   />
@@ -183,6 +187,7 @@ const ContactForm = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  maxLength={2000}
                   placeholder="Type here"
                   rows="1"
                   className="w-full bg-transparent text-[#98989A] focus:outline-none resize-none placeholder:text-[#656567] border-b border-[#262626] pb-4 leading-normal transition-colors focus:border-[#9EFF00]"

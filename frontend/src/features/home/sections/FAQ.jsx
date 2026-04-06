@@ -4,8 +4,6 @@ import SectionHeader from "../../../shared/components/SectionHeader";
 import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 import FAQAccordion from "../../../shared/components/FAQAccordion";
 
-
-
 const FAQ = () => {
   return (
     <section className="bg-[#1A1A1A]">

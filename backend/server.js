@@ -9,7 +9,7 @@ import helmet from "helmet";
 
 dotenv.config();
 
-// Trust first proxy (for rate limiting behind proxies)
+// Trust first proxy
 const app = express();
 
 app.set("trust proxy", 1); 
@@ -25,7 +25,7 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [];
 app.use(
   cors({
     origin: function (origin, callback) {
-      // allow requests with no origin (like Postman)
+      // allow requests with no origin 
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
@@ -58,7 +58,7 @@ const contactLimiter = rateLimit({
 //  Routes
 app.use("/contact", contactLimiter , contactRoute);
 
-app.get("/", (req, res) => {
+app.get("/", (res) => {
   res.send("API running");
 });
 

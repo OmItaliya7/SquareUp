@@ -36,7 +36,7 @@ const StepCard = ({ number, title, description, index, variant = "default" }) =>
         </div>
       </div>
 
-      {/* 2. BOTTOM SECTION: Description Body */}
+      {/* 2. BOTTOM SECTION: Description  */}
       <div>
         <p className="text-[#98989A] text-[14px] xl:text-base 2xl:text-lg font-normal leading-normal">
           {description}

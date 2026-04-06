@@ -42,7 +42,7 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
 
           {/* CONTENT LAYER */}
           <div className="relative z-10 flex flex-col items-center gap-4 text-center">
-            <h2 className="
+            <h1 className="
               text-white font-semibold
               text-[28px] 
               xl:text-[38px] 
@@ -50,7 +50,7 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
               leading-[1.2]
             ">
               {title}
-            </h2>
+            </h1>
 
             <p className="
               text-[#E6E6E6] 

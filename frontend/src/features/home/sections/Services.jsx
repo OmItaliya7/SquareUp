@@ -47,10 +47,10 @@ const ServiceCard = ({ item, index }) => {
       <div>
         <Link
           to={`/services#${item.slug}`}
-          aria-label={`Learn more about ${item.title} service`}
+          aria-label={`Explore ${item.title} services`}
           className="px-4 py-3.5 2xl:py-4.5 rounded-md text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full text-center block"
         >
-          Learn More
+          Explore {item.title} 
         </Link>
       </div>
     </div>

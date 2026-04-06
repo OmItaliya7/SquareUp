@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
     <SEO
-      title="About Us - SquareUp"
+      title="About Us | Digital Product Studio & Development Experts - SquareUp"
       description="Discover SquareUp, a leading digital product agency specializing in design, engineering, and project management. Learn about our collaborative process and how we create exceptional digital experiences for businesses."
       path="/about"
     />

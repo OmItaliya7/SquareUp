@@ -1,4 +1,3 @@
-
   const IntroBlock = ({ title, description, label }) => (
     <div className="border-x  border-[#262626] bg-[#1A1A1A]">
       {/* BOX 1: Title & Description */}

@@ -14,7 +14,7 @@ const HighlightCTA = () => {
         
         <div className="flex flex-col gap-2.5 xl:gap-3.5 2xl:gap-5">
           <h2 className="text-[#98989A] text-[20px]  xl:text-[24px] 2xl:text-[30px] font-medium leading-[1.2]">
-            Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....
+            Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.
           </h2>
           <p className="text-[#98989A] text-sm xl:text-base 2xl:text-lg font-normal leading-normal">
             Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.

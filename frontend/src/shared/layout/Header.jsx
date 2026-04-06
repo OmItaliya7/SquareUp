@@ -19,7 +19,7 @@
 
     return (
       <>
-        {/* ================= HEADER ================= */}
+        {/* HEADER*/}
         <header className="w-full bg-[#1A1A1A] lg:border-b border-[#262626]">
           <Container>
 
