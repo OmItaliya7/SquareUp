@@ -3,7 +3,7 @@ import { logos } from "../data/stripData";
 
 const LogoStrip = () => {
   return (
-    <section className="relative bg-[#1A1A1A]">
+    <section className="relative">
       {/* FLOATING BADGE */}
       <div className="absolute z-20 -translate-x-1/2 left-1/2 -top-6">
         <div className="bg-[#1A1A1A] border border-[#262626] rounded-full px-6 py-3 md:px-8 md:py-4 2xl:px-8.5 2xl:py-5 text-white text-sm md:text-base 2xl:text-lg font-medium whitespace-nowrap " >

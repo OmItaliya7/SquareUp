@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 
 const CTABanner = ({ title, subtitle }) => {
   return (
-    <section className="bg-[#1A1A1A] w-full">
+    <section className="w-full ">
       
         <div className="
           relative overflow-hidden 
           border-x  border-[#262626]
-          bg-[#1A1A1A]
           px-4 py-12.5
           xl:py-25
           2xl:py-30

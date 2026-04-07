@@ -11,7 +11,7 @@ const audience = [
 
 const Hero = () => {
   return (
-    <section className="w-full bg-[#1A1A1A]">
+    <section className="w-full">
       <Container>
         <div
           className="
@@ -35,9 +35,12 @@ const Hero = () => {
           />
 
           {/* MOUNTAIN */}
+      
           <img
             src="/images/hero-bg.webp"
             alt="hero background"
+            width="1200"
+            height="600"
             className="absolute bottom-0 -translate-x-1/2 pointer-events-none left-1/2 w-225 md:w-300 xl:w-350 opacity-80 mix-blend-screen"
             decoding="async"
             loading="eager"

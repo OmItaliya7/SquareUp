@@ -16,7 +16,7 @@ const Work = () => {
       description="Explore our portfolio of web development and UI/UX design projects delivering scalable and impactful digital solutions."
       path="/work"
     />
-    <main className="bg-[#1A1A1A] min-h-screen" id="our-work">
+    <main className="min-h-screen" id="our-work">
       <Container>
       <SectionHeader 
         title="Our Works" 

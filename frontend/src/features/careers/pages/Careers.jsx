@@ -17,7 +17,7 @@ import SEO from "../../../shared/components/SEO";
           path="/careers"
         />
       
-      <main className="bg-[#1A1A1A]">
+      <main>
         <Container>
         <SectionHeader
           title="Join Our Team at SquareUp"
@@ -39,7 +39,7 @@ import SEO from "../../../shared/components/SEO";
               {whyWorkData.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col bg-[#1A1A1A] `}
+                  className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col  `}
                 >
                   {/* 1. Title Container with Border  */}
                   <div className="border-b border-[#262626] pb-4 md:pb-6 lg:pb-8">

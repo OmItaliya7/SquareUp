@@ -5,7 +5,7 @@ import cubeLogo from "../../assets/logo/brand/logo-highlight.svg";
 const HighlightCTA = () => {
   return (
     
-    <div className="border-x  border-[#262626] bg-[#1A1A1A] flex flex-col px-6 py-10 gap-7.5 xl:p-15 xl:gap-10 2xl:p-20 2xl:gap-12.5">
+    <div className="border-x  border-[#262626] flex flex-col px-6 py-10 gap-7.5 xl:p-15 xl:gap-10 2xl:p-20 2xl:gap-12.5">
       
       {/* ROW 1: Logo and Main Text */}
       <div className="flex flex-col items-center gap-6 text-center xl:flex-row xl:text-left xl:gap-7.5 2xl:gap-10">

@@ -33,7 +33,7 @@ const WCUCard = ({ item, i }) => {
 
 const WCU = () => {
   return (
-    <section className="bg-[#1A1A1A]">
+    <section>
       <Container>
       <SectionHeader
         title="Why Choose SquareUp?"
@@ -42,7 +42,7 @@ const WCU = () => {
       />
 
       
-        <div className="border-x border-b border-[#262626] bg-[#1A1A1A]">
+        <div className="border-x border-b border-[#262626]">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {wcuData.map((item, i) => (
               <WCUCard key={i} item={item} index={i} />

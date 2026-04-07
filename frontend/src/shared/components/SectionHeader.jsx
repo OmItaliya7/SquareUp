@@ -3,12 +3,11 @@ import grid from "../../assets/images/backgrounds/grid.webp";
 
 const SectionHeader = ({ title, subtitle, bgImage }) => {
   return (
-    <div className="bg-[#1A1A1A] w-full">
+    <div className="w-full ">
       
         <div className="
           relative 
           border-x border-b border-[#262626]
-          bg-[#1A1A1A]
           px-4 py-12.5
           md:px-25 md:py-20
           xl:px-62.5 xl:py-25

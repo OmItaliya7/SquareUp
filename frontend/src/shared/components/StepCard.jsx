@@ -12,7 +12,7 @@ const StepCard = ({ number, title, description, index, variant = "default" }) =>
 
   return (
     <div className={`
-      flex flex-col bg-[#1A1A1A] border-[#262626]
+      flex flex-col border-[#262626]
       ${isLeft ? 'lg:border-r' : ''}
       border-b 
       px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25

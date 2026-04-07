@@ -44,9 +44,15 @@ const JobCard = ({ title, icon, description, index }) => {
       </div>
 
       <div>
-        <button className="px-4 py-3.5 2xl:py-4.5 rounded-lg text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full leading-6">
+        {/* <button className="px-4 py-3.5 2xl:py-4.5 rounded-lg text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full leading-6">
           Apply Now
-        </button>
+        </button> */}
+        <a 
+          href={`mailto:contact.squareupp@gmail.com?subject=Application for ${encodeURIComponent(title)}&body=Hello SquareUp Team,%0D%0A%0D%0AI would like to apply for the ${encodeURIComponent(title)} position.%0D%0A%0D%0APlease find my details below:%0D%0A%0D%0AFull Name:%0D%0AEmail:%0D%0APhone:%0D%0ALinkedIn:%0D%0APortfolio:%0D%0D%0AExperience Summary:%0D%0A%0D%0APlease find my resume attached with this email.%0D%0A%0D%0AThank you for your time and consideration.%0D%0A%0D%0ABest regards,%0D%0A`}
+          className="block text-center px-4 py-3.5 2xl:py-4.5 rounded-lg text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full leading-6"
+        >
+          Apply Now
+        </a>
       </div>
     </div>
   );

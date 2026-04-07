@@ -20,7 +20,7 @@
     return (
       <>
         {/* HEADER*/}
-        <header className="w-full bg-[#1A1A1A] lg:border-b border-[#262626]">
+        <header className="w-full lg:border-b border-[#262626]">
           <Container>
 
             <div className="flex items-center justify-between pt-10 pb-5 xl:py-5">

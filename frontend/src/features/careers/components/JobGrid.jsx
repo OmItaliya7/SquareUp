@@ -5,7 +5,7 @@ const JobGrid = ({ categoryTitle, jobs }) => {
   // If there are no jobs, display an message 
   if (!jobs || jobs.length === 0) {
     return (
-      <div className="border-x border-b border-[#262626] bg-[#1A1A1A] py-16 text-center">
+      <div className="border-x border-b border-[#262626]  py-16 text-center">
         <h3 className="text-lg font-medium text-white">
           No Open Positions
         </h3>
@@ -18,7 +18,7 @@ const JobGrid = ({ categoryTitle, jobs }) => {
 
   
   return (
-  <div className="border-x border-b border-[#262626] bg-[#1A1A1A]">
+  <div className="border-x border-b border-[#262626] ">
     
     {/* CATEGORY TITLE BAR */}
     <div className="p-10 2xl:p-12.5 border-b border-[#262626]">

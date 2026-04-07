@@ -6,7 +6,7 @@ const ContactUs = () => {
 
 
   return (
-    <section className="bg-[#1A1A1A] w-full">
+    <section className="w-full ">
       {/* HEADER SECTION */}
       <Container>
       <CTABanner

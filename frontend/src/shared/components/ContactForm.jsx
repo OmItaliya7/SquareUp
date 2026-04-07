@@ -21,9 +21,9 @@ const ContactForm = () => {
   } = useContactForm();
 
   return (
-    <section className="w-full bg-[#1A1A1A] border-x border-t  border-[#262626]">
+    <section className="w-full  border-x border-t  border-[#262626]">
       <div className="px-6 md:px-16 xl:px-54.25 2xl:px-67">
-        <div className="bg-[#1A1A1A] xl:border border-[#262626] p-6 px-0 md:p-10 xl:p-15 2xl:p-20">
+        <div className=" xl:border border-[#262626] p-6 px-0 md:p-10 xl:p-15 2xl:p-20">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col  mx-auto gap-7.5 2xl:gap-10"

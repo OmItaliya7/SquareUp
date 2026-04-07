@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1A1A1A] border-t border-[#262626]">
+    <footer className=" border-t border-[#262626]">
       <Container>
         <div className="flex flex-col items-center gap-10 py-7.5 xl:py-10 2xl:py-12.5 lg:flex-row lg:justify-between">
           {/* Logo */}
@@ -101,7 +101,6 @@ const Footer = () => {
                 key={id}
                 className="flex items-center justify-center  gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4"
               >
-                {/* <Icon className="text-[#9EFF00] text-2xl md:text-xl 2xl:text-2xl shrink-0" /> */}
                 <img
                   src={contactIcons[type]}
                   alt={text}

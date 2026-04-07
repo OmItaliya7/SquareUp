@@ -6,7 +6,7 @@ import FAQAccordion from "../../../shared/components/FAQAccordion";
 
 const FAQ = () => {
   return (
-    <section className="bg-[#1A1A1A]">
+    <section>
       <Container>
       <SectionHeader
         title="Frequently Asked Questions"

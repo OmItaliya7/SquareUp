@@ -1,40 +1,54 @@
-    @import "tailwindcss";
+@import "tailwindcss";
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+@import "@fontsource/barlow/600.css";
+@import "@fontsource/barlow/700.css";
 
-    :root {
-    
-      /* Backgrounds */
-  --color-bg-main: #262626;
-  --color-bg-card: #1A1A1A;
-  --color-bg-soft: #262626;
-    
-    }
-    *,
-    *::before,
-    *::after {
-    box-sizing: border-box;
-    }
+:root {
+  /* Backgrounds */
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #262626;
+  --bg-tertiary: #1C1C1C;
 
-    html {
-    scroll-behavior: smooth;
-    }
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E6E6E6;
+  --text-muted: #98989A;
 
-    body {
-  background-color: var(--color-bg-main);
+  /* Borders */
+  --border-subtle: #262626;
+  --border-strong: #333333;
 
+  /* Accent */
+  --accent-primary: #9EFF00;
+  --accent-hover: #D8FF99;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
   font-family: "Barlow", sans-serif;
   overflow-x: hidden;
-    }
+}
 
-    img,
-    svg {
-    display: block;
-    max-width: 100%;
-    }
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
 
-    a {
-    text-decoration: none;
-    }
+a {
+  text-decoration: none;
+}
 
-    button {
-    cursor: pointer;
-    }
+button {
+  cursor: pointer;
+}

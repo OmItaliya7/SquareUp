@@ -60,17 +60,15 @@ const TestimonialsCard = ({ item, index, total }) => {
 
 const AboutUs = () => {
   return (
-    <section className="w-full bg-[#1A1A1A]">
+    <section>
       <Container>
       <SectionHeader
         title="What our Clients say About us"
         subtitle="At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us"
         bgImage={wave}
       />
-
-      
         {/* Testimonials Grid */}
-        <div className="border-x border-b border-[#262626] bg-[#1A1A1A]">
+        <div className="border-x border-b border-[#262626] ">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {testimonials.map((item, i) => (
               <TestimonialsCard key={i} item={item} index={i} total={testimonials.length} />

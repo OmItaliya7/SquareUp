@@ -15,7 +15,7 @@ const ServicesPage = () => {
       description="Explore our services including web development, UI/UX design, mobile apps, and custom software solutions tailored for startups and businesses."
       path="/services"
     />
-    <main className="bg-[#1A1A1A]">
+    <main>
       <Container>
       <SectionHeader
         title="Our Services"

@@ -6,7 +6,7 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
   return (
     <div
       className={`
-      group flex flex-col bg-[#1A1A1A] border-[#262626]
+      group flex flex-col border-[#262626]
       lg:border-r ${isLeft ? "lg:border-r" : ""}
       border-b
       gap-5  xl:gap-7.5
@@ -27,6 +27,8 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
             src={image}
             alt={brand}
             className="object-cover w-full aspect-16/10"
+            width="800"
+            height="500"
             loading="lazy"
             decoding="async"
           />

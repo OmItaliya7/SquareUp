@@ -1,5 +1,5 @@
   const IntroBlock = ({ title, description, label }) => (
-    <div className="border-x  border-[#262626] bg-[#1A1A1A]">
+    <div className="border-x  border-[#262626] ">
       {/* BOX 1: Title & Description */}
       <div className="flex flex-col gap-7.5 xl:gap-10 2xl:gap-12.5 px-4 py-10 xl:p-10 xl:pt-20 2xl:p-12.5 2xl:pt-30 border-b border-[#262626]">
         <div className="flex flex-col gap-2.5">

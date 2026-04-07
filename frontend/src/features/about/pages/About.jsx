@@ -15,7 +15,7 @@ const About = () => {
       description="Discover SquareUp, a leading digital product agency specializing in design, engineering, and project management. Learn about our collaborative process and how we create exceptional digital experiences for businesses."
       path="/about"
     />
-    <main className="bg-[#1A1A1A]">
+    <main >
       <Container>
       <SectionHeader
         title="About Us"
@@ -25,7 +25,7 @@ const About = () => {
       
         <div className="flex flex-col -mt-px">
           {/* 1. ABOUT INTRO SECTION  */}
-          <div className=" border-b md:border-x border-[#262626] bg-[#1A1A1A]">
+          <div className=" border-b md:border-x border-[#262626] ">
             <div
               className="
               grid md:grid-cols-2 items-center
@@ -57,6 +57,8 @@ const About = () => {
                   <img
                     src={aboutImg}
                     alt="SquareUp Cube"
+                    width="598"
+                    height="571"
                     loading="lazy"
                     decoding="async"
                     className="object-cover w-full h-full"

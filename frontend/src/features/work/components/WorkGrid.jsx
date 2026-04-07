@@ -5,7 +5,7 @@ const WorkGrid = ({ projects }) => {
 
   if(!projects || projects.length === 0) {
     return (
-      <div className="border-x border-[#262626] bg-[#1A1A1A] py-16 text-center">
+      <div className="border-x border-[#262626] py-16 text-center">
         <h3 className="text-lg font-medium text-white">
           No Projects Yet
         </h3>
@@ -17,7 +17,7 @@ const WorkGrid = ({ projects }) => {
   }
  
   return (
-  <div className="border-x border-[#262626] bg-[#1A1A1A]">
+  <div className="border-x border-[#262626] ">
     <div className="grid grid-cols-1 lg:grid-cols-2">
       {projects.map((project, index) => (
         <WorkCard 

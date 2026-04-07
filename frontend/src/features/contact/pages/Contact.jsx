@@ -17,7 +17,7 @@ import { memo } from "react";
 import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
-  { id: "email", icon: mailIcon, text: "hello@squareup.com" },
+  { id: "email", icon: mailIcon, text: "contact.squareupp@gmail.com" },
   { id: "phone", icon: phoneIcon, text: "+91 91813 22309" },
   { id: "location", icon: locationIcon, text: "Get Location" },
 ];
@@ -57,7 +57,7 @@ const Contact = () => {
       description="Get in touch with us today and let us help you with any questions or inquiries you may have."
       path="/contact"
     />
-    <main className="bg-[#1A1A1A]">
+    <main>
       <Container>
         <SectionHeader
           title="Contact Us"
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           {/* Section: Operating Days & Social */}
-          <div className="border-x border-b border-[#262626] bg-[#1A1A1A]">
+          <div className="border-x border-b border-[#262626] ">
             <div className="flex flex-col md:flex-row">
               {/* LEFT SIDE: Operating Days */}
               <div className="flex-1 flex flex-row items-center justify-center gap-3.5 xl:gap-3.5 py-5 md:py-12 xl:py-12.5 border-b md:border-b-0 md:border-r border-[#262626]">

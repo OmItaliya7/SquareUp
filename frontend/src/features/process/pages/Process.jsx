@@ -16,7 +16,7 @@ const Process = () => {
       description="Discover the process of starting a project with SquareUp, a digital product agency dedicated to crafting exceptional digital experiences through collaboration, expertise, and a client-centric approach."
       path="/process"
     />
-    <main className="bg-[#1A1A1A] min-h-screen">
+    <main className="min-h-screen ">
       <Container>
       <SectionHeader 
         title="Process of Starting the Project" 

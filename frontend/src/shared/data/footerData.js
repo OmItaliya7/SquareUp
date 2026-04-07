@@ -14,7 +14,7 @@ export const contactInfo = [
   {
     id: 1,
     type: "mail",
-    text: "hello@squareup.com",
+    text: "contact.squareupp@gmail.com",
   },
   {
     id: 2,
