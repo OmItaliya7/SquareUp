@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import cubeLogo from "../../assets/logo/brand/logo-highlight.svg";
 
 
@@ -41,9 +42,9 @@ const HighlightCTA = () => {
           </div>
           
           {/* Right Side: Action Button */}
-          <button className="bg-[#9EFF00] text-[#1A1A1A] font-medium px-6 py-4 xl:px-5 xl:py-3.5 2xl:px-8.5 2xl:py-4.5 rounded-md w-full xl:w-auto whitespace-nowrap cursor-pointer shrink-0">
+          <Link to="/contact" className="bg-[#9EFF00] hover:bg-[#ACFF24] text-[#1A1A1A] font-medium px-6 py-4 xl:px-5 xl:py-3.5 2xl:px-8.5 2xl:py-4.5 rounded-md w-full xl:w-auto whitespace-nowrap cursor-pointer shrink-0">
             Start Project
-          </button>
+          </Link>
         </div>
       </div>
     </div>

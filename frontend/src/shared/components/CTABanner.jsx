@@ -1,6 +1,7 @@
 import grid from "../../assets/images/backgrounds/grid.webp";
 import logo from "../../assets/logo/brand/logo-main.svg";
 import wave from "../../assets/images/backgrounds/about-wave.webp";
+import { Link } from "react-router-dom";
 
 const CTABanner = ({ title, subtitle }) => {
   return (
@@ -55,9 +56,9 @@ const CTABanner = ({ title, subtitle }) => {
             </div>  
 
             {/* Button */}
-            <button className="px-6 py-3.5 2xl:px-8.5 2xl:py-4.5 bg-[#9EFF00] hover:bg-[#ACFF24] transition-colors text-sm 2xl:text-lg font-medium rounded-lg text-[#1A1A1A]">
+            <Link to="/contact" className="px-6 py-3.5 2xl:px-8.5 2xl:py-4.5 bg-[#9EFF00] hover:bg-[#ACFF24] transition-colors text-sm 2xl:text-lg font-medium rounded-lg text-[#1A1A1A]">
               Start Project
-            </button>
+            </Link>
           </div>
         </div>
     

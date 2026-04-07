@@ -6,10 +6,10 @@ import amazon from "../../../assets/logo/partners/amazon.webp"
 import adobe from "../../../assets/logo/partners/adobe.webp"
 
 export const logos = [
-  { src: zapier, alt: "Zapier logo" },
-  { src: spotify, alt: "Spotify logo" },
-  { src: zoom, alt: "Zoom logo" },
-  { src: slack, alt: "Slack logo" },
-  { src: amazon, alt: "Amazon logo" },
-  { src: adobe, alt: "Adobe logo" },
+  { src: zapier, alt: "Zapier — Technology Partner" },
+  { src: spotify, alt: "Spotify — Technology Partner" },
+  { src: zoom, alt: "Zoom — Technology Partner" },
+  { src: slack, alt: "Slack — Technology Partner" },
+  { src: amazon, alt: "Amazon — Technology Partner" },
+  { src: adobe, alt: "Adobe — Technology Partner" },
 ];

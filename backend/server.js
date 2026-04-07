@@ -58,7 +58,7 @@ const contactLimiter = rateLimit({
 //  Routes
 app.use("/contact", contactLimiter , contactRoute);
 
-app.get("/", (res) => {
+app.get("/", (req,res) => {
   res.send("API running");
 });
 

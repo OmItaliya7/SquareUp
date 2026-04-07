@@ -1,5 +1,4 @@
 import {lazy, Suspense} from "react";
-import { Helmet } from "react-helmet-async"
 import SEO from "../../../shared/components/SEO";
 
 

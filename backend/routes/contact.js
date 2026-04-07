@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
     }
 
     //  Save to DB
-    const lead = await Lead.create({
+    await Lead.create({
       name,
       email,
       message,
@@ -23,8 +23,7 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: "Lead stored successfully",
-      data: lead,
+      message: "We 'll be in touch soon!",
     });
 
   } catch (error) {

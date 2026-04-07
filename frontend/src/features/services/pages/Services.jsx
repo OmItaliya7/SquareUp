@@ -5,28 +5,9 @@ import ServiceCategoryGrid from '../components/ServiceCategoryGrid';
 import { servicesData } from '../data/servicesData';
 import wave from "../../../assets/images/backgrounds/services-wave.webp";
 import CTABanner from '../../../shared/components/CTABanner';
-import { useEffect } from "react";
 import SEO from "../../../shared/components/SEO";
-import { useLocation } from "react-router-dom";
 
 const ServicesPage = () => {
-  const location = useLocation();
-
-useEffect(() => {
-  if (location.hash) {
-    const id = location.hash.replace("#", "")
-    const el = document.getElementById(id)
-
-    if (el) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      })
-    }
-  }
-}, [location.hash])
-
-
   return (
     <>
     <SEO
