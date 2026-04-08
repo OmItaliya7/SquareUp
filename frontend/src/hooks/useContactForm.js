@@ -16,6 +16,8 @@ export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFlexible, setIsFlexible] = useState(false);
 
+  const [formStartTime] = useState(Date.now());
+
   // INPUT CHANGE
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -24,6 +26,11 @@ export const useContactForm = () => {
       ...prev,
       [name]: value,
     }));
+
+    setErrors(prev => ({
+      ...prev,
+      [name]: value.trim() === "" ? "This field is required" : undefined,
+    }))
   }, []);
 
   // CHECKBOX
@@ -71,6 +78,7 @@ export const useContactForm = () => {
     if (isSubmitting) return;
 
     // Honeypot (spam protection)
+
     const honeypot = e.target.company?.value;
     if (honeypot) return;
 

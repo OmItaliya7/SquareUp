@@ -73,6 +73,7 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
         </div>
       </div>
     </div>
+      
   );
 };
 

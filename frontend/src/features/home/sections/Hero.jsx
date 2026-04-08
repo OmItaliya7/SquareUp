@@ -18,10 +18,7 @@ const Hero = () => {
           relative overflow-hidden
           border-b md:border-x border-[#262626]
           flex items-center justify-center text-center  
-          h-140          
-          md:h-162.5
-          xl:h-172.75        
-          2xl:h-199       
+          min-h-[560px] md:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[790px]       
         "
         >
           {/* GRID OVERLAY */}

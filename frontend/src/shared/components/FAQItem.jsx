@@ -3,70 +3,72 @@ import { FiPlus, FiX } from "react-icons/fi";
 
 const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
   return (
-    <button
-      onClick={() => onToggle(item.id)}
-      aria-expanded={isOpen}
-      aria-controls={`faq-${item.id}`}
-      className="w-full text-left"
-    >
-      <div
-        className={`
-          p-6 md:p-8 xl:px-10 xl:py-6
-          transition-all duration-300
-          hover:bg-[#1C1C1C]/40
-          ${showBorder ? "border-b border-[#262626]" : ""}
-        `}
+    <div className="w-full">
+      <button
+        onClick={() => onToggle(item.id)}
+        aria-expanded={isOpen}
+        aria-controls={`faq-${item.id}`}
+        className="w-full text-left"
       >
-        <div className="flex items-start gap-5 lg:gap-8">
-          
-          {/* Number */}
-          <div className={`
-            shrink-0 size-13 xl:size-15.5 rounded-xl 
-            bg-linear-to-b from-[#242424] to-[#242424]/0
-            flex items-center justify-center font-bold text-lg
-            ${isOpen ? "text-[#C5FF66]" : "text-white"}
-          `}>
-            {item.id}
-          </div>
+        <div
+          className={`
+            p-6 md:p-8 xl:px-10 xl:py-6
+            transition-all duration-300
+            hover:bg-[#1C1C1C]/40
+            ${showBorder ? "border-b border-[#262626]" : ""}
+          `}
+        >
+          <div className="flex items-start gap-5 lg:gap-8">
+            
+            {/* Number */}
+            <div className={`
+              shrink-0 size-13 xl:size-15.5 rounded-xl 
+              bg-linear-to-b from-[#242424] to-[#242424]/0
+              flex items-center justify-center font-bold text-lg
+              ${isOpen ? "text-[#C5FF66]" : "text-white"}
+            `}>
+              {item.id}
+            </div>
 
-             {/* Content */}
-             <div className="flex-1">
-               <div className="flex items-start justify-between gap-4">
-                 <h3
-                   className={`
-                     text-sm md:text-base lg:text-lg font-medium
-                     transition-colors duration-300 leading-tight
-                    ${isOpen ? "text-[#C5FF66]" : "text-white"}
-                   `}
-                 >
-                   {item.question}
-                 </h3>
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex items-start justify-between gap-4">
+                  <h3
+                    className={`
+                      text-sm md:text-base lg:text-lg font-medium
+                      transition-colors duration-300 leading-tight
+                      ${isOpen ? "text-[#C5FF66]" : "text-white"}
+                    `}
+                  >
+                    {item.question}
+                  </h3>
 
-                 <div
-                  className={`shrink-0 w-6.5 h-6.5 flex items-center justify-center mt-0.5 ${
-                     isOpen ? "text-[#C5FF66]" : "text-white"
-                   }`}
-                 >
-                   {isOpen ? <FiX size={26} /> : <FiPlus size={26} />}
+                  <div
+                    className={`shrink-0 w-6.5 h-6.5 flex items-center justify-center mt-0.5 ${
+                      isOpen ? "text-[#C5FF66]" : "text-white"
+                    }`}
+                  >
+                    {isOpen ? <FiX size={26} /> : <FiPlus size={26} />}
+                  </div>
                 </div>
-               </div>
 
-               {/* Answer */}
-               <div
-                 id={`faq-${item.id}`}
-                 className={`
-                  overflow-hidden transition-all duration-500 ease-in-out
-                   ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
-                 `}
-               >
-                 <p className="text-[#E6E6E6] font-normal text-sm lg:text-base 2xl:text-lg leading-normal">
-                   {item.answer}
-                 </p>
-               </div>
+                {/* Answer */}
+                <div
+                  id={`faq-${item.id}`}
+                  className={`
+                    overflow-hidden transition-all duration-500 ease-in-out
+                    ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
+                  `}
+                >
+                  <p className="text-[#E6E6E6] font-normal text-sm lg:text-base 2xl:text-lg leading-normal">
+                    {item.answer}
+                  </p>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
   );
 };
 

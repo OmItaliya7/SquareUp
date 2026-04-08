@@ -26,16 +26,20 @@ const ContactForm = () => {
         <div className=" xl:border border-[#262626] p-6 px-0 md:p-10 xl:p-15 2xl:p-20">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col  mx-auto gap-7.5 2xl:gap-10"
+            className="flex flex-col relative mx-auto gap-7.5 2xl:gap-10"
           >
             <div className="grid grid-cols-1  md:grid-cols-2 gap-7.5 2xl:gap-10">
-              {/* Honeypot Field */}
-              <input
-                type="hidden"
-                name="company"
-                autoComplete="off"
-                tabIndex={-1}
-              />
+              {/* Honeypot Field  */}
+              <div className="absolute left-[-9999px] top-auto w-[1px] h-[1px] overflow-hidden">
+                <label htmlFor="company">Company</label>
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  autoComplete="off"
+                  tabIndex={-1}
+                />
+              </div>
               {/* Name */}
               <div className="bg-[#24242480] border border-[#262626] rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
                 <label
@@ -51,12 +55,14 @@ const ContactForm = () => {
                   name="name"
                   value={formData.name}
                   maxLength={100}
+                  aria-describedby="name-error"
+                  aria-invalid={!!errors.name}
                   onChange={handleChange}
                   placeholder="Type here"
                   className=" w-full  bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none  focus:border-[#C5FF66] transition-colors  font-normal text-base 2xl:text-lg leading-normal"
                 />
                 {errors.name && (
-                  <span className="mt-1 text-sm text-red-500">
+                  <span id="name-error" role="alert" className="mt-1 text-sm text-red-500">
                     {errors.name}
                   </span>
                 )}
@@ -76,13 +82,15 @@ const ContactForm = () => {
                   id="email"
                   name="email"
                   maxLength={254}
+                  aria-describedby="email-error"
+                  aria-invalid={!!errors.email}
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Type here"
                   className=" w-full bg-transparent border-b border-[#333333] pb-1.5 text-[#98989A] placeholder:text-[#656567] focus:outline-none focus:border-[#C5FF66] transition-colors font-normal text-base 2xl:text-lg leading-normal"
                 />
                 {errors.email && (
-                  <span className="mt-1 text-sm text-red-500">
+                  <span id="email-error" role="alert" className="mt-1 text-sm text-red-500">
                     {errors.email}
                   </span>
                 )}
@@ -90,11 +98,11 @@ const ContactForm = () => {
             </div>
 
             {/* ROW 2 */}
-            <div className="bg-[#24242480] border border-[#262626] rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
+            <div aria-describedby="services-error" className="bg-[#24242480] border border-[#262626] rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
               <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-white">
                 Why are you contacting us?
               </label>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div role="group" aria-describedby="services-error" className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {contactOptions.map((item) => (
                   <label
                     key={item}
@@ -119,7 +127,7 @@ const ContactForm = () => {
                   </label>
                 ))}
                 {errors.services && (
-                  <span className="mt-2 text-sm text-red-500">
+                  <span id="services-error" role="alert" className="mt-2 text-sm text-red-500">
                     {errors.services}
                   </span>
                 )}
@@ -188,12 +196,14 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   maxLength={2000}
+                  aria-describedby="message-error"
+                  aria-invalid={!!errors.message}
                   placeholder="Type here"
                   rows="1"
                   className="w-full bg-transparent text-[#98989A] focus:outline-none resize-none placeholder:text-[#656567] border-b border-[#262626] pb-4 leading-normal transition-colors focus:border-[#9EFF00]"
                 />
                 {errors.message && (
-                  <span className="mt-1 text-sm text-red-500">
+                  <span id="message-error" role="alert" className="mt-1 text-sm text-red-500">
                     {errors.message}
                   </span>
                 )}

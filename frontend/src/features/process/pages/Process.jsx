@@ -12,7 +12,7 @@ const Process = () => {
   return (
     <>
     <SEO
-      title="Our Process | Agile Web Development & Design Workflow - SquareUp"
+      title="Our Process | How We Build Scalable Digital Products — SquareUp"
       description="Discover the process of starting a project with SquareUp, a digital product agency dedicated to crafting exceptional digital experiences through collaboration, expertise, and a client-centric approach."
       path="/process"
     />

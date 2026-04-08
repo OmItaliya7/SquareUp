@@ -92,14 +92,14 @@ const Footer = () => {
         {/* Divider */}
         <div className="md:border-b md:border-[#262626]" />
 
-        {/* ================= BOTTOM SECTION ================= */}
+        {/* BOTTOM SECTION  */}
         <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-12.5 lg:flex-row lg:justify-between sm:items-center">
           {/* Contact Info */}
           <div className="flex flex-col gap-5 sm:flex-row md:gap-5.5 2xl:gap-7.5">
             {contactInfo.map(({ id, type, text }) => (
               <div
                 key={id}
-                className="flex items-center justify-center  gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4"
+                className="flex items-center justify-center gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4"
               >
                 <img
                   src={contactIcons[type]}
@@ -107,7 +107,7 @@ const Footer = () => {
                   loading="lazy"
                   className="size-6 md:size-5 2xl:size-6 shirnk-0"
                 />
-                <span className="text-lg sm:text-sm md:text-base 2xl:text-lg text-[#E6E6E6] font-normal leading-normal">
+                <span className="text-lg sm:text-sm xl:text-base 2xl:text-lg text-[#E6E6E6] font-normal leading-normal">
                   {text}
                 </span>
               </div>
@@ -116,7 +116,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-[#98989A] font-normal leading-normal text-base md:text-lg text-center lg:text-right">
-            © 2026 SquareUp. All rights reserved.
+            &copy; {new Date().getFullYear()} SquareUp. All rights reserved.
           </p>
         </div>
       </Container>

@@ -21,6 +21,7 @@
       <>
         {/* HEADER*/}
         <header className="w-full lg:border-b border-[#262626]">
+          <a href="#main-content" className="z-200 sr-only focus:not-sr-only focus:absolute focus:top-1 focus:left-1 bg-[#9EFF00] text-black  rounded-md text-sm font-medium">Skip to main content</a>
           <Container>
 
             <div className="flex items-center justify-between pt-10 pb-5 xl:py-5">

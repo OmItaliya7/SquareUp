@@ -17,9 +17,9 @@ import { memo } from "react";
 import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
-  { id: "email", icon: mailIcon, text: "contact.squareupp@gmail.com" },
-  { id: "phone", icon: phoneIcon, text: "+91 91813 22309" },
-  { id: "location", icon: locationIcon, text: "Get Location" },
+  { id: "email", icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Email us at contact.squareupp@gmail.com" },
+  { id: "phone", icon: phoneIcon, text: "+91 91813 22309", alt: "Call us at +91 91813 22309" },
+  { id: "location", icon: locationIcon, text: "Get Location", alt: "Get directions to our location" },
 ];
 
 const socialIcons = [
@@ -28,11 +28,11 @@ const socialIcons = [
   { id: "ln", src: linkedinIcon, alt: "Connect with us on LinkedIn", url: "https://www.linkedin.com/company/enthusia-softech/"},
 ];
 
-const ContactInfoCard = memo(({ Icon, text }) => (
+const ContactInfoCard = memo(({ Icon, text, alt }) => (
   <div
     className="
-      inline-flex items-center justify-center  gap-3.5
-      px-5 py-4.5 xl:py-3.5 2xl:px-6 2xl:py-4.5
+      inline-flex items-center justify-center gap-3.5 
+      px-5 py-4.5 md:px-2 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5
       rounded-md
       bg-[#262626]
       w-full
@@ -40,7 +40,7 @@ const ContactInfoCard = memo(({ Icon, text }) => (
     "
   >
     {/* <Icon className="text-[#9EFF00] text-[24px] 2xl:text-[30px] shrink-0" /> */}
-    <img src={Icon} alt={text} loading="lazy" className="size-6 md:size-5 2xl:size-6 shrink-0" />
+    <img src={Icon} alt={alt} loading="lazy" className="size-6 md:size-5 2xl:size-6 shrink-0" />
    
 
     <span className="text-base 2xl:text-xl leading-normal font-medium text-[#E6E6E6] whitespace-nowrap">
@@ -98,19 +98,19 @@ const Contact = () => {
               {/* RIGHT SIDE: Stay Connected */}
               <div className="flex items-center justify-center flex-1  md:py-12 xl:py-12.5">
                 <div className="flex flex-col md:flex-row items-center gap-5 2xl:gap-5 md:bg-[#1C1C1C] md:border md:border-[#262626] md:rounded-lg p-5 pb-10  md:px-2 md:py-3 xl:pl-5 xl:p-2.5 2xl:pl-6 2xl:p-3.5">
-                  <span className="text-[#E6E6E6] text-base 2xl:text-lg font-medium leading-normal">
+                  <span className="text-[#E6E6E6] text-base  2xl:text-lg font-medium leading-normal">
                     Stay Connected
                   </span>
 
                   {/* Icon Group  */}
-                  <div className="flex items-center gap-2.5 2xl:gap-3.5">
+                  <div className="flex items-center gap-2.5 md:gap-1.5 2xl:gap-3.5">
                     {socialIcons.map(({ id, src, alt, url }) => (
                       <a key={id} href={url} target="_blank" rel="noopener noreferrer" aria-label={alt}>
                         <img
                           src={src}
                           alt={alt}
-                          decoding="async"
-                          className="size-13 2xl:size-16"
+                          decoding="async" 
+                          className="transition duration-300 size-13 md:size-10 2xl:size-16 hover:scale-110 hover:brightness-125"
                           loading="lazy"
                         />
                       </a>

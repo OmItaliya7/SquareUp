@@ -6,10 +6,7 @@ It showcases services, portfolio work, company process, and contact features wit
 ---
 
 ## 🚀 Live Preview
-
-> (Add your deployed link here)
-
-https://your-domain.com
+https://square-upp.vercel.app/
 
 
 ---
@@ -84,3 +81,23 @@ This project demonstrates production-level frontend development skills, includin
  -> Performance optimization
  -> Accessibility
  -> SEO best practices
+
+
+
+
+
+
+ # .env.development
+VITE_API_URL=http://localhost:backendport
+VITE_SITE_URL=http://localhost:frontendport
+
+# .env.production
+VITE_API_URL= https://api.your-domain.com
+VITE_SITE_URL= frontend deployment URL
+
+
+# .env (backend)
+PORT=PORT_NUMBER
+MONGO_URI= mongodb srv URL
+ALLOWED_ORIGINS=http://localhost:frontendport, frontend deployment URL
+    
