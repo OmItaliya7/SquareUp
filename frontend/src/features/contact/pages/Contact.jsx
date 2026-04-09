@@ -17,9 +17,9 @@ import { memo } from "react";
 import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
-  { id: "email", icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Email us at contact.squareupp@gmail.com" },
-  { id: "phone", icon: phoneIcon, text: "+91 91813 22309", alt: "Call us at +91 91813 22309" },
-  { id: "location", icon: locationIcon, text: "Get Location", alt: "Get directions to our location" },
+  { id: "email", icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Emailus" },
+  { id: "phone", icon: phoneIcon, text: "+91 91813 22309", alt: "Callus" },
+  { id: "location", icon: locationIcon, text: "Get Location", alt: "Get directions" },
 ];
 
 const socialIcons = [
