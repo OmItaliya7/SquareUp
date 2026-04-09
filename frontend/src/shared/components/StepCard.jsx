@@ -4,7 +4,7 @@ import { memo } from "react";
 const StepCard = ({ number, title, description, index, variant = "default" }) => {
   const isLeft = index % 2 === 0;
   const variants = {
-    default: "text-accent-primary",
+    default: "text-text-muted",
     highlight: "text-accent-secondary",
   };
 
