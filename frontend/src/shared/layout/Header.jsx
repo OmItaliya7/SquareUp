@@ -2,8 +2,8 @@
   import { Link, useLocation } from "react-router-dom"
   import { navLinks } from "../../shared/data/navbarData"
   import logo from "../../assets/logo/brand/logo-main.svg"
-  import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"
   import Container from "../../shared/ui/Container"
+  import menuIcon from "../../assets/icons/common/menu-toggle.svg"
 
   const Header = () => {
 
@@ -20,8 +20,8 @@
     return (
       <>
         {/* HEADER*/}
-        <header className="w-full lg:border-b border-[#262626]">
-          <a href="#main-content" className="z-200 sr-only focus:not-sr-only focus:absolute focus:top-1 focus:left-1 bg-[#9EFF00] text-black  rounded-md text-sm font-medium">Skip to main content</a>
+        <header className="w-full lg:border-b border-border-subtle">
+          <a href="#main-content" className="text-sm font-medium text-black rounded-md sr-only z-200 focus:not-sr-only focus:absolute focus:top-1 focus:left-1 bg-accent-primary">Skip to main content</a>
           <Container>
 
             <div className="flex items-center justify-between pt-10 pb-5 xl:py-5">
@@ -29,7 +29,7 @@
               <div className="flex items-center">
                 <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
                   <img src={logo} alt="SquareUp logo" className="size-10 2xl:size-15" />
-                  <span className="font-semibold text-white">SquareUp</span>
+                  <span className="font-semibold text-text-primary">SquareUp</span>
                 </Link>
               </div>
 
@@ -41,8 +41,8 @@
                     to={item.path}
                     className={
                       isActive(item.path)
-                        ? "bg-[#262626] text-white px-5.5 py-3 rounded-md text-sm 2xl:text-lg font-semibold transition-all"
-                        : "text-[#E6E6E6] hover:text-white hover:bg-[#262626] px-5.5 py-3 rounded-md text-sm 2xl:text-lg font-medium transition-all"
+                        ? "bg-bg-secondary text-text-primary px-5.5 py-3 rounded-md text-sm 2xl:text-lg font-semibold transition-all"
+                        : "text-text-secondary hover:text-text-primary hover:bg-bg-secondary px-5.5 py-3 rounded-md text-sm 2xl:text-lg font-medium transition-all"
                     }
                   >
                     {item.name}
@@ -51,12 +51,12 @@
 
               </nav>
 
-              <div className="flex items-center gap-3">
+              
 
                 {/* Desktop Contact */}
                 <Link
                   to="/contact"
-                  className="hidden lg:flex bg-[#9EFF00]   px-4.5 py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium text-soft"
+                  className="hidden lg:flex bg-accent-primary  px-4.5 py-3 2xl:px-6 2xl:py-4 rounded-md text-sm 2xl:text-lg font-medium text-text-tertiary"
                 >
                   Contact Us
                 </Link>
@@ -67,17 +67,14 @@
                   aria-label="Toggle menu"
                   aria-expanded={open}
                   aria-controls="mobile-menu"
-                  className="lg:hidden w-11.5 h-11.5 bg-[#262626]  rounded-md flex items-center justify-center"
+                  className="lg:hidden w-11.5 h-11.5"
                 >
-                  {open
-                    ? <HiOutlineX size={22} color="#D8FF99" />
-                    : <HiOutlineMenuAlt3 size={28} color="#D8FF99" />
-                  }
+                  <img src={menuIcon} alt="Menu toggle" className={`transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`} />
                 </button>
 
               </div>
 
-            </div>
+            
 
           </Container>
         </header>
@@ -90,8 +87,8 @@
             absolute z-40
             lg:hidden
             w-full
-            bg-[#1A1A1A]
-            border-b border-[#262626]
+            bg-bg-primary
+            border-b border-border-subtle
             transition-all duration-300
             ${open ? "max-h-125 py-6" : "max-h-0 overflow-hidden"}
           `}
@@ -106,8 +103,8 @@
                   onClick={closeMenu}
                   className={
                     isActive(item.path)
-                      ? "bg-[#262626] text-white px-4 py-3 rounded-md text-sm font-semibold"
-                      : "text-[#98989A] hover:text-white hover:bg-[#262626] px-4 py-3 rounded-md text-sm font-medium"
+                      ? "bg-bg-secondary text-white px-4 py-3 rounded-md text-sm font-semibold"
+                      : "text-text-muted hover:text-white hover:bg-bg-secondary px-4 py-3 rounded-md text-sm font-medium"
                   }
                 >
                   {item.name}
@@ -117,7 +114,7 @@
               <Link
                 to="/contact"
                 onClick={closeMenu}
-                className="mt-3 bg-[#9EFF00] text-[#262626] w-full py-5 rounded-md text-center font-medium"
+                className="w-full py-5 mt-3 font-medium text-center rounded-md bg-accent-primary text-text-tertiary"
                 
               >
                Contact Us

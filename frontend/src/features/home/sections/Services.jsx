@@ -6,7 +6,7 @@ import { servicesData } from "../data/servicesData";
 
 const ServiceCard = ({ item, index }) => {
   return (
-    <div className={`flex flex-col justify-between p-7.5 xl:p-10 2xl:p-12.5 border-[#262626] 
+    <div className={`flex flex-col justify-between p-7.5 xl:p-10 2xl:p-12.5 border-border-subtle
       border-b 
       md:border-r md:border-b
       ${(index + 1) % 2 === 0 ? "md:border-r-0" : ""} 
@@ -16,7 +16,7 @@ const ServiceCard = ({ item, index }) => {
       ${(index + 1) % 3 === 0 ? "lg:border-r-0" : ""}
       ${index >= 3 ? "lg:border-b-0" : ""}
       
-     bg-[#1C1C1C] gap-6 xl:gap-10  `}> 
+     bg-bg-tertiary gap-6 xl:gap-10  `}> 
      
       <div className="flex flex-col gap-7.5 2xl:gap-10">
         {/* HEADER SECTION: Icon + Title */}
@@ -31,14 +31,14 @@ const ServiceCard = ({ item, index }) => {
             />
           </div>
 
-          <h3 className="text-white text-[20px] xl:text-[24px] 2xl:text-[30px] font-semibold leading-tight tracking-[.6%]">
+          <h3 className="text-text-primary text-[20px] xl:text-[24px] 2xl:text-[30px] font-semibold leading-tight tracking-[.6%]">
             {item.title}
           </h3>
         </div>
 
         {/* DESCRIPTION SECTION */}
         
-        <p className="text-[#E6E6E6] text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal leading-normal 2xl:leading-6 tracking-[-.6%]">
+        <p className="text-text-secondary text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal leading-normal 2xl:leading-6 tracking-[-.6%]">
           {item.desc}
         </p>
         
@@ -48,7 +48,7 @@ const ServiceCard = ({ item, index }) => {
         <Link
           to={`/services#${item.slug}`}
           aria-label={`Explore ${item.title} services`}
-          className="px-4 py-3.5 2xl:py-4.5 rounded-md text-white bg-[#262626] border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors font-medium text-sm 2xl:text-lg w-full text-center block"
+          className="px-4 py-3.5 2xl:py-4.5 rounded-md text-text-primary bg-bg-secondary hover:bg-bg-hover transition-colors font-medium text-sm 2xl:text-lg w-full text-center block"
         >
           Explore {item.title} 
         </Link>
@@ -69,9 +69,7 @@ const Services = () => {
 
         
         <div
-          className="
-          border border-[#262626] mt-px       
-        "
+          className="mt-px border border-border-subtle"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {servicesData.map((item, i) => (

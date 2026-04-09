@@ -9,7 +9,7 @@ const CTABanner = ({ title, subtitle }) => {
       
         <div className="
           relative overflow-hidden 
-          border-x  border-[#262626]
+          border-x  border-border-subtle
           px-4 py-12.5
           xl:py-25
           2xl:py-30
@@ -28,34 +28,32 @@ const CTABanner = ({ title, subtitle }) => {
               backgroundSize: "50px", 
             }}
           />
-          <div className="absolute inset-0 bg-[#ACFF24] opacity-[0.02] mix-blend-color-dodge pointer-events-none" />
+          <div className="absolute inset-0 bg-bg-banner opacity-[0.02] mix-blend-color-dodge pointer-events-none" />
 
           {/* CONTENT LAYER  */}
           <div className="relative z-10 flex flex-col items-center text-center gap-5.75 xl:gap-[25.5px] 2xl:gap-[52.2px]">
             
-            {/* Logo Box */}
-            <div className="size-12.5] xl:size-15 2xl:size-20 bg-[#ACFF24] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(172,255,36,0.3)]">
+            {/* Logo Box */}    
               <img 
                 src={logo} 
                 alt="SquareUp" 
-                className="w-6.5 h-7.5 xl:w-8 xl:h-9 2xl:w-10.5 2xl:h-12" 
+                className="size-12.5 xl:size-15 2xl:size-20 " 
               />
-            </div>
-
+              
             <div className="space-y-2 xl:space-y-2.5 2xl:space-y-3.5">
               {/* Heading */}
-              <h2 className="text-2xl font-semibold text-white xl:text-3xl 2xl:text-[38px] ">
+              <h2 className="text-2xl font-semibold text-text-primary xl:text-3xl 2xl:text-[38px] ">
                 {title}
               </h2>
 
               {/* Subtitle */}
-              <p className="text-[#E6E6E6] text-sm xl:text-base 2xl:text-lg font-normal leading-6 lg:leading-normal tracking-[-0.06%] max-w-200 mx-auto">
+              <p className="text-text-secondary text-sm xl:text-base 2xl:text-lg font-normal leading-6 lg:leading-normal tracking-[-0.06%] max-w-200 mx-auto">
                 {subtitle}
               </p>
             </div>  
 
             {/* Button */}
-            <Link to="/contact" className="px-6 py-3.5 2xl:px-8.5 2xl:py-4.5 bg-[#9EFF00] hover:bg-[#ACFF24] transition-colors text-sm 2xl:text-lg font-medium rounded-lg text-[#1A1A1A]">
+            <Link to="/contact" className="px-6 py-3.5 2xl:px-8.5 2xl:py-4.5 bg-accent-primary hover:bg-bg-banner transition-colors text-sm 2xl:text-lg font-medium rounded-lg text-text-fourth">
               Start Project
             </Link>
           </div>

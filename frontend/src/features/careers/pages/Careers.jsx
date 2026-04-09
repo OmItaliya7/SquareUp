@@ -35,22 +35,22 @@ import SEO from "../../../shared/components/SEO";
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="border-x border-b border-[#262626] grid grid-cols-1 lg:grid-cols-2 divide-y divide-[#262626] lg:divide-y-0 lg:divide-x bg-[#1A1A1A]">
+            <div className="grid grid-cols-1 border-b divide-y border-x border-border-subtle lg:grid-cols-2 divide-border-subtle lg:divide-y-0 lg:divide-x">
               {whyWorkData.map((item, idx) => (
                 <div
                   key={idx}
                   className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col  `}
                 >
                   {/* 1. Title Container with Border  */}
-                  <div className="border-b border-[#262626] pb-4 md:pb-6 lg:pb-8">
-                    <h3 className="text-[#D8FF99] text-[26px] xl:text-[32px] 2xl:text-[40px] font-medium  leading-normal">
+                  <div className="pb-4 border-b border-border-subtle md:pb-6 lg:pb-8">
+                    <h3 className="text-accent-secondary text-[26px] xl:text-[32px] 2xl:text-[40px] font-medium leading-normal">
                       {item.title}
                     </h3>
                   </div>
 
                   {/* 2. Description Container*/}
                   <div className="pt-4 md:pt-6 lg:pt-8">
-                    <p className="text-[#98989A] text-sm xl:text-base 2xl:text-lg leading-normal font-normal">
+                    <p className="text-sm font-normal leading-normal text-text-muted xl:text-base 2xl:text-lg">
                       {item.description}
                     </p>
                   </div>
@@ -59,12 +59,12 @@ import SEO from "../../../shared/components/SEO";
             </div>
          
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
-            <div className="border-x border-[#262626] py-10 pl-4 xl:pl-10 xl:pb-10 xl:pt-20 border-b">
+            <div className="py-10 pl-4 border-b border-x border-border-subtle xl:pl-10 xl:pb-10 xl:pt-20">
               <div className="flex flex-col gap-1.5 xl:gap-2.5 2xl:gap-3.5">
-                <h2 className="text-white text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold">
+                <h2 className="text-text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold">
                   Current Openings
                 </h2>
-                <p className="text-[#E6E6E6] max-w-5xl text-sm xl:text-base 2xl:text-lg font-normal">
+                <p className="max-w-5xl text-sm font-normal text-text-muted xl:text-base 2xl:text-lg">
                   We are always on the lookout for talented individuals who are
                   passionate about creating exceptional digital experiences.
                   Whether you're a designer, engineer, project manager, or have

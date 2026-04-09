@@ -17,18 +17,18 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-center bg-[#1A1A1A] text-white px-6">
+        <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-text-primary bg-bg-primary">
           <h1 className="mb-4 text-3xl font-semibold">
             ⚠️ Page failed to load
           </h1>
 
-          <p className="text-[#98989A] mb-6">
+          <p className="mb-6 text-text-muted">
             Something went wrong while loading this page.
           </p>
 
           <button
             onClick={this.handleReload}
-            className="bg-[#9EFF00] text-[#1A1A1A] px-6 py-3 rounded-md font-medium"
+            className="px-6 py-3 font-medium rounded-md bg-accent-primary text-text-fourth"
           >
             Retry
           </button>

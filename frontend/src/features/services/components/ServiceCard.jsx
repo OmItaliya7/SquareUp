@@ -10,11 +10,11 @@ const ServiceCard = ({ icon, title, index, total }) => {
       className={` 
         flex flex-col gap-5 xl:gap-6 2xl:gap-7.5        
         p-5 xl:p-10 2xl:p-12.5
-        bg-[#1C1C1C] 
-        border-r border-[#262626]
+        bg-bg-tertiary
+        border-r border-border-subtle
         ${isEven ? 'border-r-0 xl:border-r' : ''}
         ${isFourth ? 'xl:border-r-0' : ''}
-        border-b border-[#262626]
+        border-b border-border-subtle
         ${isLastRowMobile ? 'border-b-0 xl:border-b' : ''}
         ${isLastRowDesktop ? 'xl:border-b-0' : ''}
       `}
@@ -25,7 +25,7 @@ const ServiceCard = ({ icon, title, index, total }) => {
       </div>
 
       {/* Title */}
-      <h4 className="font-medium leading-snug text-[#E6E6E6] text-base 2xl:text-xl tracking-[.6%]">
+      <h4 className="font-medium leading-snug text-text-secondary text-base 2xl:text-xl tracking-[.6%]">
         {title}
       </h4>
     </div>

@@ -16,8 +16,6 @@ export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFlexible, setIsFlexible] = useState(false);
 
-  const [formStartTime] = useState(Date.now());
-
   // INPUT CHANGE
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -26,12 +24,22 @@ export const useContactForm = () => {
       ...prev,
       [name]: value,
     }));
-
-    setErrors(prev => ({
-      ...prev,
-      [name]: value.trim() === "" ? "This field is required" : undefined,
-    }))
   }, []);
+
+  const handleBlur = useCallback((e) => {
+  const { name, value } = e.target;
+
+  let error = "";
+
+  if (!value.trim()) {
+    error = "This field is required";
+  }
+
+  setErrors((prev) => ({
+    ...prev,
+    [name]: error || undefined,
+  }));
+}, []);
 
   // CHECKBOX
   const handleCheckbox = useCallback((value) => {
@@ -43,7 +51,7 @@ export const useContactForm = () => {
         services: exists
           ? prev.services.filter((item) => item !== value)
           : [...prev.services, value],
-      };
+      };  
     });
   }, []);
 
@@ -97,8 +105,7 @@ export const useContactForm = () => {
         ...formData,
         budget: isFlexible ? "Flexible" : formData.budget,
       };
-      const res = await api.post("/contact", payload);
-      // console.log("Form Data Submitted:", res.data);
+       await api.post("/contact", payload);
 
       // RESET FORM
       setFormData({
@@ -130,6 +137,7 @@ export const useContactForm = () => {
     isFlexible,
     setIsFlexible,
     handleChange,
+    handleBlur,
     handleCheckbox,
     handleBudgetChange,
     handleSubmit,

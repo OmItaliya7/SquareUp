@@ -14,8 +14,8 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
           className={`
             p-6 md:p-8 xl:px-10 xl:py-6
             transition-all duration-300
-            hover:bg-[#1C1C1C]/40
-            ${showBorder ? "border-b border-[#262626]" : ""}
+            hover:bg-bg-tertiary/40
+            ${showBorder ? "border-b border-border-subtle" : ""}
           `}
         >
           <div className="flex items-start gap-5 lg:gap-8">
@@ -25,7 +25,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
               shrink-0 size-13 xl:size-15.5 rounded-xl 
               bg-linear-to-b from-[#242424] to-[#242424]/0
               flex items-center justify-center font-bold text-lg
-              ${isOpen ? "text-[#C5FF66]" : "text-white"}
+              ${isOpen ? "text-[#C5FF66]" : "text-text-primary"}
             `}>
               {item.id}
             </div>
@@ -37,7 +37,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                     className={`
                       text-sm md:text-base lg:text-lg font-medium
                       transition-colors duration-300 leading-tight
-                      ${isOpen ? "text-[#C5FF66]" : "text-white"}
+                      ${isOpen ? "text-[#C5FF66]" : "text-text-primary"}
                     `}
                   >
                     {item.question}
@@ -45,7 +45,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
 
                   <div
                     className={`shrink-0 w-6.5 h-6.5 flex items-center justify-center mt-0.5 ${
-                      isOpen ? "text-[#C5FF66]" : "text-white"
+                      isOpen ? "text-[#C5FF66]" : "text-text-primary"
                     }`}
                   >
                     {isOpen ? <FiX size={26} /> : <FiPlus size={26} />}
@@ -60,7 +60,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                     ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
                   `}
                 >
-                  <p className="text-[#E6E6E6] font-normal text-sm lg:text-base 2xl:text-lg leading-normal">
+                  <p className="text-sm font-normal leading-normal text-text-secondary lg:text-base 2xl:text-lg">
                     {item.answer}
                   </p>
                 </div>

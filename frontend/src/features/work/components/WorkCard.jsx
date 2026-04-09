@@ -6,15 +6,15 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
   return (
     <div
       className={`
-      group flex flex-col border-[#262626]
+      group flex flex-col border-border-subtle
       lg:border-r ${isLeft ? "lg:border-r" : ""}
       border-b
       gap-5  xl:gap-7.5
     `}
     >
       {/*  Category Title Box  */}
-      <div className=" p-6 xl:px-10 xl:py-6 2xl:px-12.5 2xl:py-7.5 border-b border-[#262626]">
-        <h4 className="text-[#98989A] text-xl 2xl:text-[26px] font-medium ">
+      <div className=" p-6 xl:px-10 xl:py-6 2xl:px-12.5 2xl:py-7.5 border-b border-border-subtle">
+        <h4 className="text-text-muted text-xl 2xl:text-[26px] font-medium ">
           {category}
         </h4>
       </div>
@@ -22,7 +22,7 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
       {/*  Main Content Block */}
       <div className="flex flex-col px-6 pb-10 xl:px-10 xl:pb-20 2xl:px-12.5 2xl:pb-25 gap-5 xl:gap-6 2xl:gap-7.5">
         {/* Project Image */}
-        <div className="overflow-hidden rounded-[10px] 2xl:rounded-xl border border-[#262626] bg-[#1C1C1C]">
+        <div className="overflow-hidden rounded-[10px] 2xl:rounded-xl border border-border-subtle bg-bg-tertiary">
           <img
             src={image}
             alt={brand}
@@ -37,14 +37,14 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
         {/* Brand & Visit Link Section */}
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-2.5 tracking-[.6%] ">
-            <h3 className="text-lg font-medium 2xl:text-2xl text-[#E6E6E6]">
+            <h3 className="text-lg font-medium 2xl:text-2xl text-text-secondary">
               {brand}
             </h3>
             <a
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-2.5 py-2 xl:px-3 2xl:px-3.5 2xl:py-2.5 rounded-lg bg-[#262626] border border-[#262626] text-[#98989A] text-sm xl:text-base 2xl:text-xl font-normal hover:text-[#D8FF99] transition-colors"
+              className="inline-block px-2.5 py-2 xl:px-3 2xl:px-3.5 2xl:py-2.5 rounded-lg bg-bg-secondary border border-border-subtle text-text-muted text-sm xl:text-base 2xl:text-xl font-normal hover:text-text-accent transition-colors"
             >
               {url}
             </a>
@@ -67,7 +67,7 @@ const WorkCard = ({ category, image, brand, url, description, index }) => {
 
         {/* Project Description */}
         <div>
-          <p className=" text-[#98989A] text-[14px] xl:text-base 2xl:text-lg font-normal leading-[150%]">
+          <p className=" text-text-muted text-[14px] xl:text-base 2xl:text-lg font-normal leading-[150%]">
             {description}
           </p>
         </div>

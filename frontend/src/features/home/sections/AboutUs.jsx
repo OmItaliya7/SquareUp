@@ -13,7 +13,7 @@ const TestimonialsCard = ({ item, index, total }) => {
           xl:px-15 xl:py-20
           2xl:px-25
           flex flex-col gap-7.5
-          border-[#262626]
+          border-border-subtle
           border-b last:border-b-0
           md:border-r md:border-b
           ${(index + 1) % 2 === 0 ? "md:border-r-0" : ""}
@@ -22,16 +22,16 @@ const TestimonialsCard = ({ item, index, total }) => {
     >
       {/* Testimonial Content */}
       <div className="flex flex-col gap-5 2xl:gap-6">
-        <h3 className="text-[#D8FF99] text-[18px] xl:text-[20px] 2xl:text-[28px] font-medium leading-normal">
+        <h3 className="text-accent-secondary text-[18px] xl:text-[20px] 2xl:text-[28px] font-medium leading-normal">
           {item.title}
         </h3>
-        <p className="text-[#E6E6E6] font-normal text-[14px] xl:text-[16px] 2xl:text-[18px] leading-normal">
+        <p className="text-text-secondary font-normal text-[14px] xl:text-[16px] 2xl:text-[18px] leading-normal">
           {item.desc}
         </p>
       </div>
 
       {/* Profile Card Section */}
-      <div className="mt-auto flex items-center justify-between bg-[#24242433] border border-[#262626] rounded-xl p-3.5 2xl:p-5">
+      <div className="mt-auto flex items-center justify-between bg-[#24242433] border border-border-subtle rounded-xl p-3.5 2xl:p-5">
         <div className="flex items-center gap-3 ">
           <img
             src={item.image}
@@ -41,16 +41,16 @@ const TestimonialsCard = ({ item, index, total }) => {
             className="object-cover rounded-lg size-10 xl:size-12.5 2xl:size-15"
           />
           <div className="flex flex-col leading-normal">
-            <span className="text-[16px] 2xl:text-[20px] font-medium text-[#FFFFFF] lg:text-base ">
+            <span className="text-[16px] 2xl:text-[20px] font-medium text-text-primary lg:text-base ">
               {item.name}
             </span>
-            <span className="text-[#E6E6E6] font-normal  text-[14px] 2xl:text-[18px] lg:text-sm ">
+            <span className="text-text-secondary font-normal  text-[14px] 2xl:text-[18px] lg:text-sm ">
               {item.role}
             </span>
           </div>
         </div>
 
-        <button className="hidden xl:block bg-[#262626] border border-[#2A2A2A] text-white px-4 py-3.5 2xl:px-5 2xl:py-4.5 rounded-lg font-medium text-[14px] 2xl:text-[18px] hover:bg-[#333] transition-all">
+        <button className="hidden xl:block bg-bg-secondary text-text-primary px-4 py-3.5 2xl:px-5 2xl:py-4.5 rounded-lg font-medium text-[14px] 2xl:text-[18px] hover:bg-bg-hover transition-all">
           Open Website
         </button>
       </div>
@@ -68,7 +68,7 @@ const AboutUs = () => {
         bgImage={wave}
       />
         {/* Testimonials Grid */}
-        <div className="border-x border-b border-[#262626] ">
+        <div className="border-b border-x border-border-subtle ">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {testimonials.map((item, i) => (
               <TestimonialsCard key={i} item={item} index={i} total={testimonials.length} />

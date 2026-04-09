@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" border-t border-[#262626]">
+    <footer className="border-t border-border-subtle">
       <Container>
         <div className="flex flex-col items-center gap-10 py-7.5 xl:py-10 2xl:py-12.5 lg:flex-row lg:justify-between">
           {/* Logo */}
@@ -41,18 +41,18 @@ const Footer = () => {
               alt="SquareUp"
               className="size-12.5 xl:size-10 2xl:size-15"
             />
-            <span className="text-lg font-semibold text-white xl:text-md">
+            <span className="text-lg font-semibold text-text-primary xl:text-md">
               SquareUp
             </span>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-x-5 2xl:gap-x-7.5 gap-y-5 text-[#E6E6E6]">
+          <nav className="flex flex-wrap justify-center gap-x-5 2xl:gap-x-7.5 gap-y-5 text-text-secondary">
             {footerLinks.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="hover:text-[#9EFF00] transition"
+                className="transition hover:text-accent-primary"
               >
                 {item.label}
               </NavLink>
@@ -62,10 +62,10 @@ const Footer = () => {
           {/* Social Capsule */}
           <div
             className="flex flex-col items-center gap-3.5 md:gap-4 md:flex-row 
-                            bg-[#1C1C1C] border border-[#262626] 
+                            bg-bg-tertiary border border-border-subtle
                             rounded-lg px-20 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6"
           >
-            <span className="text-base 2xl:text-lg font-medium leading-normal text-[#E6E6E6]">
+            <span className="text-base font-medium leading-normal 2xl:text-lg text-text-secondary">
               Stay Connected
             </span>
 
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="md:border-b md:border-[#262626]" />
+        <div className="md:border-b md:border-border-subtle" />
 
         {/* BOTTOM SECTION  */}
         <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-12.5 lg:flex-row lg:justify-between sm:items-center">
@@ -99,7 +99,7 @@ const Footer = () => {
             {contactInfo.map(({ id, type, text }) => (
               <div
                 key={id}
-                className="flex items-center justify-center gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-[#262626] pb-5 md:pb-3 2xl:pb-4"
+                className="flex items-center justify-center gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-border-subtle pb-5 md:pb-3 2xl:pb-4"
               >
                 <img
                   src={contactIcons[type]}
@@ -107,7 +107,7 @@ const Footer = () => {
                   loading="lazy"
                   className="size-6 md:size-5 2xl:size-6 shirnk-0"
                 />
-                <span className="text-lg sm:text-sm xl:text-base 2xl:text-lg text-[#E6E6E6] font-normal leading-normal">
+                <span className="text-lg font-normal leading-normal sm:text-sm xl:text-base 2xl:text-lg text-text-secondary">
                   {text}
                 </span>
               </div>
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-[#98989A] font-normal leading-normal text-base md:text-lg text-center lg:text-right">
+          <p className="text-base font-normal leading-normal text-center text-text-muted md:text-lg lg:text-right">
             &copy; {new Date().getFullYear()} SquareUp. All rights reserved.
           </p>
         </div>

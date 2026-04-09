@@ -15,14 +15,14 @@ const FAQAccordion = () => {
   const rightCol = faqData.slice(mid);
 
   if(!faqData || faqData.length === 0) {
-    return <h3 className="py-8 text-lg text-center text-white">No FAQs available.</h3>;
+    return <h3 className="py-8 text-lg text-center text-text-primary">No FAQs available.</h3>;
   }
 
   return (
-    <div className="grid lg:grid-cols-2 border border-t-0 border-[#262626]">
+    <div className="grid border border-t-0 lg:grid-cols-2 border-border-subtle">
       
       {/* LEFT */}
-      <div className="border-r border-[#262626]">
+      <div className="border-r border-border-subtle">
         {leftCol.map((item, index) => (
           <FAQItem
             key={item.id}

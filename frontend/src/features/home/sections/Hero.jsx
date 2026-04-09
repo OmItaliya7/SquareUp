@@ -16,7 +16,7 @@ const Hero = () => {
         <div
           className="
           relative overflow-hidden
-          border-b md:border-x border-[#262626]
+          border-b md:border-x border-border-subtle
           flex items-center justify-center text-center  
           min-h-[560px] md:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[790px]       
         "
@@ -51,7 +51,7 @@ const Hero = () => {
               <div>
                 <h1
                   className="
-                  text-white font-semibold 
+                  text-text-primary font-semibold 
                   text-[34px] sm:text-[44px] md:text-[56px]
                   lg:text-[64px] xl:text-[72px] 3xl:text-[80px]
                   leading-[1.2]
@@ -59,14 +59,14 @@ const Hero = () => {
                 "
                 >
                   A Digital Product Studio <br className="hidden md:block" />
-                  that will Work
+                  Build to Deliver
                 </h1>
               </div>
 
               <div
                 className="
                 bg-[#24242433] backdrop-blur-md z-10
-                border border-[#262626]
+                border border-border-subtle
                 rounded-md
                 py-4.5
                 px-5 xl:px-7.5 
@@ -75,14 +75,14 @@ const Hero = () => {
               "
               >
                 {/* MOBILE -> paragraph */}
-                <p className="text-[#98989A] text-base font-normal leading-normal md:hidden">
+                <p className="text-base font-normal leading-normal text-text-muted md:hidden">
                   For startups, enterprise leaders, media & publishers, and
                   social good.
                 </p>
 
                 {/* DESKTOP -> pills */}
                 <div className="hidden gap-3 md:flex ">
-                  <span className="text-[#98989A] text-lg 2xl:text-[22px] flex items-center justify-center">
+                  <span className="text-text-muted text-lg 2xl:text-[22px] flex items-center justify-center">
                     For
                   </span>
 
@@ -90,12 +90,12 @@ const Hero = () => {
                     <div key={i} className="flex items-center gap-1.5">
 
                       {i !== 0 && (
-                        <span className="text-[#98989A] text-sm xl:text-lg 2xl:text-[22px]">
+                        <span className="text-text-muted text-sm xl:text-lg 2xl:text-[22px]">
                           {i === audience.length - 1 ? "and" : ","}
                         </span>
                       )}
 
-                      <span className="text-white text-sm xl:text-lg 2xl:text-[22px] bg-[#262626] border border-[#2A2A2A] rounded-md px-2.5 py-2 2xl:px-3.5 2xl:py-3">
+                      <span className="text-text-primary text-sm xl:text-lg 2xl:text-[22px] bg-bg-secondary  rounded-md px-2.5 py-2 2xl:px-3.5 2xl:py-3">
                         {item}
                       </span>
 
@@ -115,14 +115,14 @@ const Hero = () => {
             >
               <Link
                 to="/work"
-                className="bg-[#24242433] backdrop-blur-md border border-[#333333] px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-white text-sm rounded-lg"
+                className="bg-[#24242433] backdrop-blur-md border border-border-strong px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-text-primary text-sm rounded-lg"
               >
                 Our Works
               </Link>
 
               <Link
                 to="/contact"
-                className="bg-[#9EFF00] text-[#262626] font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg"
+                className="bg-accent-primary text-text-tertiary font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg"
               >
                 Contact Us
               </Link>

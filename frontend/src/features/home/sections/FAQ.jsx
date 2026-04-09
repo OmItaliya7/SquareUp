@@ -10,7 +10,7 @@ const FAQ = () => {
       <Container>
       <SectionHeader
         title="Frequently Asked Questions"
-        subtitle="Still you have any questions? Contact our Team via hello@squareup.com"
+        subtitle="Do you still have questions? Contact our Team via contact.square-upp@gmail.com"
         bgImage={wave}
       />
         <FAQAccordion />

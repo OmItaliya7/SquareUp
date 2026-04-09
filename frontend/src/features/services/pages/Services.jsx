@@ -11,8 +11,8 @@ const ServicesPage = () => {
   return (
     <>
     <SEO
-      title="Web Development & UI/UX Services | Scalable Digital Solutions — SquareUp"
-      description="Explore our services including web development, UI/UX design, mobile apps, and custom software solutions tailored for startups and businesses."
+      title="Web Development, UI/UX Services & Mobile App Services | SquareUp"
+      description="Discover our professional services including web development, UI/UX design, mobile app development, and custom software solutions tailored for startups and growing businesses."
       path="/services"
     />
     <main>

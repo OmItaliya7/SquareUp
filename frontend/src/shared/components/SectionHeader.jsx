@@ -7,7 +7,7 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
       
         <div className="
           relative 
-          border-x border-b border-[#262626]
+          border-x border-b border-border-subtle
           px-4 py-12.5
           md:px-25 md:py-20
           xl:px-62.5 xl:py-25
@@ -37,12 +37,12 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
           />
 
           {/* 3. BRAND TINT*/}
-          <div className="absolute inset-0 bg-[#ACFF24] opacity-[0.01] mix-blend-color-dodge pointer-events-none" />
+          <div className="absolute inset-0 bg-bg-banner opacity-[0.01] mix-blend-color-dodge pointer-events-none" />
 
           {/* CONTENT LAYER */}
           <div className="relative z-10 flex flex-col items-center gap-4 text-center">
             <h1 className="
-              text-white font-semibold
+              text-text-primary font-semibold
               text-[28px] 
               xl:text-[38px] 
               2xl:text-[48px]
@@ -52,11 +52,11 @@ const SectionHeader = ({ title, subtitle, bgImage }) => {
             </h1>
 
             <p className="
-              text-[#E6E6E6] 
+              text-text-secondary 
               max-w-200
               font-normal
               text-[14px] 
-              xl:text-[18px] 
+              xl:text-[16px] 
               2xl:text-[20px]
               xl:leading-normal
               leading-6
