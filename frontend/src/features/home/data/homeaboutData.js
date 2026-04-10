@@ -38,7 +38,7 @@ export const testimonials = [
   {
     image: client5,
     name: "Michael Anderson",
-    role: "Founder of Dream Homes Realty.",
+    role: "Founder of Dream Homes.",
     title: "SquareUp designed and developed a captivating web portal for showcasing our real estate listings.",
     desc: "The platform is visually appealing and easy to navigate, allowing potential buyers to find their dream homes effortlessly. SquareUp's expertise in the real estate industry is unmatched."
   },

@@ -19,9 +19,7 @@ const SEO = ({ title, description, path = "/", image = defaultImage, type = "web
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta property="og:type" content={type} />
-
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="SquareUp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

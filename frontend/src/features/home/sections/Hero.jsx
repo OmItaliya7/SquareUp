@@ -59,7 +59,7 @@ const Hero = () => {
                 "
                 >
                   A Digital Product Studio <br className="hidden md:block" />
-                  Build to Deliver
+                  Built to Deliver
                 </h1>
               </div>
 

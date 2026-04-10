@@ -15,7 +15,6 @@ const ServicesPage = () => {
       description="Discover our professional services including web development, UI/UX design, mobile app development, and custom software solutions tailored for startups and growing businesses."
       path="/services"
     />
-    <main>
       <Container>
       <SectionHeader
         title="Our Services"
@@ -50,7 +49,6 @@ const ServicesPage = () => {
         subtitle="No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product."
       />
       </Container>
-    </main>
     </>
   );
 };

@@ -14,32 +14,6 @@ export default {
         barlow: ["Barlow", "sans-serif"],
       },
 
-      colors: {
-        bg: {
-          primary: "var(--bg-primary)",
-          secondary: "var(--bg-secondary)",
-          tertiary: "var(--bg-tertiary)",
-        },
-        text: {
-          primary: "var(--text-primary)",
-          secondary: "var(--text-secondary)",
-          muted: "var(--text-muted)",
-        },
-        border: {
-          subtle: "var(--border-subtle)",
-          strong: "var(--border-strong)",
-        },
-        accent: {
-          primary: "var(--accent-primary)",
-          hover: "var(--accent-hover)",
-        },
-      },
-      
-      borderColor: {
-        subtle: "var(--border-subtle)",
-        strong: "var(--border-strong)",
-      },
-
       maxWidth: {
         container: "1920px",
       },

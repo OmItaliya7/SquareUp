@@ -25,9 +25,21 @@ const Home = () => {
 
             <Suspense fallback={<Loader />} >
                 <Services />
+            </Suspense>
+
+            <Suspense fallback={<Loader />} >
                 <WCU />
+            </Suspense>
+
+            <Suspense fallback={<Loader />} >
                 <AboutUs />
+            </Suspense>
+
+            <Suspense fallback={<Loader />} >
                 <FAQ />
+            </Suspense>
+
+            <Suspense fallback={<Loader />} >
                 <ContactUs />
             </Suspense>
         </>

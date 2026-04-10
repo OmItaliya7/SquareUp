@@ -56,7 +56,7 @@ const Contact = () => {
       description="Get in touch with us today and let us help you with any questions or inquiries you may have."
       path="/contact"
     />
-    <main>
+    
       <Container>
         <SectionHeader
           title="Contact Us"
@@ -124,7 +124,7 @@ const Contact = () => {
 
           <SectionHeader
             title="Frequently Asked Questions"
-            subtitle="Do you still have questions? Contact our Team via contact.square-upp@gmail.com"
+            subtitle="Do you still have questions? Contact our Team via contact.squareupp@gmail.com"
             bgImage={wave}
           />
 
@@ -136,7 +136,7 @@ const Contact = () => {
           <HighlightCTA />
         </div>
       </Container>
-    </main>
+    
     </>
   );
 };

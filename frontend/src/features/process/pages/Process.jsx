@@ -16,7 +16,7 @@ const Process = () => {
       description="Learn how SquareUp designs, develops, and delivers scalable digital products through a structured, client-focused process from idea to launch."
       path="/process"
     />
-    <main className="min-h-screen ">
+ 
       <Container>
         <SectionHeader 
           title="Process of Starting the Project" 
@@ -40,8 +40,7 @@ const Process = () => {
           <CTABanner title="Thank you for your Interest in SquareUp."  subtitle="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."/>
         <ContactForm />
       </Container>
-      
-    </main>
+
     </>
   );
 };

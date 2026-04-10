@@ -195,7 +195,7 @@ const ContactForm = () => {
 
             {/* ROW 4: Message Section */}
             <div className="bg-bg-form border border-border-subtle rounded-md px-6 py-4.5 md:p-10 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-5">
-              <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary">
+              <label htmlFor="message" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary">
                 Your Message
               </label>
 
@@ -203,6 +203,7 @@ const ContactForm = () => {
                 {/* First Line: The actual Textarea */}
                 <textarea
                   name="message"
+                  id="message"
                   value={formData.message}
                   onChange={handleChange}
                   onBlur={handleBlur}

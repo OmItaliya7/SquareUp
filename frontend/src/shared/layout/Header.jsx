@@ -1,4 +1,4 @@
-  import { useState } from "react"
+  import { useEffect, useState } from "react"
   import { Link, useLocation } from "react-router-dom"
   import { navLinks } from "../../shared/data/navbarData"
   import logo from "../../assets/logo/brand/logo-main.svg"
@@ -8,12 +8,25 @@
   const Header = () => {
 
     const [open, setOpen] = useState(false)
-    const { pathname } = useLocation()
+    const location = useLocation()
 
     const isActive = (path) => {
-      if (path === "/") return pathname === "/"
-      return pathname.startsWith(path) && pathname !=="/"
+      if (path === "/") return location.pathname === "/"
+      return location.pathname.startsWith(path) && location.pathname !=="/"
     }
+
+    useEffect(() =>{
+      if(!open) return;
+
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
+
+      return () => {
+        document.body.style.overflow = "";
+        document.body.style.paddingRight = "";
+      }
+    }, [open])
 
     const closeMenu = () => setOpen(false)
 
@@ -50,9 +63,7 @@
                 ))}
 
               </nav>
-
               
-
                 {/* Desktop Contact */}
                 <Link
                   to="/contact"
@@ -69,13 +80,10 @@
                   aria-controls="mobile-menu"
                   className="lg:hidden w-11.5 h-11.5"
                 >
-                  <img src={menuIcon} alt="Menu toggle" className={`transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`} />
+                  <img src={menuIcon} alt="Menu toggle" />
                 </button>
 
               </div>
-
-            
-
           </Container>
         </header>
 

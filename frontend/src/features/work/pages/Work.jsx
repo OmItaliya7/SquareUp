@@ -16,7 +16,6 @@ const Work = () => {
       description="Explore our portfolio of real-world projects including web devlopment, UI/UX design , and mobile apps. See how SquareUp delivers scalable and impactful digital solutions."
       path="/work"
     />
-    <main className="min-h-screen" id="our-work">
       <Container>
       <SectionHeader 
         title="Our Works" 
@@ -39,7 +38,6 @@ const Work = () => {
         subtitle="No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product."
       />
       </Container>
-    </main>
     </>
   );
 };

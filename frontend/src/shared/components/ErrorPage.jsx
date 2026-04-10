@@ -51,6 +51,7 @@ const ErrorPage = () => {
         <div className="flex justify-center gap-4 mt-6">
 
           <button
+            aria-label="go back button"
             onClick={goBack}
             className="px-6 py-3 transition border rounded-lg text-text-primary bg-bg-primary hover:bg-bg-secondary border-border-subtle"
           >
@@ -58,6 +59,7 @@ const ErrorPage = () => {
           </button>
 
           <button
+            aria-label="go home button"
             onClick={goHome}
             className="px-6 py-3 transition bg-red-600 rounded-lg hover:bg-red-500"
           >

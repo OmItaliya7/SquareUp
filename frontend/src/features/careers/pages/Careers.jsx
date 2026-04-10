@@ -17,7 +17,6 @@ import SEO from "../../../shared/components/SEO";
           path="/careers"
         />
       
-      <main>
         <Container>
         <SectionHeader
           title="Join Our Team at SquareUp"
@@ -87,7 +86,7 @@ import SEO from "../../../shared/components/SEO";
             <HighlightCTA />
           </div>
         </Container>
-      </main>
+      
       </>
     );
   };
