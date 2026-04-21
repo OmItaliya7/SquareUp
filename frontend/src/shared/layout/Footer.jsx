@@ -8,14 +8,9 @@ import mailIcon from "../../assets/icons/social/mail.svg";
 import phoneIcon from "../../assets/icons/social/phone.svg";
 import locationIcon from "../../assets/icons/social/location.svg";
 
-import {
-  footerLinks,
-  socialLinks,
-  contactInfo,
-} from "../../shared/data/footerData";
-
-import Container from "../../shared/ui/Container";
 import { NavLink } from "react-router-dom";
+
+import { footerLinks, socialLinks, contactInfo} from "../../shared/data/footerData";
 
 const Footer = () => {
   const contactIcons = {
@@ -31,9 +26,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border-subtle">
-      <Container>
-        <div className="flex flex-col items-center gap-10 py-7.5 xl:py-10 2xl:py-12.5 lg:flex-row lg:justify-between">
+    <footer className="w-full border-t border-border-subtle">
+      <div className="py-8 md:py-10 2xl:py-12.5 layout-shell">
+        <div className="flex flex-col gap-7.5 items-center lg:flex-row lg:justify-between pb-[30px] lg:pb-10 2xl:pb-[50px] md:border-b md:border-border-subtle">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img
@@ -60,11 +55,7 @@ const Footer = () => {
           </nav>
 
           {/* Social Capsule */}
-          <div
-            className="flex flex-col items-center gap-3.5 md:gap-4 md:flex-row 
-                            bg-bg-tertiary border border-border-subtle
-                            rounded-lg px-20 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6"
-          >
+          <div className="flex flex-col items-center gap-3.5 md:gap-4 md:flex-row bg-bg-tertiary border border-border-subtle rounded-lg px-20 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6" >
             <span className="text-base font-medium leading-normal 2xl:text-lg text-text-secondary">
               Stay Connected
             </span>
@@ -87,15 +78,13 @@ const Footer = () => {
               ))}
             </div>
           </div>
+          
         </div>
 
-        {/* Divider */}
-        <div className="md:border-b md:border-border-subtle" />
-
         {/* BOTTOM SECTION  */}
-        <div className="flex flex-col gap-8 py-8 md:py-10 2xl:py-12.5 lg:flex-row lg:justify-between sm:items-center">
+        <div className="flex flex-col gap-5 pt-[30px] lg:pt-10 2xl:pt-[50px] lg:flex-row lg:justify-between sm:items-center">
           {/* Contact Info */}
-          <div className="flex flex-col gap-5 sm:flex-row md:gap-5.5 2xl:gap-7.5">
+          <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-center md:gap-5.5 2xl:gap-7.5">
             {contactInfo.map(({ id, type, text }) => (
               <div
                 key={id}
@@ -105,9 +94,9 @@ const Footer = () => {
                   src={contactIcons[type]}
                   alt={text}
                   loading="lazy"
-                  className="size-6 md:size-5 2xl:size-6 shirnk-0"
+                  className="size-6 md:size-5 2xl:size-6 shrink-0"
                 />
-                <span className="text-lg font-normal leading-normal sm:text-sm xl:text-base 2xl:text-lg text-text-secondary">
+                <span className="text-lg xl:text-base 2xl:text-lg text-text-secondary">
                   {text}
                 </span>
               </div>
@@ -115,11 +104,11 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-base font-normal leading-normal text-center text-text-muted md:text-lg lg:text-right">
+          <p className="text-base leading-normal text-center text-text-muted md:text-lg lg:text-right">
             &copy; {new Date().getFullYear()} SquareUp. All rights reserved.
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };

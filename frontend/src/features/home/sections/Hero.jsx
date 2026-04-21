@@ -1,5 +1,4 @@
 import grid from "../../../assets/images/backgrounds/grid.webp";
-import Container from "../../../shared/ui/Container";
 import { Link } from "react-router-dom";
 
 const audience = [
@@ -11,125 +10,87 @@ const audience = [
 
 const Hero = () => {
   return (
-    <section className="w-full">
-      <Container>
+    <section className="w-full lg:border-x border-border-subtle" id="hero">
+      <div className="relative overflow-hidden pt-20 pb-[205px] text-center md:pt-26 md:pb-40 xl:pt-28 xl:pb-[274px]">
+
+        {/* Grid Overlay */}
         <div
-          className="
-          relative overflow-hidden
-          border-b md:border-x border-border-subtle
-          flex items-center justify-center text-center  
-          min-h-[560px] md:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[790px]       
-        "
-        >
-          {/* GRID OVERLAY */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-40"
-            style={{
-              backgroundImage: `url(${grid})`,
-              backgroundRepeat: "repeat",
-              backgroundSize: "60px",
-            }}
-          />
+          className="absolute inset-0 opacity-50 pointer-events-none"
+          style={{
+            backgroundImage: `url(${grid})`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "60px",
+          }}
+        />
 
-          {/* MOUNTAIN */}
-      
-          <img
-            src="/images/hero-bg.webp"
-            alt="hero background"
-            width="1200"
-            height="600"
-            className="absolute bottom-0 -translate-x-1/2 pointer-events-none left-1/2 w-225 md:w-300 xl:w-350 opacity-80 mix-blend-screen"
-            decoding="async"
-            loading="eager"
-            fetchPriority="high"
-          />
+        {/* Mountain Background */}
+        <img
+          src="/images/hero-bg.webp"
+          alt="hero background"
+          width="1400"
+          height="700"
+          className="pointer-events-none absolute bottom-0 left-1/2 w-[900px] -translate-x-1/2 opacity-70 mix-blend-screen sm:w-[1100px] md:w-[1300px] xl:w-[1500px] 2xl:w-[1700px]"
+          decoding="async"
+          loading="eager"
+          fetchPriority="high"
+        />
 
-          {/* CONTENT */}
-          <div className="relative z-10">
-            <div className="flex flex-col gap-7.5 2xl:gap-10">
-              {/* TITLE */}
-              <div>
-                <h1
-                  className="
-                  text-text-primary font-semibold 
-                  text-[34px] sm:text-[44px] md:text-[56px]
-                  lg:text-[64px] xl:text-[72px] 3xl:text-[80px]
-                  leading-[1.2]
-                  md:leading-none
-                "
-                >
-                  A Digital Product Studio <br className="hidden md:block" />
-                  Built to Deliver
-                </h1>
-              </div>
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex max-w-[1280px] flex-col items-center gap-10 2xl:gap-[50px]">
 
-              <div
-                className="
-                bg-[#24242433] backdrop-blur-md z-10
-                border border-border-subtle
-                rounded-md
-                py-4.5
-                px-5 xl:px-7.5 
-                2xl:px-10 2xl:py-6
-                inline-flex mx-auto
-              "
-              >
-                {/* MOBILE -> paragraph */}
-                <p className="text-base font-normal leading-normal text-text-muted md:hidden">
-                  For startups, enterprise leaders, media & publishers, and
-                  social good.
-                </p>
+          {/* Title */}
+          <h1 className="max-w-[900px] text-[34px] font-semibold leading-[1.2] sm:text-[44px] md:text-[56px] md:leading-none lg:text-[64px] xl:text-[72px] 3xl:text-[80px]">
+            A Digital Product Studio that will Work
+          </h1>
 
-                {/* DESKTOP -> pills */}
-                <div className="hidden gap-3 md:flex ">
-                  <span className="text-text-muted text-lg 2xl:text-[22px] flex items-center justify-center">
-                    For
+          {/* Capsule */}
+          <div className="rounded-xl border border-border-subtle bg-[#24242433] px-4 py-4 backdrop-blur-md sm:px-5 md:px-7 xl:px-8 2xl:px-10 2xl:py-5">
+            
+            {/* Mobile */}
+            <p className="text-base text-text-muted md:hidden">
+              For startups, enterprise leaders, media & publishers, and social good.
+            </p>
+
+            {/* Desktop */}
+            <div className="hidden items-center gap-1.5 md:flex">
+              <span className="text-base text-text-muted xl:text-lg 2xl:text-[22px]">
+                For
+              </span>
+
+              {audience.map((item, index) => (
+                <div key={item} className="flex items-center gap-1.5">
+                  <span className="rounded-md bg-bg-secondary px-2.5 py-2 text-sm text-text-primary xl:text-lg 2xl:px-3.5 2xl:py-3 2xl:text-[22px]">
+                    {item}
                   </span>
 
-                  {audience.map((item, i) => (
-                    <div key={i} className="flex items-center gap-1.5">
-
-                      {i !== 0 && (
-                        <span className="text-text-muted text-sm xl:text-lg 2xl:text-[22px]">
-                          {i === audience.length - 1 ? "and" : ","}
-                        </span>
-                      )}
-
-                      <span className="text-text-primary text-sm xl:text-lg 2xl:text-[22px] bg-bg-secondary  rounded-md px-2.5 py-2 2xl:px-3.5 2xl:py-3">
-                        {item}
-                      </span>
-
-                    </div>
-                  ))}
+                  {index !== audience.length - 1 && (
+                    <span className="text-base text-text-muted xl:text-lg 2xl:text-[22px]">
+                      {index === audience.length - 2 ? "and" : ","}
+                    </span>
+                  )}
                 </div>
-              </div>
-            </div>
-
-            {/* BUTTONS */}
-            <div
-              className="
-              mt-10 2xl:mt-12.5
-              flex 
-              gap-3.25
-              justify-center"
-            >
-              <Link
-                to="/work"
-                className="bg-[#24242433] backdrop-blur-md border border-border-strong px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-text-primary text-sm rounded-lg"
-              >
-                Our Works
-              </Link>
-
-              <Link
-                to="/contact"
-                className="bg-accent-primary text-text-tertiary font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg"
-              >
-                Contact Us
-              </Link>
+              ))}
             </div>
           </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3.25">
+            <Link
+              to="/work"
+              className="bg-[#24242433] backdrop-blur-md border border-border-strong px-5 py-3.5 2xl:px-7 2xl:py-4.5 font-medium text-text-primary text-sm rounded-lg"
+            >
+              Our Works
+            </Link>
+
+            <Link
+              to="/contact"
+              className="bg-accent-primary text-text-tertiary font-medium text-sm px-5 py-3.5 2xl:px-7 2xl:py-4.5 rounded-lg"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 };

@@ -1,10 +1,9 @@
-  import Container from "../../../shared/ui/Container";
-  import SectionHeader from "../../../shared/components/SectionHeader";
-  import IntroBlock from "../../../shared/components/IntroBlock";
-  import HighlightCTA from "../../../shared/components/HighlightCTA";
-  import JobGrid from "../components/JobGrid";
-  import { whyWorkData, jobCategories } from "../data/careersData";
- import wave from "../../../assets/images/backgrounds/faq-wave.webp";
+import SectionHeader from "../../../shared/components/SectionHeader";
+import IntroBlock from "../../../shared/components/IntroBlock";
+import HighlightCTA from "../../../shared/components/HighlightCTA";
+import JobGrid from "../components/JobGrid";
+import { whyWorkData, jobCategories } from "../data/careersData";
+import wave from "../../../assets/images/backgrounds/faq-wave.webp";
 
 import SEO from "../../../shared/components/SEO";
 
@@ -17,16 +16,15 @@ import SEO from "../../../shared/components/SEO";
           path="/careers"
         />
       
-        <Container>
+        <section className="w-full border-x border-border-subtle" id="careers">
+          
         <SectionHeader
           title="Join Our Team at SquareUp"
           subtitle="Unlock your potential and join our team of innovators and problem solvers."
           bgImage={wave}
         />
-
         
-          <div className="flex flex-col -mt-px">
-            {/* 1. INTRO BLOCK (Reusable) */}
+            {/* 1. INTRO BLOCK */}
             <IntroBlock
               title="Welcome to SquareUp, where talent meets opportunity!"
               description="At SquareUp, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you're ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us."
@@ -34,32 +32,28 @@ import SEO from "../../../shared/components/SEO";
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="grid grid-cols-1 border-b divide-y border-x border-border-subtle lg:grid-cols-2 divide-border-subtle lg:divide-y-0 lg:divide-x">
-              {whyWorkData.map((item, idx) => (
+            <div className="grid grid-cols-1 border-b divide-x divide-y lg:grid-cols-2 divide-border-subtle border-border-subtle">
+              {whyWorkData.map((item) => (
                 <div
-                  key={idx}
-                  className={`px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 flex flex-col  `}
+                  key={item.id}
+                  className="flex flex-col gap-5 px-6 py-10 xl:gap-7.5 xl:px-10 xl:py-20 2xl:gap-12.5 2xl:px-12.5 2xl:py-25"
                 >
                   {/* 1. Title Container with Border  */}
-                  <div className="pb-4 border-b border-border-subtle md:pb-6 lg:pb-8">
-                    <h3 className="text-accent-secondary text-[26px] xl:text-[32px] 2xl:text-[40px] font-medium leading-normal">
+                    <h3 className="border-b border-border-subtle pb-4 text-[26px] font-medium text-accent-secondary md:pb-6 lg:pb-8 xl:text-[32px] 2xl:text-[40px]">
                       {item.title}
                     </h3>
-                  </div>
 
                   {/* 2. Description Container*/}
-                  <div className="pt-4 md:pt-6 lg:pt-8">
-                    <p className="text-sm font-normal leading-normal text-text-muted xl:text-base 2xl:text-lg">
+                    <p className="text-sm leading-normal text-text-muted xl:text-base 2xl:text-lg">
                       {item.description}
                     </p>
-                  </div>
                 </div>
               ))}
             </div>
          
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
-            <div className="py-10 pl-4 border-b border-x border-border-subtle xl:pl-10 xl:pb-10 xl:pt-20">
-              <div className="flex flex-col gap-1.5 xl:gap-2.5 2xl:gap-3.5">
+            <div className="py-10 pl-4 border-b xl:pl-10 xl:pb-10 xl:pt-20 border-border-subtle">
+              <div className="flex flex-col gap-[6px] xl:gap-[10px] 2xl:gap-[14px]">
                 <h2 className="text-text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold">
                   Current Openings
                 </h2>
@@ -84,8 +78,7 @@ import SEO from "../../../shared/components/SEO";
 
             {/* 5. CTA HIGHLIGHT (Reusable) */}
             <HighlightCTA />
-          </div>
-        </Container>
+        </section>
       
       </>
     );

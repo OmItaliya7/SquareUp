@@ -1,25 +1,16 @@
 import { memo } from "react";
 import { FiPlus, FiX } from "react-icons/fi";
 
-const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
+const FAQItem = ({ item, isOpen, onToggle }) => {
   return (
-    <div className="w-full">
+    <div className="w-full border-b border-border-subtle">
       <button
         onClick={() => onToggle(item.id)}
         aria-expanded={isOpen}
         aria-controls={`faq-${item.id}`}
-        className="w-full text-left"
+        className="w-full p-6 text-left md:p-8 xl:px-10 xl:py-6"
       >
-        <div
-          className={`
-            p-6 md:p-8 xl:px-10 xl:py-6
-            transition-all duration-300
-            hover:bg-bg-tertiary/40
-            ${showBorder ? "border-b border-border-subtle" : ""}
-          `}
-        >
           <div className="flex items-start gap-5 lg:gap-8">
-            
             {/* Number */}
             <div className={`
               shrink-0 size-13 xl:size-15.5 rounded-xl 
@@ -44,7 +35,7 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                   </h3>
 
                   <div
-                    className={`shrink-0 w-6.5 h-6.5 flex items-center justify-center mt-0.5 ${
+                    className={`shrink-0 size-6.5 flex items-center justify-center mt-0.5 ${
                       isOpen ? "text-[#C5FF66]" : "text-text-primary"
                     }`}
                   >
@@ -60,13 +51,12 @@ const FAQItem = ({ item, isOpen, onToggle, showBorder }) => {
                     ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
                   `}
                 >
-                  <p className="text-sm font-normal leading-normal text-text-secondary lg:text-base 2xl:text-lg">
+                  <p className="text-sm font-normal text-text-secondary lg:text-base 2xl:text-lg">
                     {item.answer}
                   </p>
                 </div>
             </div>
           </div>
-        </div>
       </button>
     </div>
   );

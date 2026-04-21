@@ -20,28 +20,31 @@ const Home = () => {
                 description="SquareUp is a modern digital product studio offering web development, UI/UX design, and scalable software solutions for startups and growing businesses."
                 path="/" 
             />
-            <Hero />
-            <LogoStrip />
+            
+                <Hero />
+                <section className="w-full border-x border-border-subtle" id="Home page">
+                <LogoStrip />
 
-            <Suspense fallback={<Loader />} >
-                <Services />
-            </Suspense>
+                <Suspense fallback={<Loader />} >
+                    <Services />
+                </Suspense>
 
-            <Suspense fallback={<Loader />} >
-                <WCU />
-            </Suspense>
+                <Suspense fallback={<Loader />} >
+                    <WCU />
+                </Suspense>
 
-            <Suspense fallback={<Loader />} >
-                <AboutUs />
-            </Suspense>
+                <Suspense fallback={<Loader />} >
+                    <AboutUs />
+                </Suspense>
 
-            <Suspense fallback={<Loader />} >
-                <FAQ />
-            </Suspense>
+                <Suspense fallback={<Loader />} >
+                    <FAQ />
+                </Suspense>
 
-            <Suspense fallback={<Loader />} >
-                <ContactUs />
-            </Suspense>
+                <Suspense fallback={<Loader />} >
+                    <ContactUs />
+                </Suspense>
+            </section>
         </>
     )
 }

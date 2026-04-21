@@ -5,7 +5,7 @@ const JobGrid = ({ categoryTitle, jobs }) => {
   // If there are no jobs, display an message 
   if (!jobs || jobs.length === 0) {
     return (
-      <div className="py-16 text-center border-b border-x border-border-subtle">
+      <div className="py-16 text-center">
         <h3 className="text-lg font-medium text-text-primary">
           No Open Positions
         </h3>
@@ -18,17 +18,15 @@ const JobGrid = ({ categoryTitle, jobs }) => {
 
   
   return (
-  <div className="border-b border-x border-border-subtle">
+  <div className="border-b border-border-subtle">
     
     {/* CATEGORY TITLE BAR */}
-    <div className="p-10 2xl:p-12.5 border-b border-border-subtle">
-      <h3 className="text-text-muted text-xl xl:text-[22px] 2xl:text-[28px] font-medium text-center md:text-left leading-none">
+      <h3 className="border-b border-border-subtle p-10 text-center text-xl font-medium text-text-muted md:text-left xl:text-[22px] 2xl:p-12.5 2xl:text-[28px]">
         {categoryTitle}
       </h3>
-    </div>
 
     {/* JOB CARDS GRID */}
-    <div className="grid grid-c-b ols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 divide-y md:divide-x md:grid-cols-2 lg:grid-cols-3 divide-border-subtle">
       {jobs.map((job) => (
         <JobCard key={job.id} {...job} />
       ))}
