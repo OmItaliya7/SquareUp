@@ -3,12 +3,11 @@ import grid from "../../assets/images/backgrounds/grid.webp";
 
 const SectionHeader = ({ title, subtitle, bgImage, className = "" }) => {
   return (
-        <div className=" relative 
+        <div className="relative border-b border-subtle
           px-4 py-12.5
           md:px-25 md:py-20
           xl:px-62.5 xl:py-25
-          2xl:px-75 2xl:py-30
-          border-b border-border-subtle"
+          2xl:px-75 2xl:py-30"
         >
           {/* 1. BACKGROUND WAVE */}
           {bgImage && (
@@ -34,11 +33,11 @@ const SectionHeader = ({ title, subtitle, bgImage, className = "" }) => {
 
           {/* CONTENT LAYER */}
           <div className="relative z-10 flex flex-col items-center gap-4 text-center">
-            <h1 className="text-text-primary font-semibold text-[28px] xl:text-[38px] 2xl:text-[48px] leading-[1.2]">
+            <h1 className="text-[28px] font-semibold leading-[1.2] text-primary xl:text-[38px] 2xl:text-[48px]">
               {title}
             </h1>
 
-            <p className="text-text-secondary max-w-220 text-[14px] xl:text-[16px] 2xl:text-[18px] tracking-[-.6%] leading-6">
+            <p className="max-w-250 text-[14px] leading-6 tracking-[-.6%] text-secondary xl:text-[16px] 2xl:text-[18px]">
               {subtitle}
             </p>
           </div>

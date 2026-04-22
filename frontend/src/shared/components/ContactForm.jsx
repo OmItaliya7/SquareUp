@@ -27,9 +27,9 @@
 //   const pct = ((formData.budget - MIN_BUDGET) / (MAX_BUDGET - MIN_BUDGET)) * 100;
 
 //   return (
-//     <section id="contact-form" className="w-full border-t border-border-subtle">
+//     <section id="contact-form" className="w-full border-t border-subtle">
 //       <div className="px-6 md:px-16 xl:px-54 2xl:px-67">
-//         <div className="p-6 px-0 xl:border-x border-border-subtle md:p-10 xl:p-15 2xl:p-20">
+//         <div className="p-6 px-0 xl:border-x border-subtle md:p-10 xl:p-15 2xl:p-20">
 //           <form
 //             onSubmit={handleSubmit}
 //             className="flex flex-col relative mx-auto gap-7.5 2xl:gap-10"
@@ -47,10 +47,10 @@
 //                 />
 //               </div>
 //               {/* Name */}
-//               <div className="bg-bg-form border border-border-subtle rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
+//               <div className="bg-bg-form border border-subtle rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
 //                 <label
 //                   htmlFor="name"
-//                   className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary"
+//                   className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-primary"
 //                 >
 //                   Full Name
 //                 </label>
@@ -66,7 +66,7 @@
 //                   onChange={handleChange}
 //                   onBlur={handleBlur}
 //                   placeholder="Type here"
-//                   className="w-full bg-transparent border-b border-border-strong pb-1.5 text-text-muted placeholder:text-text-placeholder focus:outline-none  focus:border-accent-primary transition-colors font-normal text-base 2xl:text-lg leading-normal"
+//                   className="w-full bg-transparent border-b border-strong pb-1.5 text-muted placeholder:text-placeholder focus:outline-none  focus:border-accent-primary transition-colors font-normal text-base 2xl:text-lg leading-normal"
 //                 />
 //                 {errors.name && (
 //                   <span id="name-error" role="alert" className="mt-1 text-sm text-red-500">
@@ -76,10 +76,10 @@
 //               </div>
 
 //               {/* Email */}
-//               <div className="bg-bg-form border border-border-subtle rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
+//               <div className="bg-bg-form border border-subtle rounded-md px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-3.5 xl:gap-4 2xl:gap-5">
 //                 <label
 //                   htmlFor="email"
-//                   className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary"
+//                   className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-primary"
 //                 >
 //                   Email
 //                 </label>
@@ -95,7 +95,7 @@
 //                   onChange={handleChange}
 //                   onBlur={handleBlur}
 //                   placeholder="Type here"
-//                   className=" w-full bg-transparent border-b border-border-strong pb-1.5 text-text-muted placeholder:text-text-placeholder focus:outline-none focus:border-accent-primary transition-colors font-normal text-base 2xl:text-lg leading-normal"
+//                   className=" w-full bg-transparent border-b border-strong pb-1.5 text-muted placeholder:text-placeholder focus:outline-none focus:border-accent-primary transition-colors font-normal text-base 2xl:text-lg leading-normal"
 //                 />
 //                 {errors.email && (
 //                   <span id="email-error" role="alert" className="mt-1 text-sm text-red-500">
@@ -106,8 +106,8 @@
 //             </div>
 
 //             {/* ROW 2 */}
-//             <div aria-describedby="services-error" className="bg-bg-form border border-border-subtle rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
-//               <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary">
+//             <div aria-describedby="services-error" className="bg-bg-form border border-subtle rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
+//               <label className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-primary">
 //                 Why are you contacting us?
 //               </label>
 //               <div role="group" aria-describedby="services-error" className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -122,14 +122,14 @@
 //                         name="services"
 //                         checked={formData.services.includes(item)}
 //                         onChange={() => handleCheckbox(item)}
-//                         className="transition-all border rounded-sm appearance-none peer size-7 border-border-strong bg-bg-secondary checked:bg-bg-secondary"
+//                         className="transition-all border rounded-sm appearance-none peer size-7 border-strong bg-bg-secondary checked:bg-bg-secondary"
 //                       />
 
 //                       <span className="absolute mb-1 transition-opacity opacity-0 pointer-events-none text-accent-primary text-md font-extralight peer-checked:opacity-100">
 //                         ✓
 //                       </span>
 //                     </div>
-//                     <span className="text-[#FDFFFA] text-base 2xl:text-lg font-normal leading-normal group-hover:text-text-primary transition-colors">
+//                     <span className="text-[#FDFFFA] text-base 2xl:text-lg font-normal leading-normal group-hover:text-primary transition-colors">
 //                       {item}
 //                     </span>
 //                   </label>
@@ -143,12 +143,12 @@
 //             </div>
 
 //             {/* ROW 3: Budget Range Slider */}
-//             <div className="flex flex-col gap-7.5 2xl:gap-10  bg-bg-form border border-border-subtle rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
+//             <div className="flex flex-col gap-7.5 2xl:gap-10  bg-bg-form border border-subtle rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
 //               <div className="flex flex-col gap-1.5 xl:gap-3.5">
-//                 <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary">
+//                 <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-primary">
 //                   Your Budget
 //                 </label>
-//                 <p className="text-text-secondary text-sm xl:text-base 2xl:text-lg leading-normal tracking-[.6%]">
+//                 <p className="text-secondary text-sm xl:text-base 2xl:text-lg leading-normal tracking-[.6%]">
 //                   Slide to indicate your budget range
 //                 </p>
 //               </div>
@@ -168,12 +168,12 @@
 //                     background: `linear-gradient(to right, var(--color-accent-primary) ${pct}%, var(--color-bg-secondary) ${pct}%)`,
 //                   }}
 //                 />
-//                 <div className="flex justify-between font-medium text-text-secondary ">
+//                 <div className="flex justify-between font-medium text-secondary ">
 //                   <span className="text-sm text-white 2xl:text-base">$0</span>
 //                   <span className="text-sm text-accent-primary 2xl:text-base">
 //                     ${formData.budget}
 //                   </span>
-//                   <span className="text-sm text-text-primary 2xl:text-base">
+//                   <span className="text-sm text-primary 2xl:text-base">
 //                     $10,000
 //                   </span>
 //                 </div>
@@ -184,7 +184,7 @@
 //                     checked={isFlexible}
 //                     onChange={handleFlexibleToggle}
 //                   />
-//                   <span className="text-sm text-text-secondary">
+//                   <span className="text-sm text-secondary">
 //                     Not sure / Flexible
 //                   </span>
 //                 </label>
@@ -192,8 +192,8 @@
 //             </div>
 
 //             {/* ROW 4: Message Section */}
-//             <div className="bg-bg-form border border-border-subtle rounded-md px-6 py-4.5 md:p-10 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-5">
-//               <label htmlFor="message" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-text-primary">
+//             <div className="bg-bg-form border border-subtle rounded-md px-6 py-4.5 md:p-10 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 flex flex-col gap-5">
+//               <label htmlFor="message" className="text-base xl:text-lg 2xl:text-[22px] font-medium leading-normal text-primary">
 //                 Your Message
 //               </label>
 
@@ -211,7 +211,7 @@
 //                   aria-invalid={!!errors.message}
 //                   placeholder="Type here"
 //                   rows={1}
-//                   className="w-full pb-4 leading-normal transition-colors bg-transparent border-b resize-none text-text-muted focus:outline-none placeholder:text-text-placeholder border-border-subtle focus:border-accent-primary"
+//                   className="w-full pb-4 leading-normal transition-colors bg-transparent border-b resize-none text-muted focus:outline-none placeholder:text-placeholder border-subtle focus:border-accent-primary"
 //                 />
 //                 {errors.message && (
 //                   <span id="message-error" role="alert" className="mt-1 text-sm text-red-500">
@@ -220,7 +220,7 @@
 //                 )}
 
 //                 {/* Second Line: The decorative empty line  */}
-//                 <div className="w-full pt-10 border-b border-border-subtle"></div>
+//                 <div className="w-full pt-10 border-b border-subtle"></div>
 //               </div>
 //             </div>
 
@@ -296,7 +296,7 @@ const ContactForm = () => {
 
   return (
     <section className="px-6 py-6 md:px-16 xl:py-0 xl:px-54 2xl:px-67" id="contact-form">
-        <div className="xl:border-x border-border-subtle xl:p-15 2xl:p-20">
+        <div className="xl:border-x border-subtle xl:p-15 2xl:p-20">
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-7.5 2xl:gap-10">
 
@@ -325,8 +325,8 @@ const ContactForm = () => {
             </div>
 
             {/* ROW 2 */}
-            <div aria-describedby="services-error" className="bg-bg-form border border-border-subtle rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
-              <label className="text-base xl:text-lg 2xl:text-[22px] font-medium text-text-primary">
+            <div aria-describedby="services-error" className="bg-bg-form border border-subtle rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
+              <label className="text-base xl:text-lg 2xl:text-[22px] font-medium text-primary">
                 Why are you contacting us?
               </label>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -341,7 +341,7 @@ const ContactForm = () => {
                         name="services"
                         checked={formData.services.includes(item)}
                         onChange={() => handleCheckbox(item)}
-                        className="transition-all border rounded-sm appearance-none peer size-7 border-border-strong bg-bg-secondary"
+                        className="transition-all border rounded-sm appearance-none peer size-7 border-strong bg-bg-secondary"
                       />
 
                       <span className="absolute mb-1 transition-opacity opacity-0 text-accent-primary text-md peer-checked:opacity-100">
@@ -362,12 +362,12 @@ const ContactForm = () => {
             </div>
 
               {/*  ROW 3: Budget Range Slider */}
-             <div className="flex flex-col gap-7.5 2xl:gap-10 bg-bg-form border border-border-subtle rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
+             <div className="flex flex-col gap-7.5 2xl:gap-10 bg-bg-form border border-subtle rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
                <div>
-                 <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium text-text-primary">
+                 <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium text-primary">
                    Your Budget
                  </label>
-                 <p className="text-text-secondary text-sm xl:text-base 2xl:text-lg tracking-[-.6%] pt-[6px] xl:pt-[14px]">
+                 <p className="text-secondary text-sm xl:text-base 2xl:text-lg tracking-[-.6%] pt-[6px] xl:pt-[14px]">
                    Slide to indicate your budget range
                  </p>
                </div>
@@ -392,7 +392,7 @@ const ContactForm = () => {
                    <span className="text-sm text-accent-primary 2xl:text-base">
                      ${formData.budget}
                    </span>
-                   <span className="text-sm text-text-primary 2xl:text-base">
+                   <span className="text-sm text-primary 2xl:text-base">
                      $10,000
                    </span>
                  </div>
@@ -403,7 +403,7 @@ const ContactForm = () => {
                      checked={isFlexible}
                      onChange={handleFlexibleToggle}
                    />
-                   <span className="text-sm text-text-secondary">
+                   <span className="text-sm text-secondary">
                      Not sure / Flexible
                    </span>
                  </label>
@@ -426,7 +426,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-accent-primary text-[#1A1A1A] w-full md:w-auto px-9 py-3.5 2xl:px-11 2xl:py-4.5 rounded-lg font-medium hover:brightness-110 disabled:opacity-60"
+                className="bg-accent-primary text-[#1A1A1A] w-full md:w-auto px-9 py-3.5 2xl:px-11 2xl:py-4.5 rounded-lg font-medium hover:brightness-110 disabled:opacity-60 text-sm 2xl:text-lg"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>

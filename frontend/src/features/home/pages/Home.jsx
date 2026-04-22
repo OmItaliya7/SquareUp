@@ -22,7 +22,7 @@ const Home = () => {
             />
             
                 <Hero />
-                <section className="w-full border-x border-border-subtle" id="Home page">
+                <section className="w-full border-x border-subtle" id="Home page">
                 <LogoStrip />
 
                 <Suspense fallback={<Loader />} >

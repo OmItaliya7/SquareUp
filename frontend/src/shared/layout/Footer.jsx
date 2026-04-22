@@ -26,23 +26,22 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full border-t border-border-subtle">
-      <div className="py-8 md:py-10 2xl:py-12.5 layout-shell">
-        <div className="flex flex-col gap-7.5 items-center lg:flex-row lg:justify-between pb-[30px] lg:pb-10 2xl:pb-[50px] md:border-b md:border-border-subtle">
+    <footer className="w-full border-t border-subtle py-7.5 md:py-10 2xl:py-12.5 layout-shell">
+        <div className="flex flex-col items-center gap-7.5 pb-[30px] lg:border-b border-subtle lg:flex-row lg:justify-between lg:pb-10 2xl:pb-[50px]">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img
               src={logo}
-              alt="SquareUp"
+              alt="SquareUp-Logo"
               className="size-12.5 xl:size-10 2xl:size-15"
             />
-            <span className="text-lg font-semibold text-text-primary xl:text-md">
+            <span className="text-lg font-semibold text-primary xl:text-md">
               SquareUp
             </span>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-x-5 2xl:gap-x-7.5 gap-y-5 text-text-secondary">
+          <nav className="flex flex-wrap justify-center font-medium gap-x-5 gap-y-5 text-secondary 2xl:gap-x-7.5 2xl:text-lg">
             {footerLinks.map((item) => (
               <NavLink
                 key={item.path}
@@ -55,9 +54,9 @@ const Footer = () => {
           </nav>
 
           {/* Social Capsule */}
-          <div className="flex flex-col items-center gap-3.5 md:gap-4 md:flex-row bg-bg-tertiary border border-border-subtle rounded-lg px-20 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6" >
-            <span className="text-base font-medium leading-normal 2xl:text-lg text-text-secondary">
-              Stay Connected
+          <div className="flex flex-col items-center gap-3.5 rounded-lg 2xl:rounded-xl border border-subtle bg-bg-tertiary px-22 py-4 md:flex-row md:gap-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6">
+            <span className="text-base font-medium leading-normal 2xl:text-lg text-secondary">
+              Stay Connected  
             </span>
 
             <div className="flex gap-2.5 2xl:gap-3.5 ">
@@ -82,13 +81,13 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM SECTION  */}
-        <div className="flex flex-col gap-5 pt-[30px] lg:pt-10 2xl:pt-[50px] lg:flex-row lg:justify-between sm:items-center">
+        <div className="flex flex-col gap-5 pt-[30px] sm:items-center lg:flex-row lg:justify-between lg:pt-10 2xl:pt-[50px]">
           {/* Contact Info */}
           <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-center md:gap-5.5 2xl:gap-7.5">
             {contactInfo.map(({ id, type, text }) => (
               <div
                 key={id}
-                className="flex items-center justify-center gap-2.5 md:gap-1.5 2xl:gap-2.5 border-b border-border-subtle pb-5 md:pb-3 2xl:pb-4"
+                className="flex items-center justify-center gap-2.5 border-b border-subtle pb-5 md:gap-1.5 md:pb-3 2xl:gap-2.5 2xl:pb-4"
               >
                 <img
                   src={contactIcons[type]}
@@ -96,7 +95,7 @@ const Footer = () => {
                   loading="lazy"
                   className="size-6 md:size-5 2xl:size-6 shrink-0"
                 />
-                <span className="text-lg xl:text-base 2xl:text-lg text-text-secondary">
+                <span className="text-lg xl:text-base 2xl:text-lg text-secondary">
                   {text}
                 </span>
               </div>
@@ -104,11 +103,10 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-base leading-normal text-center text-text-muted md:text-lg lg:text-right">
+          <p className="text-base leading-normal text-center text-muted md:text-sm 2xl:text-lg lg:text-right">
             &copy; {new Date().getFullYear()} SquareUp. All rights reserved.
           </p>
         </div>
-      </div>
     </footer>
   );
 };

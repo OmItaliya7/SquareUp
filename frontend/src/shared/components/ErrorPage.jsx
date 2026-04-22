@@ -32,7 +32,7 @@ const ErrorPage = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-text-primary bg-linear-to-b from-black to-gray-900">
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-primary bg-linear-to-b from-black to-gray-900">
 
       <div className="max-w-xl space-y-6">
 
@@ -44,7 +44,7 @@ const ErrorPage = () => {
           {title}
         </h2>
 
-        <p className="text-text-muted">
+        <p className="text-muted">
           {message}
         </p>
 
@@ -53,7 +53,7 @@ const ErrorPage = () => {
           <button
             aria-label="go back button"
             onClick={goBack}
-            className="px-6 py-3 transition border rounded-lg text-text-primary bg-bg-primary hover:bg-bg-secondary border-border-subtle"
+            className="px-6 py-3 transition border rounded-lg text-primary bg-bg-primary hover:bg-bg-secondary border-subtle"
           >
             Go Back
           </button>

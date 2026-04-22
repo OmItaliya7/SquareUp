@@ -4,14 +4,14 @@ const LogoStrip = () => {
   return (
     <section className="relative w-full" id="trusted-companies">
       {/* FLOATING BADGE */}
-      <div className="absolute z-20 -translate-x-1/2 left-1/2 -top-6">
-        <p className="bg-bg-primary border border-border-subtle rounded-full px-6 py-3 md:px-8 md:py-4 2xl:px-8.5 2xl:py-5 text-text-primary text-sm md:text-base 2xl:text-lg font-medium whitespace-nowrap " >
+      <div className="absolute left-1/2 top-[-24px] z-20 -translate-x-1/2">
+        <p className="whitespace-nowrap rounded-full border border-subtle bg-bg-primary px-6 py-3.5 text-sm font-medium text-[#FDFFFA] md:px-6 2xl:px-8.5 2xl:py-5 2xl:text-lg">
           Trusted By 250+ Companies
         </p>
       </div>
         {/* OUTER BOX */}
 
-          <div className="grid grid-cols-2 md:grid-cols-6 md:gap-5 md:py-7.5 2xl:py-10 border-y border-border-subtle divide-x divide-y md:divide-x-0 md:divide-y-0 divide-border-subtle">
+          <div className="grid grid-cols-2 divide-x divide-y divide-subtle border-y border-subtle md:grid-cols-6 md:divide-x-0 md:divide-y-0 md:gap-5 md:py-7.5 2xl:py-10">
             {logos.map((logo, i) => (
               <div
                 key={i}
@@ -21,7 +21,7 @@ const LogoStrip = () => {
                     alt={logo.alt}
                     loading="lazy"
                     decoding="async"
-                    className="object-contain h-8 xl:h-10 aspect-3/1" />
+                    className="object-contain h-8 aspect-[3/1] xl:h-10" />
               </div>
             ))}
           </div>

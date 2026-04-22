@@ -3,7 +3,7 @@ import { FiPlus, FiX } from "react-icons/fi";
 
 const FAQItem = ({ item, isOpen, onToggle }) => {
   return (
-    <div className="w-full border-b border-border-subtle">
+    <div className="w-full border-b border-subtle">
       <button
         onClick={() => onToggle(item.id)}
         aria-expanded={isOpen}
@@ -16,7 +16,7 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
               shrink-0 size-13 xl:size-15.5 rounded-xl 
               bg-linear-to-b from-[#242424] to-[#242424]/0
               flex items-center justify-center font-bold text-lg
-              ${isOpen ? "text-[#C5FF66]" : "text-text-primary"}
+              ${isOpen ? "text-[#C5FF66]" : "text-primary"}
             `}>
               {item.id}
             </div>
@@ -28,7 +28,7 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
                     className={`
                       text-sm md:text-base lg:text-lg font-medium
                       transition-colors duration-300 leading-tight
-                      ${isOpen ? "text-[#C5FF66]" : "text-text-primary"}
+                      ${isOpen ? "text-[#C5FF66]" : "text-primary"}
                     `}
                   >
                     {item.question}
@@ -36,7 +36,7 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
 
                   <div
                     className={`shrink-0 size-6.5 flex items-center justify-center mt-0.5 ${
-                      isOpen ? "text-[#C5FF66]" : "text-text-primary"
+                      isOpen ? "text-[#C5FF66]" : "text-primary"
                     }`}
                   >
                     {isOpen ? <FiX size={26} /> : <FiPlus size={26} />}
@@ -51,7 +51,7 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
                     ${isOpen ? "max-h-50 opacity-100 mt-4" : "max-h-0 opacity-0"}
                   `}
                 >
-                  <p className="text-sm font-normal text-text-secondary lg:text-base 2xl:text-lg">
+                  <p className="text-sm font-normal text-secondary lg:text-base 2xl:text-lg">
                     {item.answer}
                   </p>
                 </div>

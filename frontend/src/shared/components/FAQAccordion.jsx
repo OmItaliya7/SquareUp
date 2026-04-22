@@ -15,11 +15,11 @@ const FAQAccordion = () => {
   const rightCol = faqData.slice(mid);
 
   if(!faqData || faqData.length === 0) {
-    return <h3 className="py-8 text-lg text-center text-text-primary">No FAQs available.</h3>;
+    return <h3 className="py-8 text-lg text-center text-primary">No FAQs available.</h3>;
   }
 
   return (
-    <div className="grid divide-x border-border-subtle lg:grid-cols-2 divide-border-subtle">
+    <div className="grid divide-x border-subtle lg:grid-cols-2 divide-subtle">
       
       {/* LEFT */}
       <div>
@@ -77,7 +77,7 @@ export default FAQAccordion;
 
 //   if (!faqData || faqData.length === 0) {
 //     return (
-//       <h3 className="py-8 text-lg text-center text-text-primary">
+//       <h3 className="py-8 text-lg text-center text-primary">
 //         No FAQs available.
 //       </h3>
 //     );
@@ -86,9 +86,9 @@ export default FAQAccordion;
 //   return (
 //     <>
 //        {/* Two Column Grid with Top Border */}
-//       <div className="grid gap-0 border-t lg:grid-cols-2 lg:gap-8 border-border-subtle">
+//       <div className="grid gap-0 border-t lg:grid-cols-2 lg:gap-8 border-subtle">
 //         {/* LEFT COLUMN */}
-//         <div className="border-b lg:border-b-0 lg:border-r lg:border-border-subtle">
+//         <div className="border-b lg:border-b-0 lg:border-r lg:border-subtle">
 //           {leftCol.map((item) => (
 //             <FAQItem
 //               key={item.id}

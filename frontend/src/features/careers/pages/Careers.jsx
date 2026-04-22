@@ -16,7 +16,7 @@ import SEO from "../../../shared/components/SEO";
           path="/careers"
         />
       
-        <section className="w-full border-x border-border-subtle" id="careers">
+        <section className="w-full border-x border-subtle" id="careers">
           
         <SectionHeader
           title="Join Our Team at SquareUp"
@@ -32,19 +32,19 @@ import SEO from "../../../shared/components/SEO";
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="grid grid-cols-1 border-b divide-x divide-y lg:grid-cols-2 divide-border-subtle border-border-subtle">
+            <div className="grid grid-cols-1 border-b divide-y border-subtle divide-subtle lg:grid-cols-2 lg:divide-x">
               {whyWorkData.map((item) => (
                 <div
                   key={item.id}
                   className="flex flex-col gap-5 px-6 py-10 xl:gap-7.5 xl:px-10 xl:py-20 2xl:gap-12.5 2xl:px-12.5 2xl:py-25"
                 >
-                  {/* 1. Title Container with Border  */}
-                    <h3 className="border-b border-border-subtle pb-4 text-[26px] font-medium text-accent-secondary md:pb-6 lg:pb-8 xl:text-[32px] 2xl:text-[40px]">
+                  {/* 1. Title  */}
+                    <h3 className="border-b border-subtle pb-4 text-[26px] font-medium text-accent-secondary md:pb-6 xl:pb-10 xl:text-[32px] 2xl:pb-12.5 2xl:text-[40px] leading-[1.3] lg:leading-normal">
                       {item.title}
                     </h3>
 
                   {/* 2. Description Container*/}
-                    <p className="text-sm leading-normal text-text-muted xl:text-base 2xl:text-lg">
+                    <p className="text-sm leading-normal text-muted xl:text-base 2xl:text-lg">
                       {item.description}
                     </p>
                 </div>
@@ -52,12 +52,12 @@ import SEO from "../../../shared/components/SEO";
             </div>
          
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
-            <div className="py-10 pl-4 border-b xl:pl-10 xl:pb-10 xl:pt-20 border-border-subtle">
+            <div className="py-10 pl-4 border-b border-subtle xl:p-10 xl:pt-20 xl:pr-[250px] 2xl:p-12.5 2xl:pt-30">
               <div className="flex flex-col gap-[6px] xl:gap-[10px] 2xl:gap-[14px]">
-                <h2 className="text-text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold">
+                <h2 className="text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold leading-none">
                   Current Openings
                 </h2>
-                <p className="max-w-5xl text-sm font-normal text-text-muted xl:text-base 2xl:text-lg">
+                <p className="text-sm text-muted xl:text-base 2xl:text-lg leading-normal tracking-[-.6%]">
                   We are always on the lookout for talented individuals who are
                   passionate about creating exceptional digital experiences.
                   Whether you're a designer, engineer, project manager, or have

@@ -17,16 +17,16 @@
   --color-bg-form: #24242480;
 
   /* Text Colors */
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #E6E6E6;
-  --color-text-tertiary: #262626;
-  --color-text-muted: #98989A;
-  --color-text-fourth: #1A1A1A;
-  --color-text-placeholder: #656567;
+  --color-primary: #FFFFFF;
+  --color-secondary: #E6E6E6;
+  --color-tertiary: #262626;
+  --color-muted: #98989A;
+  --color-fourth: #1A1A1A;
+  --color-placeholder: #656567;
 
   /* Border Colors */
-  --color-border-subtle: #262626;
-  --color-border-strong: #333333;
+  --color-subtle: #262626;
+  --color-strong: #333333;
 
   /* Accent Colors */
   --color-accent-primary: #9EFF00;
@@ -50,10 +50,9 @@
   }
 
   body {
-    
     background-color: var(--color-bg-primary);
     font-family: var(--font-barlow);
-    color: var(--color-text-primary);
+    color: var(--color-primary);
     overflow-x: hidden;
   }
 
