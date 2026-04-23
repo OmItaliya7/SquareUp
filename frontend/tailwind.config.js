@@ -15,7 +15,7 @@ export default {
       },
 
       maxWidth: {
-        container: "1920px",
+        container: "1640px",
       },
     },
   },

@@ -15,16 +15,19 @@ export const contactInfo = [
     id: 1,
     type: "mail",
     text: "contact.squareupp@gmail.com",
+    link: "mailto:contact.squareupp@gmail.com"
   },
   {
     id: 2,
     type: "phone",
-    text: "+91 91813 22309",
+    text: "+91 82005 50680",
+    link: "tel:+918200550680",
   },
   {
     id: 3,
     type: "location",
-    text: "Remote-first, Globally Available",
+    text: "Surat, Gujarat",
+    link: "https://www.google.com/maps/search/?api=1&query=Enthusia+Softech"
   },
 ]
 

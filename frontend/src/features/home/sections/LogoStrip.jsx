@@ -9,8 +9,8 @@ const LogoStrip = () => {
           Trusted By 250+ Companies
         </p>
       </div>
+      
         {/* OUTER BOX */}
-
           <div className="grid grid-cols-2 divide-x divide-y divide-subtle border-y border-subtle md:grid-cols-6 md:divide-x-0 md:divide-y-0 md:gap-5 md:py-7.5 2xl:py-10">
             {logos.map((logo, i) => (
               <div
@@ -21,7 +21,7 @@ const LogoStrip = () => {
                     alt={logo.alt}
                     loading="lazy"
                     decoding="async"
-                    className="object-contain h-8 aspect-[3/1] xl:h-10" />
+                    className="object-contain h-8 aspect-3/1 xl:h-10" />
               </div>
             ))}
           </div>

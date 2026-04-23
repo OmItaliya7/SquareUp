@@ -16,7 +16,7 @@ const FormField = ({
       </label>
 
       {textarea ? (
-        <div className="border-b border-subtle pb-[34px] 2xl:pb-10"> 
+        <div className="border-b border-subtle pb-8.5 2xl:pb-10"> 
         <textarea
           name={name}
           value={value}

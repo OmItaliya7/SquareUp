@@ -1,7 +1,5 @@
 import {lazy, Suspense} from "react";
 import SEO from "../../../shared/components/SEO";
-
-
 import Hero from "../sections/Hero";
 import LogoStrip from "../sections/LogoStrip";
 import Loader from "../../../shared/ui/Loader";
@@ -21,8 +19,8 @@ const Home = () => {
                 path="/" 
             />
             
-                <Hero />
-                <section className="w-full border-x border-subtle" id="Home page">
+            <Hero />
+            <section className="w-full border-x border-subtle" id="Home page">
                 <LogoStrip />
 
                 <Suspense fallback={<Loader />} >
@@ -44,6 +42,7 @@ const Home = () => {
                 <Suspense fallback={<Loader />} >
                     <ContactUs />
                 </Suspense>
+                
             </section>
         </>
     )

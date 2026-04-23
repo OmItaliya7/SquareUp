@@ -15,10 +15,11 @@ import FAQAccordion from "../../../shared/components/FAQAccordion";
 import { memo } from "react";
 import SEO from "../../../shared/components/SEO";
 
+
 const contactInfo = [
-  { id: "email", Icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Emailus" },
-  { id: "phone", Icon: phoneIcon, text: "+91 91813 22309", alt: "Callus" },
-  { id: "location", Icon: locationIcon, text: "Get Location", alt: "Get directions" },
+  { id: "email", Icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Emailus", link: "mailto:contact.squareupp@gmail.com"},
+  { id: "phone", Icon: phoneIcon, text: "+91 91813 22309", alt: "Callus" , link: "tel:+918200550680"},
+  { id: "location", Icon: locationIcon, text: "Get Location", alt: "Get directions", link: "https://www.google.com/maps/search/?api=1&query=Enthusia+Softech"},
 ];
 
 const socialIcons = [
@@ -27,13 +28,13 @@ const socialIcons = [
   { id: "ln", src: linkedinIcon, alt: "Connect with us on LinkedIn", url: "https://www.linkedin.com/company/enthusia-softech/"},
 ];
 
-const ContactInfoCard = memo(({ Icon, text, alt }) => (
-  <div className="inline-flex w-full items-center justify-center gap-3.5 rounded-md bg-subtle px-5 py-4.5 md:w-auto md:px-2 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5">
+const ContactInfoCard = memo(({ Icon, text, alt, link }) => (
+  <a href={link} target={link.startsWith("http") ? "_blank" : "_self"} rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-3.5 rounded-md bg-subtle px-5 py-4.5 md:w-auto md:px-2 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 transition-all duration-300 hover:bg-bg-hover hover:scale-[1.02] cursor-pointer">
     <img src={Icon} alt={alt} loading="lazy" className="size-6 shrink-0 md:size-6 2xl:size-7.5" />
     <span className="text-base font-medium whitespace-nowrap text-secondary 2xl:text-xl">
       {text}
     </span>
-  </div>
+  </a>
 ));
 
 const Contact = () => {
@@ -56,8 +57,8 @@ const Contact = () => {
         {/* Contact Info Strip */}
         <div className="border-b border-subtle px-6 py-7.5 xl:px-0 xl:py-10 2xl:py-12.5 flex items-center justify-center">
           <div className="flex flex-col md:flex-row gap-5 2xl:gap-7.5">
-            {contactInfo.map(({ id, Icon, text, alt }) => (
-              <ContactInfoCard key={id} Icon={Icon} text={text} alt={alt} />
+            {contactInfo.map(({ id, Icon, text, alt , link }) => (
+              <ContactInfoCard key={id} Icon={Icon} text={text} alt={alt} link={link} />
             ))}
           </div>
         </div>
@@ -117,3 +118,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

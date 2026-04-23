@@ -16,8 +16,8 @@ const TestimonialsCard  = ({item}) => {
       </div>
 
       {/* Bottom Profile card  */}
-      <div className="mt-auto flex gap-[6px] rounded-xl border border-subtle bg-[#24242433] p-3.5 2xl:gap-[10px] 2xl:p-5">
-        <div className="flex flex-1 items-center gap-[10px] xl:gap-[12px] 2xl:gap-[18px]">
+      <div className="mt-auto flex gap-1.5 rounded-xl border border-subtle bg-[#24242433] p-3.5 2xl:gap-2.5 2xl:p-5">
+        <div className="flex flex-1 items-center gap-2.5 xl:gap-3 2xl:gap-4.5">
            <img
              src={item.image}
              alt={item.name}

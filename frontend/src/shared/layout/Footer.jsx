@@ -84,10 +84,13 @@ const Footer = () => {
         <div className="flex flex-col gap-5 pt-[30px] sm:items-center lg:flex-row lg:justify-between lg:pt-10 2xl:pt-[50px]">
           {/* Contact Info */}
           <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-center md:gap-5.5 2xl:gap-7.5">
-            {contactInfo.map(({ id, type, text }) => (
-              <div
+            {contactInfo.map(({ id, type, text , link }) => (
+              <a
                 key={id}
-                className="flex items-center justify-center gap-2.5 border-b border-subtle pb-5 md:gap-1.5 md:pb-3 2xl:gap-2.5 2xl:pb-4"
+                href={link}
+                target={link.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2.5 border-b border-subtle pb-5 md:gap-1.5 md:pb-3 2xl:gap-2.5 2xl:pb-4 transition-all duration-300 hover:text-accent-primary hover:scale-[1.02] cursor-pointer"
               >
                 <img
                   src={contactIcons[type]}
@@ -98,7 +101,7 @@ const Footer = () => {
                 <span className="text-lg xl:text-base 2xl:text-lg text-secondary">
                   {text}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
 

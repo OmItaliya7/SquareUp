@@ -18,11 +18,11 @@ import SEO from "../../../shared/components/SEO";
       
         <section className="w-full border-x border-subtle" id="careers">
           
-        <SectionHeader
-          title="Join Our Team at SquareUp"
-          subtitle="Unlock your potential and join our team of innovators and problem solvers."
-          bgImage={wave}
-        />
+            <SectionHeader
+              title="Join Our Team at SquareUp"
+              subtitle="Unlock your potential and join our team of innovators and problem solvers."
+              bgImage={wave}
+            />
         
             {/* 1. INTRO BLOCK */}
             <IntroBlock
@@ -43,7 +43,7 @@ import SEO from "../../../shared/components/SEO";
                       {item.title}
                     </h3>
 
-                  {/* 2. Description Container*/}
+                  {/* 2. Description */}
                     <p className="text-sm leading-normal text-muted xl:text-base 2xl:text-lg">
                       {item.description}
                     </p>
@@ -52,8 +52,8 @@ import SEO from "../../../shared/components/SEO";
             </div>
          
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
-            <div className="py-10 pl-4 border-b border-subtle xl:p-10 xl:pt-20 xl:pr-[250px] 2xl:p-12.5 2xl:pt-30">
-              <div className="flex flex-col gap-[6px] xl:gap-[10px] 2xl:gap-[14px]">
+            <div className="py-10 pl-4 border-b border-subtle xl:p-10 xl:pt-20 xl:pr-62.5 2xl:p-12.5 2xl:pt-30">
+              <div className="flex flex-col gap-1.5 xl:gap-2.5 2xl:gap-3.5">
                 <h2 className="text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold leading-none">
                   Current Openings
                 </h2>

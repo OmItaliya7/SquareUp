@@ -1,6 +1,7 @@
 import { memo } from "react";
 
 const StepCard = ({ number, title, description, variant = "default" }) => {
+
   const variants = {
     default: "text-muted",
     highlight: "text-accent-secondary",
@@ -16,9 +17,8 @@ const StepCard = ({ number, title, description, variant = "default" }) => {
       2xl:gap-12.5 2xl:px-12.5 2xl:py-25
     ">      
       
-      {/* 1. TOP SECTION: Number and Title Row */}
+      {/* 1. Number and Title Row */}
       <div className="flex items-end gap-2.5 xl:gap-3.5"> 
-        {/* Large Neon Number */}
           <span className="text-[80px] font-semibold leading-[0.8] text-accent-secondary xl:text-[120px] 2xl:text-[150px]">
             {number}
           </span>
@@ -28,7 +28,7 @@ const StepCard = ({ number, title, description, variant = "default" }) => {
           </h3>
       </div>
 
-      {/* 2. BOTTOM SECTION: Description  */}
+      {/* 2. Description  */}
         <p className="text-[14px] text-muted xl:text-base 2xl:text-lg leading-normal">
           {description}
         </p>

@@ -31,7 +31,7 @@ const CTABanner = ({ title, subtitle, className }) => {
                 className="size-12.5 md:size-14 2xl:size-20" 
               />
               
-            <div className="flex w-full flex-col gap-[6px] md:gap-[8px] xl:gap-[10px] 2xl:gap-[14px] ">
+            <div className="flex w-full flex-col gap-1.5 md:gap-2 xl:gap-2.5 2xl:gap-3.5">
               {/* Heading */}
               <h2 className="text-2xl font-semibold text-primary md:text-[28px] xl:text-3xl 2xl:text-[38px]">
                 {title}

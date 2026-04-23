@@ -9,12 +9,13 @@ import SEO from "../../../shared/components/SEO";
 const ServicesPage = () => {
   return (
     <>
-    <SEO
-      title="Web Development, UI/UX Services & Mobile App Services | SquareUp"
-      description="Discover our professional services including web development, UI/UX design, mobile app development, and custom software solutions tailored for startups and growing businesses."
-      path="/services"
-    />
+      <SEO
+        title="Web Development, UI/UX Services & Mobile App Services | SquareUp"
+        description="Discover our professional services including web development, UI/UX design, mobile app development, and custom software solutions tailored for startups and growing businesses."
+        path="/services"
+      />
       <section className="w-full border-x border-subtle" id="services">
+        
           <SectionHeader
             title="Our Services"
             subtitle="Transform your brand with our innovative digital solutions that captivate and engage your audience."
@@ -23,6 +24,7 @@ const ServicesPage = () => {
             
             {servicesData.map((service) => (
               <div key={service.slug} id={service.slug}>
+                
                 <IntroBlock 
                   title={service.mainTitle}
                   description={service.description}
@@ -30,18 +32,21 @@ const ServicesPage = () => {
                 />
             
                 {service.categories.map((cat, index) => (
+                  
                   <ServiceCategoryGrid 
                     key={index} 
                     categoryTitle={cat.name} 
                     items={cat.services} 
                   />
+                  
                 ))}
               </div>
             ))}   
-        <CTABanner 
-          title="Let us Bring your Ideas to Life in the Digital World."
-          subtitle="No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product."
-        />
+            
+          <CTABanner 
+            title="Let us Bring your Ideas to Life in the Digital World."
+            subtitle="No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product."
+          />
       </section>
     </>
   );

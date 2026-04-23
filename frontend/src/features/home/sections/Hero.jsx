@@ -13,7 +13,7 @@ const Hero = () => {
     <section className="w-full lg:border-x border-subtle" id="hero">
       <div className="relative overflow-hidden pt-20 pb-51.25 text-center md:pt-26 md:pb-40 xl:pt-28 xl:pb-68.5">
 
-        {/* Grid Overlay */}
+        {/* Grid BG */}
         <div
           className="absolute inset-0 opacity-50 pointer-events-none"
           style={{
@@ -44,14 +44,14 @@ const Hero = () => {
           </h1>
 
           {/* Capsule */}
-          <div className="rounded-xl border border-subtle bg-[#24242433] px-5 py-[18px] backdrop-blur-md sm:px-5 md:px-7 xl:px-7.5 2xl:px-10 2xl:py-6">
+          <div className="rounded-xl border border-subtle bg-[#24242433] px-5 py-4.5 backdrop-blur-md sm:px-5 md:px-7 xl:px-7.5 2xl:px-10 2xl:py-6">
             
-            {/* Mobile */}
+            {/* Mobile Capsule */}
             <p className="text-base text-muted md:hidden">
               For startups, enterprise leaders, media & publishers, and social good.
             </p>
 
-            {/* Desktop */}
+            {/* Desktop Capsule */}
             <div className="hidden items-center gap-1.5 md:flex">
               <span className="text-base text-muted xl:text-lg 2xl:text-[22px]">
                 For

@@ -10,18 +10,20 @@ import SEO from "../../../shared/components/SEO";
 const Process = () => {
   return (
     <>
-    <SEO
-      title="Our Process | How We Design & Build Digital Products — SquareUp"
-      description="Learn how SquareUp designs, develops, and delivers scalable digital products through a structured, client-focused process from idea to launch."
-      path="/process"
-    />
+      <SEO
+        title="Our Process | How We Design & Build Digital Products — SquareUp"
+        description="Learn how SquareUp designs, develops, and delivers scalable digital products through a structured, client-focused process from idea to launch."
+        path="/process"
+      />
  
       <section className="w-full border-x border-subtle" id="process-page">
+        
         <SectionHeader 
           title="Process of Starting the Project" 
           subtitle="At SquareUp, we value transparency, collaboration, and delivering exceptional results."
           bgImage={wave}
         />
+        
         {/*  Intro Block */}
         <IntroBlock 
           title="At SquareUp"
@@ -37,7 +39,9 @@ const Process = () => {
           subtitle="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."
           className="border-b border-subtle"
         />
+        
         <ContactForm />
+        
       </section>
 
     </>

@@ -13,6 +13,7 @@ const WorkGrid = ({ projects }) => {
   }
  
   return (
+    
     <div className="grid grid-cols-1 border-b divide-x divide-y border-subtle divide-subtle lg:grid-cols-2">
       {projects.map((project) => (
         <WorkCard 
@@ -21,6 +22,7 @@ const WorkGrid = ({ projects }) => {
         />
       ))}
     </div>
+    
 )};
 
 export default memo(WorkGrid);

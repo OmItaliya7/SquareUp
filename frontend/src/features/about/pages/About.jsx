@@ -22,13 +22,12 @@ const About = () => {
           bgImage={wave}
         />
             {/* 1. ABOUT INTRO SECTION  */}
-        <div
-          className="grid items-center gap-7.5 
-          px-4 py-10
-          md:grid-cols-2 md:px-20 md:py-15
-          xl:gap-25 xl:px-25 xl:py-20
-          2xl:px-37.5 2xl:py-25 "
-          >
+        <div className="grid items-center gap-7.5 
+              px-4 py-10
+              md:grid-cols-2 md:px-20 md:py-15
+              xl:gap-25 xl:px-25 xl:py-20
+              2xl:px-37.5 2xl:py-25">
+                
           {/* LEFT SIDE: Text Container  */}
           <div className="flex flex-col gap-4 text-left 2xl:gap-5">
             <h2 className="text-[28px] font-semibold leading-none text-primary xl:text-[38px] 2xl:text-[48px]">

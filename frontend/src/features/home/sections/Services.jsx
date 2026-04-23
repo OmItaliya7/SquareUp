@@ -46,11 +46,11 @@ const Services = () => {
           subtitle="Transform your brand with our innovative digital solutions that captivate and engage your audience."
           bgImage={wave}
         />
-          <div className="grid grid-cols-1 border-b divide-y divide-subtle border-subtle md:grid-cols-2 md:divide-x lg:grid-cols-3">
-            {servicesData.map((item, i) => (
-              <ServiceCard key={item.slug} item={item} index={i} />
-            ))}
-          </div> 
+        <div className="grid grid-cols-1 border-b divide-y divide-subtle border-subtle md:grid-cols-2 md:divide-x lg:grid-cols-3">
+          {servicesData.map((item, i) => (
+            <ServiceCard key={item.slug} item={item} index={i} />
+          ))}
+        </div> 
       
     </section>
   );
