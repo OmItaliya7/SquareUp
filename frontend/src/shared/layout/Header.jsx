@@ -189,7 +189,7 @@ const Header = () => {
           </Link>
 
           {/* DESKTOP NAVIGATION - KEY CHANGES HERE */}
-          <nav aria-label="Main navigation" className="items-center hidden gap-0 lg:flex">
+          <nav aria-label="Main navigation" className="items-center hidden gap-1 lg:flex">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
@@ -198,7 +198,7 @@ const Header = () => {
                   inline-flex items-center rounded-lg transition-all
                   ${
                     isActive(item.path)
-                      ? "bg-bg-secondary font-semibold text-primary px-4.5 py-3 2xl:px-6 2xl:py-3.5"
+                      ? "bg-bg-secondary font-semibold text-primary px-4.5 py-3 2xl:px-7 2xl:py-3.5"
                       : "font-medium text-secondary hover:bg-bg-secondary hover:text-primary px-4.5 py-3 2xl:px-6 2xl:py-3.5"
                   }
                   text-sm 2xl:text-lg whitespace-nowrap

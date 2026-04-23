@@ -5,7 +5,7 @@ import { servicesData } from "../data/servicesData";
 
 const ServiceCard = ({ item }) => {
   return (
-    <div className="flex flex-col justify-between gap-6 bg-bg-tertiary p-7.5 xl:gap-0 xl:p-10 2xl:p-12.5"> 
+    <div className="flex flex-col gap-6 bg-bg-tertiary p-7.5 xl:gap-0 xl:p-10 2xl:p-12.5"> 
      
         {/*  Icon + Title */}
         <div className="flex items-center gap-3.5 md:flex-col md:items-start md:gap-7.5 2xl:gap-10">

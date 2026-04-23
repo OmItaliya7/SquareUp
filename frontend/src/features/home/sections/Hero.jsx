@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-10 2xl:gap-12.5">
 
           {/* Title */}
-          <h1 className="max-w-130 2xl:max-w-200 text-[34px] font-semibold leading-none sm:text-[38px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[68px]">
+          <h1 className="max-w-130 2xl:max-w-200 text-[34px] font-semibold leading-[1.2] sm:text-[38px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[68px]">
             A Digital Product Studio that will Work
           </h1>
 
