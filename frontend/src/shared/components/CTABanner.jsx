@@ -3,9 +3,9 @@ import logo from "../../assets/logo/brand/logo-main.svg";
 import wave from "../../assets/images/backgrounds/about-wave.webp";
 import { Link } from "react-router-dom";
 
-const CTABanner = ({ title, subtitle }) => {
+const CTABanner = ({ title, subtitle, className }) => {
   return (
-        <section id="CTABanner" className="relative overflow-hidden px-4 py-12.5 md:px-8 md:py-16 xl:px-0 xl:py-25 2xl:py-30">
+        <section id="CTABanner" className={`relative overflow-hidden px-4 py-12.5 md:px-8 md:py-16 xl:px-0 xl:py-25 2xl:py-30 ${className} `}>
           {/* BACKGROUND LAYERS */}
           <img
             src={wave}
