@@ -9,9 +9,12 @@ const SEO = ({ title, description, path = "/", image = defaultImage, type = "web
 
   return (
     <Helmet>
+
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+
+      <meta name="robots" content="index, follow" />
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />

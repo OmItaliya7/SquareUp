@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t border-subtle py-7.5 md:py-10 2xl:py-12.5 layout-shell">
-        <div className="flex flex-col items-center gap-7.5 pb-[30px] lg:border-b border-subtle lg:flex-row lg:justify-between lg:pb-10 2xl:pb-[50px]">
+        <div className="flex flex-col items-center gap-7.5 pb-7.5 lg:border-b border-subtle lg:flex-row lg:justify-between lg:pb-10 2xl:pb-12.5">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM SECTION  */}
-        <div className="flex flex-col gap-5 pt-[30px] sm:items-center lg:flex-row lg:justify-between lg:pt-10 2xl:pt-[50px]">
+        <div className="flex flex-col gap-5 pt-7.5 sm:items-center lg:flex-row lg:justify-between lg:pt-10 2xl:pt-12.5">
           {/* Contact Info */}
           <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-center md:gap-5.5 2xl:gap-7.5">
             {contactInfo.map(({ id, type, text , link }) => (
