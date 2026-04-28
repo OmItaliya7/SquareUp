@@ -5,7 +5,7 @@ import { wcuData } from "../data/wcuData"
 const WCUCard = ({ item }) => {
   return (
     <div
-      className="flex flex-col gap-6 px-7.5 py-10 xl:gap-7.5 xl:p-15 2xl:p-20 2xl:gap-10"
+      className="flex flex-col px-7.5 py-10 xl:p-15 2xl:p-20 gap-6 xl:gap-7.5 2xl:gap-10"
     >
       {/* ICON BOX */}
       <div className="flex items-center gap-3.5 2xl:gap-5">
@@ -15,16 +15,16 @@ const WCUCard = ({ item }) => {
           alt={item.title}
           loading="lazy"
           decoding="async"
-          className="size-14.5 object-contain xl:size-17.5 2xl:size-22"
+          className="object-contain size-14.5 xl:size-17.5 2xl:size-22"
         />
-        <h3 className="text-[20px] font-medium text-primary 2xl:text-[26px] leading-normal tracking-[-0.6%]">
+        <h3 className="font-medium text-xl 2xl:text-[26px] leading-normal tracking-[-0.6%] text-primary">
           {item.title}
         </h3>
         
       </div>
 
       {/* DESCRIPTION */}
-      <p className="text-[14px] tracking-[-0.6%] leading-normal text-secondary xl:text-[16px] 2xl:text-[20px]">
+      <p className="text-sm xl:text-base 2xl:text-xl leading-normal tracking-[-0.6%] text-secondary">
         {item.desc}
       </p>
       
@@ -41,7 +41,7 @@ const WCU = () => {
           bgImage={wave}
         />
         
-        <div className="grid grid-cols-1 border-b divide-y divide-subtle border-subtle md:grid-cols-2 md:divide-x">
+        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-subtle divide-y md:divide-x divide-subtle">
           {wcuData.map((item, i) => (
             <WCUCard key={i} item={item} />
           ))}

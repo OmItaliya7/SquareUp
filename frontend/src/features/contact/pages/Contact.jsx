@@ -18,7 +18,7 @@ import SEO from "../../../shared/components/SEO";
 
 const contactInfo = [
   { id: "email", Icon: mailIcon, text: "contact.squareupp@gmail.com", alt: "Emailus", link: "mailto:contact.squareupp@gmail.com"},
-  { id: "phone", Icon: phoneIcon, text: "+91 91813 22309", alt: "Callus" , link: "tel:+918200550680"},
+  { id: "phone", Icon: phoneIcon, text: "+91 82005 50680", alt: "Callus" , link: "tel:+918200550680"},
   { id: "location", Icon: locationIcon, text: "Get Location", alt: "Get directions", link: "https://www.google.com/maps/search/?api=1&query=Enthusia+Softech"},
 ];
 
@@ -29,9 +29,9 @@ const socialIcons = [
 ];
 
 const ContactInfoCard = memo(({ Icon, text, alt, link }) => (
-  <a href={link} target={link.startsWith("http") ? "_blank" : "_self"} rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-3.5 rounded-md bg-subtle px-5 py-4.5 md:w-auto md:px-2 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 transition-all duration-300 hover:bg-bg-hover hover:scale-[1.02] cursor-pointer">
-    <img src={Icon} alt={alt} loading="lazy" className="size-6 shrink-0 md:size-6 2xl:size-7.5" />
-    <span className="text-base font-medium whitespace-nowrap text-secondary 2xl:text-xl">
+  <a href={link} target={link.startsWith("http") ? "_blank" : "_self"} rel="noopener noreferrer" className="inline-flex items-center justify-center w-full md:w-auto px-5 py-4.5 md:px-2 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 gap-3.5 rounded-md 2xl:rounded-lg bg-subtle transition-all duration-300 hover:bg-bg-hover hover:scale-[1.02] cursor-pointer">
+    <img src={Icon} alt={alt} loading="lazy" className="size-6 2xl:size-7.5 shrink-0" />
+    <span className="whitespace-nowrap font-medium text-base 2xl:text-xl text-secondary">
       {text}
     </span>
   </a>
@@ -55,7 +55,7 @@ const Contact = () => {
         />
         
         {/* Contact Info Strip */}
-        <div className="border-b border-subtle px-6 py-7.5 xl:px-0 xl:py-10 2xl:py-12.5 flex items-center justify-center">
+        <div className="flex items-center justify-center px-6 py-7.5 xl:px-0 xl:py-10 2xl:py-12.5 border-b border-subtle">
           <div className="flex flex-col md:flex-row gap-5 2xl:gap-7.5">
             {contactInfo.map(({ id, Icon, text, alt , link }) => (
               <ContactInfoCard key={id} Icon={Icon} text={text} alt={alt} link={link} />
@@ -67,21 +67,21 @@ const Contact = () => {
         <ContactForm />
         
         {/* Section: Operating Days & Social */}
-        <div className="flex flex-col border-y border-subtle md:flex-row">
+        <div className="flex flex-col md:flex-row border-y border-subtle">
           {/* LEFT */}
-          <div className="flex flex-1 items-center justify-center gap-3.5 border-b border-subtle py-5 md:border-b-0 md:border-r md:py-12 xl:py-12.5">
-            <span className="whitespace-nowrap text-base font-medium text-secondary 2xl:text-[22px]">
+          <div className="flex flex-1 items-center justify-center py-5 md:py-12 xl:py-12.5 gap-3.5 border-b md:border-b-0 md:border-r border-subtle">
+            <span className="whitespace-nowrap font-medium text-base 2xl:text-[22px] text-secondary">
               Operating Days
             </span>
 
-            <span className="whitespace-nowrap rounded-sm border border-subtle bg-bg-secondary px-5 py-2.5 text-sm font-medium text-secondary xl:text-base 2xl:px-6 2xl:py-3 2xl:text-xl">
+            <span className="whitespace-nowrap px-5 py-2.5 2xl:px-6 2xl:py-3 border border-subtle rounded-sm xl:rounded-md bg-bg-secondary font-medium text-sm xl:text-base 2xl:text-xl text-secondary">
               Monday to Friday
             </span>
           </div>
           {/* RIGHT */}
           <div className="flex flex-1 items-center justify-center md:py-12 xl:py-12.5">
-            <div className="flex flex-col items-center gap-5 p-5 pb-10 md:flex-row md:rounded-lg md:border md:border-subtle md:bg-bg-tertiary md:px-2 md:py-3 xl:p-2.5 xl:pl-5 2xl:p-3.5 2xl:pl-6">
-              <span className="text-base font-medium whitespace-nowrap text-secondary 2xl:text-lg">
+            <div className="flex flex-col md:flex-row items-center p-5 pb-10 md:px-2 md:py-3 xl:p-2.5 xl:pl-5 2xl:p-3.5 2xl:pl-6 gap-5 md:border md:border-subtle rounded-lg 2xl:rounded-xl md:bg-bg-tertiary">
+              <span className="whitespace-nowrap font-medium text-base 2xl:text-lg text-secondary">
                 Stay Connected
               </span>
 
@@ -92,7 +92,7 @@ const Contact = () => {
                       src={src}
                       alt={alt}
                       decoding="async"
-                      className="cursor-pointer size-13 2xl:size-16"
+                      className="size-13 2xl:size-16 cursor-pointer"
                     />
                   </a>
                 ))}
@@ -118,4 +118,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

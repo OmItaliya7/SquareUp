@@ -1,5 +1,4 @@
 import { useContactForm } from "../../hooks/useContactForm";
-import FormField from "../components/form/FormField";
 
 const contactOptions = [
   "Web Design",
@@ -7,6 +6,54 @@ const contactOptions = [
   "Mobile App Design",
   "Others",
 ];
+
+const FormField = ({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  placeholder,
+  error,
+  textarea = false,
+}) => {
+  return (
+    <div className="flex flex-col px-6 py-4.5 xl:px-7.5 xl:py-5 2xl:px-10 2xl:py-6 gap-3.5 xl:gap-4 2xl:gap-5 border border-subtle rounded-md 2xl:rounded-lg bg-bg-form">
+
+      <label className="font-medium text-base xl:text-lg 2xl:text-[22px] text-primary">
+        {label}
+      </label>
+
+      {textarea ? (
+        <div className="pb-8.5 2xl:pb-10 border-b border-subtle"> 
+        <textarea
+          name={name}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          rows={1}
+          className="w-full pb-1.5 border-b border-subtle bg-transparent resize-none text-muted focus:border-accent-primary focus:outline-none"
+        />
+        </div>
+      ) : (
+        <input
+          type={type}
+          name={name}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          className="w-full pb-1.5 border-b border-strong bg-transparent text-base 2xl:text-lg text-muted placeholder:text-placeholder transition-colors focus:border-accent-primary focus:outline-none"
+        />
+      )}
+
+      {error && (
+        <span className="text-sm text-red-500">
+          {error}
+        </span>
+      )}
+    </div>
+  );
+};
 
 const ContactForm = () => {
   const {
@@ -28,7 +75,7 @@ const ContactForm = () => {
 
   return (
     <section className="px-6 py-6 md:px-16 xl:py-0 xl:px-54 2xl:px-67" id="contact-form">
-        <div className="xl:border-x border-subtle xl:p-15 2xl:p-20">
+        <div className="xl:p-15 2xl:p-20 xl:border-x border-subtle">
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-7.5 2xl:gap-10">
 
@@ -57,30 +104,30 @@ const ContactForm = () => {
             </div>
 
             {/* ROW 2 */}
-            <div aria-describedby="services-error" className="bg-bg-form border border-subtle rounded-xl p-7.5 2xl:p-10 flex flex-col gap-7.5 2xl:gap-10">
-              <label className="text-base xl:text-lg 2xl:text-[22px] font-medium text-primary">
+            <div aria-describedby="services-error" className="flex flex-col p-7.5 2xl:p-10 gap-7.5 2xl:gap-10 border border-subtle rounded-lg 2xl:rounded-xl bg-bg-form">
+              <label className="font-medium text-base xl:text-lg 2xl:text-[22px] text-primary">
                 Why are you contacting us?
               </label>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactOptions.map((item) => (
                   <label
                     key={item}
                     className="flex gap-2.5"
                   >
-                    <div className="flex justify-center">
+                    <div className="relative flex justify-center">
                       <input
                         type="checkbox"
                         name="services"
                         checked={formData.services.includes(item)}
                         onChange={() => handleCheckbox(item)}
-                        className="transition-all border rounded-sm appearance-none peer size-7 border-strong bg-bg-secondary"
+                        className="size-7 border border-strong rounded-sm appearance-none bg-bg-secondary cursor-pointer transition-all peer"
                       />
 
-                      <span className="absolute mb-1 transition-opacity opacity-0 text-accent-primary text-md peer-checked:opacity-100">
+                      <span className="absolute text-accent-primary text-md opacity-0 transition-opacity peer-checked:opacity-100">
                         ✓
                       </span>
                     </div>
-                    <span className="text-[#FDFFFA] text-base 2xl:text-lg">
+                    <span className="text-base 2xl:text-lg text-[#FDFFFA] cursor-pointer">
                       {item}
                     </span>
                   </label>
@@ -94,12 +141,12 @@ const ContactForm = () => {
             </div>
 
               {/*  ROW 3: Budget Range Slider */}
-             <div className="flex flex-col gap-7.5 2xl:gap-10 bg-bg-form border border-subtle rounded-md p-6 pb-12.5 xl:p-7.5 2xl:p-10">
+             <div className="flex flex-col p-6 pb-12.5 xl:p-7.5 2xl:p-10 gap-7.5 2xl:gap-10 border border-subtle rounded-lg 2xl:rounded-xl bg-bg-form">
                <div>
-                 <label htmlFor="budget-slider" className="text-base xl:text-lg 2xl:text-[22px] font-medium text-primary">
+                 <label htmlFor="budget-slider" className="font-medium text-base xl:text-lg 2xl:text-[22px] text-primary">
                    Your Budget
                  </label>
-                 <p className="text-secondary text-sm xl:text-base 2xl:text-lg tracking-[-.6%] pt-1.5 xl:pt-3.5">
+                 <p className="pt-1.5 xl:pt-3.5 text-sm xl:text-base 2xl:text-lg tracking-[-.6%] text-secondary">
                    Slide to indicate your budget range
                  </p>
                </div>
@@ -120,22 +167,22 @@ const ContactForm = () => {
                    }}
                  />
                  <div className="flex justify-between font-medium">
-                   <span className="text-sm text-white 2xl:text-base">$0</span>
-                   <span className="text-sm text-accent-primary 2xl:text-base">
+                   <span className="text-sm 2xl:text-base text-white">$0</span>
+                   <span className="text-sm 2xl:text-base text-accent-primary">
                      ${formData.budget}
                    </span>
-                   <span className="text-sm text-primary 2xl:text-base">
+                   <span className="text-sm 2xl:text-base text-primary">
                      $10,000
                    </span>
                  </div>
-                 <label htmlFor="flexible-toggle" className="flex gap-2 mt-4 cursor-pointer">
+                 <label htmlFor="flexible-toggle" className="flex mt-4 gap-2 cursor-pointer">
                    <input
                      type="checkbox"
                      id="flexible-toggle"
                      checked={isFlexible}
                      onChange={handleFlexibleToggle}
                    />
-                   <span className="text-sm text-secondary">
+                   <span className="text-sm text-secondary cursor-pointer">
                      Not sure / Flexible
                    </span>
                  </label>
@@ -158,7 +205,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-accent-primary text-[#1A1A1A] w-full md:w-auto px-9 py-3.5 2xl:px-11 2xl:py-4.5 rounded-lg font-medium hover:brightness-110 disabled:opacity-60 text-sm 2xl:text-lg"
+                className="w-full md:w-auto px-9 py-3.5 2xl:px-11 2xl:py-4.5 rounded-md 2xl:rounded-lg bg-accent-primary font-medium text-sm 2xl:text-lg text-[#1A1A1A] transition hover:brightness-110 disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>

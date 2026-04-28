@@ -9,7 +9,6 @@ import SEO from "../../../shared/components/SEO";
 const Work = () => {
   return (
     <>
-    
       <SEO
         title="Portfolio & Case Studies - Web Devlopment and UI/UX Design Projects | SquareUp"
         description="Explore our portfolio of real-world projects including web devlopment, UI/UX design , and mobile apps. See how SquareUp delivers scalable and impactful digital solutions."

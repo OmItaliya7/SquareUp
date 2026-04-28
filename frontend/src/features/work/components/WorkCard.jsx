@@ -1,23 +1,18 @@
 import { memo } from "react";
-import squareIcon from "../../../assets/images/work/link-btn.webp";
+import squareIcon from "../../../assets/images/work/link-btn.svg";
+import { Link } from "react-router-dom";
 
 const WorkCard = ({ category, image, brand, url, description }) => {
   return (
-    <div className="flex flex-col gap-5 pb-10 xl:pb-20 xl:gap-7.5 2xl:pb-25">
+    <div className="flex flex-col pb-10 xl:pb-20 2xl:pb-25 gap-5 xl:gap-7.5">
 
       {/*  TITLE */}
-      <h4 className="border-b border-subtle
-        px-6 py-5
-        text-lg font-medium text-muted
-        xl:px-10 xl:py-6 xl:text-[20px]
-        2xl:px-12.5 2xl:py-7.5 2xl:text-[26px] 
-        leading-none
-      ">
+      <h4 className="px-6 py-5 xl:px-10 xl:py-6 2xl:px-12.5 2xl:py-7.5 border-b border-subtle font-medium text-lg xl:text-xl 2xl:text-[26px] leading-none text-muted">
         {category}
       </h4>
 
       {/* CONTENT */}
-      <div className="flex flex-col gap-5 px-6 xl:gap-6 xl:px-10 2xl:gap-7.5 2xl:px-12.5">
+      <div className="flex flex-col px-6 xl:px-10 2xl:px-12.5 gap-5 xl:gap-6 2xl:gap-7.5">
 
         {/* IMAGE */}
         <img
@@ -31,38 +26,28 @@ const WorkCard = ({ category, image, brand, url, description }) => {
         />
 
         {/* BRAND + URL + ICON */}
-        <div className="flex items-end justify-between lg:items-center">
+        <div className="flex justify-between items-end lg:items-center">
 
           {/* LEFT SIDE */}
           <div className="flex flex-col gap-2.5 leading-normal tracking-[-.6%]">
-            <h3 className="text-lg font-medium 2xl:text-2xl text-secondary ">
+            <h3 className="font-medium text-lg 2xl:text-2xl text-secondary">
               {brand}
             </h3>
 
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit px-2.5 py-2 xl:px-3 2xl:px-3.5 2xl:py-2.5 rounded-md 2xl:rounded-lg bg-bg-secondary border border-subtle text-muted text-sm xl:text-base 2xl:text-xl hover:text-accent transition-colors"
-            >
+            <a href={url} target="_blank" rel="noopener noreferrer" className="w-fit px-2.5 py-2 xl:px-3 2xl:px-3.5 2xl:py-2.5 border border-subtle rounded-md 2xl:rounded-lg bg-bg-secondary text-sm xl:text-base 2xl:text-xl text-muted transition-colors hover:text-accent-primary">
               {url}
             </a>
           </div>
 
           {/* RIGHT ICON */}
-          <a href={url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${brand} website`}>
-            <img
-              src={squareIcon}
-              alt={`Visit ${brand} website`}
-              className="size-11.5 2xl:size-13.5"
-              loading="lazy"
-            />
-          </a>
+          <Link to={url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-md 2xl:rounded-lg bg-[#262626] transition-colors hover:bg-bg-hover">
+            <img src={squareIcon} alt={`Visit ${brand} website`} className="size-6.5 2xl:size-8.5" />
+          </Link>
 
         </div>
 
         {/* DESCRIPTION */}
-        <p className="text-muted text-[14px] xl:text-base 2xl:text-lg leading-normal">
+        <p className="text-sm xl:text-base 2xl:text-lg leading-normal text-muted">
           {description}
         </p>
 

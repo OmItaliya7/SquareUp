@@ -25,7 +25,7 @@ const AppLayout = () => {
         <>
             <Header />
             <main id="main-content" className="flex justify-center">
-                <div className="w-full max-w-[1640px] px-4 sm:px-5 xl:px-20 2xl:px-6">
+                <div className="w-full max-w-[1640px] px-4 sm:px-5 xl:px-20 2xl:px-5.5">
                     <ErrorBoundary>
                         <Suspense fallback={<Loader />}>
                             <Outlet />

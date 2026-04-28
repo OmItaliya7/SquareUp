@@ -43,7 +43,6 @@ const Process = () => {
         <ContactForm />
         
       </section>
-
     </>
   );
 };

@@ -32,19 +32,16 @@ import SEO from "../../../shared/components/SEO";
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="grid grid-cols-1 border-b divide-y border-subtle divide-subtle lg:grid-cols-2 lg:divide-x">
+            <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-subtle divide-y lg:divide-x divide-subtle">
               {whyWorkData.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex flex-col gap-5 px-6 py-10 xl:gap-7.5 xl:px-10 xl:py-20 2xl:gap-12.5 2xl:px-12.5 2xl:py-25"
-                >
+                <div key={item.id} className="flex flex-col px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 gap-5 xl:gap-7.5 2xl:gap-12.5">
                   {/* 1. Title  */}
-                    <h3 className="border-b border-subtle pb-4 text-[26px] font-medium text-accent-secondary md:pb-6 xl:pb-10 xl:text-[32px] 2xl:pb-12.5 2xl:text-[40px] leading-[1.3] lg:leading-normal">
+                    <h3 className="pb-4 md:pb-6 xl:pb-10 2xl:pb-12.5 border-b border-subtle font-medium text-[26px] xl:text-[32px] 2xl:text-[40px] leading-[1.3] lg:leading-normal text-accent-secondary">
                       {item.title}
                     </h3>
 
                   {/* 2. Description */}
-                    <p className="text-sm leading-normal text-muted xl:text-base 2xl:text-lg">
+                    <p className="text-sm xl:text-base 2xl:text-lg leading-normal text-muted">
                       {item.description}
                     </p>
                 </div>
@@ -52,12 +49,12 @@ import SEO from "../../../shared/components/SEO";
             </div>
          
             {/* 3. CURRENT OPENINGS HEADER BLOCK */}
-            <div className="py-10 pl-4 border-b border-subtle xl:p-10 xl:pt-20 xl:pr-62.5 2xl:p-12.5 2xl:pt-30">
+            <div className="py-10 pl-4 xl:p-10 xl:pt-20 xl:pr-62.5 2xl:p-12.5 2xl:pt-30">
               <div className="flex flex-col gap-1.5 xl:gap-2.5 2xl:gap-3.5">
-                <h2 className="text-primary text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold leading-none">
+                <h2 className="font-semibold text-[28px] xl:text-[38px] 2xl:text-5xl leading-none text-primary">
                   Current Openings
                 </h2>
-                <p className="text-sm text-muted xl:text-base 2xl:text-lg leading-normal tracking-[-.6%]">
+                <p className="text-sm xl:text-base 2xl:text-lg leading-normal tracking-[-.6%] text-muted">
                   We are always on the lookout for talented individuals who are
                   passionate about creating exceptional digital experiences.
                   Whether you're a designer, engineer, project manager, or have
@@ -77,7 +74,7 @@ import SEO from "../../../shared/components/SEO";
             ))}
 
             {/* 5. CTA HIGHLIGHT (Reusable) */}
-            <HighlightCTA />
+            <HighlightCTA className="border-t border-subtle" />
         </section>
       
       </>

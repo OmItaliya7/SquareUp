@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center text-primary bg-bg-primary">
-          <h1 className="mb-4 text-3xl font-semibold">
+          <h1 className="mb-4 font-semibold text-3xl">
             ⚠️ Page failed to load
           </h1>
 
@@ -28,7 +28,7 @@ class ErrorBoundary extends React.Component {
 
           <button
             onClick={this.handleReload}
-            className="px-6 py-3 font-medium rounded-md bg-accent-primary text-fourth"
+            className="px-6 py-3 rounded-md bg-accent-primary font-medium text-fourth"
           >
             Retry
           </button>
