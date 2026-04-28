@@ -22,7 +22,7 @@ const ServiceCard = ({ item }) => {
         </div>
 
         {/* DESCRIPTION SECTION */}  
-        <p className="text-sm xl:text-base 2xl:text-lg tracking-[-0.6%] 2xl:leading-6 text-secondary xl:pt-3">
+        <p className="text-sm xl:text-base 2xl:text-lg tracking-[-0.6%] 2xl:leading-6 text-secondary xl:pt-[14px] 2xl:pt-5">
           {item.desc}
         </p>
       
