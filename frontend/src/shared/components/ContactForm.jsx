@@ -25,14 +25,14 @@ const FormField = ({
       </label>
 
       {textarea ? (
-        <div className="pb-8.5 2xl:pb-10 border-b border-subtle"> 
+        <div className="pb-8.5 2xl:pb-10 border-b border-strong"> 
         <textarea
           name={name}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
           rows={1}
-          className="w-full pb-1.5 border-b border-subtle bg-transparent resize-none text-muted focus:border-accent-primary focus:outline-none"
+          className="w-full pb-1.5 border-b border-strong bg-transparent resize-none text-muted focus:border-accent-primary focus:outline-none"
         />
         </div>
       ) : (
@@ -99,7 +99,6 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Type here"
                 error={errors.email}
-                
               />
             </div>
 
@@ -161,7 +160,7 @@ const ContactForm = () => {
                    disabled={isFlexible}
                    value={formData.budget}
                    onChange={handleBudgetChange}
-                   className="w-full h-1 rounded-lg appearance-none cursor-pointer bg-bg-secondary accent-accent-primary"
+                   className="w-full h-0.5 rounded-lg appearance-none cursor-pointer bg-strong accent-accent-primary"
                    style={{
                      background: `linear-gradient(to right, var(--color-accent-primary) ${pct}%, var(--color-bg-secondary) ${pct}%)`,
                    }}

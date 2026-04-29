@@ -19,7 +19,7 @@ const FAQAccordion = () => {
   }
 
   return (
-    <div className="grid lg:grid-cols-2 divide-x divide-subtle">
+    <div className="grid lg:grid-cols-2 lg:divide-x divide-subtle">
       
       {/* LEFT */}
       <div>

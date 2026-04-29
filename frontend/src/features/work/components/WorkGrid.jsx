@@ -14,7 +14,7 @@ const WorkGrid = ({ projects }) => {
  
   return (
     
-    <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-subtle divide-subtle divide-x divide-y">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
       {projects.map((project) => (
         <WorkCard 
           key={project.id} 

@@ -8,6 +8,7 @@ import client6 from "../../../assets/icons/clients/client_6.webp"
 
 export const testimonials = [
   {
+    id: 1,
     image: client1,
     name: "John Smith",
     role: "CEO of Chic Boutique",
@@ -15,6 +16,7 @@ export const testimonials = [
     desc: "Their team's expertise in web development and design resulted in a visually stunning and user-friendly e-commerce platform. Our online sales have skyrocketed, and we couldn't be happier."
   },
   {
+    id: 2,
     image: client2,
     name: "Sarah Johnson",
     role: "Founder of HungryBites.",
@@ -22,6 +24,7 @@ export const testimonials = [
     desc: "They understood our vision for a mobile app that streamlined our food delivery service. The app they delivered exceeded our expectations, and our customers love the seamless ordering experience. SquareUp is a trusted partner we highly recommend."
   },
   {
+    id: 3,
     image: client3,
     name: "Mark Thompson",
     role: "CEO of EventMasters",
@@ -29,6 +32,7 @@ export const testimonials = [
     desc: "Their attention to detail and commitment to delivering a user-friendly platform was evident throughout the project. The system has streamlined our operations and enhanced our clients' event experiences."
   },
   {
+    id: 4,
     image: client4,
     name: "Laura Adams",
     role: "COO of ProTech Solutions.",
@@ -36,6 +40,7 @@ export const testimonials = [
     desc: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner."
   },
   {
+    id: 5,
     image: client5,
     name: "Michael Anderson",
     role: "Founder of Dream Homes Realty.",
@@ -43,6 +48,7 @@ export const testimonials = [
     desc: "The platform is visually appealing and easy to navigate, allowing potential buyers to find their dream homes effortlessly. SquareUp's expertise in the real estate industry is unmatched."
   },
   {
+    id: 6,
     image: client6,
     name: "Emily Turner",
     role: "CEO of FitLife Tracker",

@@ -26,8 +26,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="layout-shell w-full py-7.5 md:py-10 2xl:py-12.5 border-t border-subtle">
-        <div className="flex flex-col items-center lg:flex-row lg:justify-between pb-7.5 lg:pb-10 2xl:pb-12.5 gap-7.5 lg:border-b border-subtle">
+    <footer className="w-full py-7.5 md:py-10 2xl:py-12.5 border-t border-subtle">
+        <div className="layout-shell flex flex-col items-center lg:flex-row lg:justify-between pb-7.5 lg:pb-10 2xl:pb-12.5 gap-7.5 lg:border-b border-subtle">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img
@@ -54,7 +54,7 @@ const Footer = () => {
           </nav>
 
           {/* Social Capsule */}
-          <div className="flex flex-col items-center md:flex-row px-22 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6 gap-3.5 md:gap-4 border border-subtle rounded-lg 2xl:rounded-xl bg-bg-tertiary">
+          <div className="flex flex-col items-center md:flex-row px-22 py-4 md:p-2.5 md:pl-5 2xl:p-3.5 2xl:pl-6 gap-3.5 md:gap-4 border-t border-subtle rounded-lg 2xl:rounded-xl bg-bg-tertiary">
             <span className="font-medium text-base 2xl:text-lg leading-normal text-secondary">
               Stay Connected  
             </span>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM SECTION  */}
-        <div className="flex flex-col lg:flex-row lg:justify-between sm:items-center pt-7.5 lg:pt-10 2xl:pt-12.5 gap-5">
+        <div className="layout-shell flex flex-col lg:flex-row lg:justify-between sm:items-center pt-7.5 lg:pt-10 2xl:pt-12.5 gap-5">
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-5 md:gap-5.5 2xl:gap-7.5">
             {contactInfo.map(({ id, type, text , link }) => (

@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const StepCard = ({ number, title, description, variant = "default" }) => {
+const StepCard = ({ number, title, description, variant = "default", id }) => {
 
   const variants = {
     default: "text-muted",
@@ -10,7 +10,7 @@ const StepCard = ({ number, title, description, variant = "default" }) => {
   const titleColor = variants[variant] || variants.default;
 
   return (
-    <div className="flex flex-col px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 gap-7.5 xl:gap-10 2xl:gap-12.5">      
+    <div className={`flex flex-col px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 gap-7.5 xl:gap-10 2xl:gap-12.5 border-b border-subtle ${id % 2 !== 0 ? "lg:border-r border-subtle" : ""} `}>      
       
       {/* 1. Number and Title Row */}
       <div className="flex items-end gap-2.5 xl:gap-3.5"> 

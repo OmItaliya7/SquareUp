@@ -11,9 +11,9 @@ const LogoStrip = () => {
       </div>
       
         {/* OUTER BOX */}
-          <div className="grid grid-cols-2 md:grid-cols-6 md:gap-5 md:py-7.5 2xl:py-10 border-y border-subtle divide-x divide-y divide-subtle md:divide-x-0 md:divide-y-0">
-            {logos.map((logo, i) => (
-              <div key={i} className="p-7.5 md:px-7.5 md:py-4 2xl:px-10 2xl:py-5">
+          <div className="grid grid-cols-2 md:grid-cols-6 md:gap-5 md:py-7.5 2xl:py-10 border-t md:border-y border-subtle">
+            {logos.map((logo) => (
+              <div key={logo.id} className={`p-7.5 md:px-7.5 md:py-4 2xl:px-10 2xl:py-5 ${logo.id % 2 === 0 ? 'border-b border-subtle' : 'border-r border-b border-subtle'} md:border-0 `}>
                   <img
                     src={logo.src}
                     alt={logo.alt}

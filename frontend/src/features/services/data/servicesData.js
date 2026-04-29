@@ -53,28 +53,28 @@ export const servicesData = [
       {
         name: "User Experience (UX) Design",
         services: [
-          { title: "User Research and Persona Development", icon: Ux_1 },
-          { title: "Information Architecture and Wireframing", icon: Ux_2 },
-          { title: "Interactive Prototyping and User Testing", icon: Ux_3 },
-          { title: "UI Design and Visual Branding", icon: Ux_4 },
+          { title: "User Research and Persona Development", icon: Ux_1, id: 1 },
+          { title: "Information Architecture and Wireframing", icon: Ux_2, id: 2 },
+          { title: "Interactive Prototyping and User Testing", icon: Ux_3, id: 3 },
+          { title: "UI Design and Visual Branding", icon: Ux_4, id: 4 },
         ]
       },
       {
         name: "User Interface (UI) Design",
         services: [
-          { title: "Intuitive and Visually Appealing Interface Design", icon: Ui_1 },
-          { title: "Custom Iconography and Illustration", icon: Ui_2 },
-          { title: "Typography and Color Palette Selection", icon: Ui_3 },
-          { title: "Responsive Design for Various Devices", icon: Ui_4 },
+          { title: "Intuitive and Visually Appealing Interface Design", icon: Ui_1, id: 5 },
+          { title: "Custom Iconography and Illustration", icon: Ui_2, id: 6 },
+          { title: "Typography and Color Palette Selection", icon: Ui_3, id: 7 },
+          { title: "Responsive Design for Various Devices", icon: Ui_4, id: 8 },
         ]
       },
       {
         name: "Branding and Identity",
         services: [
-          { title: "Logo Design and Visual Identity Development", icon: Brand_1 },
-          { title: "Brand Strategy and Positioning", icon: Brand_2 },
-          { title: "Brand Guidelines and Style Guides", icon: Brand_3 },
-          { title: "Marketing Collateral Design (Brochures, Business Cards, etc.)", icon: Brand_4 },
+          { title: "Logo Design and Visual Identity Development", icon: Brand_1, id: 9 },
+          { title: "Brand Strategy and Positioning", icon: Brand_2, id: 10 },
+          { title: "Brand Guidelines and Style Guides", icon: Brand_3, id: 11 },
+          { title: "Marketing Collateral Design (Brochures, Business Cards, etc.)", icon: Brand_4, id: 12 },
         ]
       }
     ]
@@ -88,28 +88,28 @@ export const servicesData = [
       {
         name: "Web Development",
         services: [
-          { title: "Front-End Development (HTML, CSS, JavaScript)", icon: web_1 },
-          { title: "Back-End Development (PHP, Python, Ruby)", icon: web_2 },
-          { title: "Content Management System (CMS) Development (WordPress, Drupal)", icon: web_3 },
-          { title: "E-Commerce Platform Development (Magento, Shopify)", icon: web_4 },
+          { title: "Front-End Development (HTML, CSS, JavaScript)", icon: web_1, id: 13 },
+          { title: "Back-End Development (PHP, Python, Ruby)", icon: web_2, id: 14 },
+          { title: "Content Management System (CMS) Development (WordPress, Drupal)", icon: web_3, id: 15 },
+          { title: "E-Commerce Platform Development (Magento, Shopify)", icon: web_4, id: 16 },
         ]
       },
       {
         name: "Mobile App Development",
         services: [
-          { title: "Native iOS and Android App Development", icon: app_1 },
-          { title: "Cross-Platform App Development (React Native, Flutter)", icon: app_2 },
-          { title: "App Prototyping and UI/UX Design Integration", icon: app_3 },
-          { title: "App Testing, Deployment, and Maintenance", icon: app_4 },
+          { title: "Native iOS and Android App Development", icon: app_1, id: 17 },
+          { title: "Cross-Platform App Development (React Native, Flutter)", icon: app_2, id: 18 },
+          { title: "App Prototyping and UI/UX Design Integration", icon: app_3, id: 19 },
+          { title: "App Testing, Deployment, and Maintenance", icon: app_4, id: 20 },
         ]
       },
       {
         name: "Custom Software Development",
         services: [
-          { title: "Enterprise Software Development", icon: custom_1 },
-          { title: "Custom Web Application Development", icon: custom_2 },
-          { title: "Integration with Third-Party APIs and Systems", icon: custom_3 },
-          { title: "Legacy System Modernization and Migration", icon: custom_4 },
+          { title: "Enterprise Software Development", icon: custom_1, id: 21 },
+          { title: "Custom Web Application Development", icon: custom_2, id: 22 },
+          { title: "Integration with Third-Party APIs and Systems", icon: custom_3, id: 23 },
+          { title: "Legacy System Modernization and Migration", icon: custom_4, id: 24 },
         ]
       }
     ]
@@ -123,28 +123,28 @@ export const servicesData = [
       {
         name: "Project Planning and Scoping",
         services: [
-          { title: "Requirements Gathering and Analysis", icon: plan_1 },
-          { title: "Project Roadmap and Timeline Development", icon: plan_2 },
-          { title: "Resource Allocation and Task Assignment", icon: plan_3 },
-          { title: "Risk Assessment and Mitigation Strategies", icon: plan_4 },
+          { title: "Requirements Gathering and Analysis", icon: plan_1, id: 25 },
+          { title: "Project Roadmap and Timeline Development", icon: plan_2, id: 26 },
+          { title: "Resource Allocation and Task Assignment", icon: plan_3, id: 27 },
+          { title: "Risk Assessment and Mitigation Strategies", icon: plan_4, id: 28 },
         ]
       },
       {
         name: "Agile Development",
         services: [
-          { title: "Iterative Development and Sprints", icon: agile_1 },
-          { title: "Scrum or Kanban Methodology Implementation", icon: agile_2 },
-          { title: "Regular Progress Updates and Demos", icon: agile_3 },
-          { title: "Continuous Improvement and Feedback Incorporation", icon: agile_4 },
+          { title: "Iterative Development and Sprints", icon: agile_1, id: 29 },
+          { title: "Scrum or Kanban Methodology Implementation", icon: agile_2, id: 30 },
+          { title: "Regular Progress Updates and Demos", icon: agile_3, id: 31 },
+          { title: "Continuous Improvement and Feedback Incorporation", icon: agile_4, id: 32 },
         ]
       },
       {
         name: "Quality Assurance and Testing",
         services: [
-          { title: "Test Planning and Execution", icon: qa_1 },
-          { title: "Functional and Usability Testing", icon: qa_2 },
-          { title: "Performance and Security Testing", icon: qa_3 },
-          { title: "Bug Tracking and Issue Resolution", icon: qa_4 },
+          { title: "Test Planning and Execution", icon: qa_1, id: 33 },
+          { title: "Functional and Usability Testing", icon: qa_2, id: 34 },
+          { title: "Performance and Security Testing", icon: qa_3, id: 35 },
+          { title: "Bug Tracking and Issue Resolution", icon: qa_4, id: 36 },
         ]
       }
     ]

@@ -32,9 +32,9 @@ import SEO from "../../../shared/components/SEO";
             />
 
             {/* 2. WHY WORK BOXES  */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-subtle divide-y lg:divide-x divide-subtle">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               {whyWorkData.map((item) => (
-                <div key={item.id} className="flex flex-col px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 gap-5 xl:gap-7.5 2xl:gap-12.5">
+                <div key={item.id} className={`flex flex-col px-6 py-10 xl:px-10 xl:py-20 2xl:px-12.5 2xl:py-25 gap-5 xl:gap-7.5 2xl:gap-12.5 border-b border-subtle ${item.id % 2 !== 0 ? "lg:border-r border-subtle" : ""} `}>
                   {/* 1. Title  */}
                     <h3 className="pb-4 md:pb-6 xl:pb-10 2xl:pb-12.5 border-b border-subtle font-medium text-[26px] xl:text-[32px] 2xl:text-[40px] leading-[1.3] lg:leading-normal text-accent-secondary">
                       {item.title}

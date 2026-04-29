@@ -5,7 +5,7 @@ import { servicesData } from "../data/servicesData";
 
 const ServiceCard = ({ item }) => {
   return (
-    <div className="flex flex-col xl:justify-between p-7.5 xl:p-10 2xl:p-12.5 gap-6 xl:gap-0 bg-bg-tertiary"> 
+    <div className="flex flex-col xl:justify-between p-7.5 xl:p-10 2xl:p-12.5 gap-6 xl:gap-0 "> 
      
         {/*  Icon + Title */}
         <div className="flex items-center md:flex-col md:items-start gap-3.5 md:gap-7.5 2xl:gap-10">
@@ -22,7 +22,7 @@ const ServiceCard = ({ item }) => {
         </div>
 
         {/* DESCRIPTION SECTION */}  
-        <p className="text-sm xl:text-base 2xl:text-lg tracking-[-0.6%] 2xl:leading-6 text-secondary xl:pt-[14px] 2xl:pt-5">
+        <p className="text-sm xl:text-base 2xl:text-lg tracking-[-0.6%] 2xl:leading-6 text-secondary xl:pt-3.5 2xl:pt-5">
           {item.desc}
         </p>
       

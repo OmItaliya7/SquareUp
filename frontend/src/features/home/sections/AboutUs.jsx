@@ -4,7 +4,7 @@ import { testimonials } from "../data/homeaboutData"
 
 const TestimonialsCard  = ({item}) => {
   return (
-    <div className="flex flex-col px-6 py-10 xl:px-15 xl:py-20 2xl:px-20 2xl:py-25 gap-6 xl:gap-7.5 2xl:gap-10 bg-bg-tertiary">
+    <div className={`flex flex-col px-6 py-10 xl:px-15 xl:py-20 2xl:px-20 2xl:py-25 gap-6 xl:gap-7.5 2xl:gap-10 border-b border-subtle md:${item.id % 2 === 0 ? "border-b border-subtle" : "border-r border-b border-subtle"} `}>
       
       <div className="flex flex-col gap-5 2xl:gap-6">
           <h3 className="font-medium text-lg xl:text-xl 2xl:text-[28px] leading-normal text-accent-secondary">
@@ -54,10 +54,10 @@ const AboutUs = () => {
       />
       
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-subtle divide-y md:divide-x divide-subtle">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           
-            {testimonials.map((item, i) => (
-              <TestimonialsCard key={i} item={item} />
+            {testimonials.map((item) => (
+              <TestimonialsCard key={item.id} item={item} />
             ))}
           
         </div>

@@ -2,7 +2,7 @@ import { memo } from "react";
 
 const JobCard = ({ title, icon, description }) => {
   return (
-    <div className="flex flex-col justify-between p-7.5 xl:p-10 2xl:p-12.5 gap-6 xl:gap-10 bg-bg-tertiary">
+    <div className="flex flex-col justify-between p-7.5 xl:p-10 2xl:p-12.5 gap-6 xl:gap-10">
       <div className="flex flex-col gap-6 2xl:gap-7.5">
         {/* ICON*/}
         <img

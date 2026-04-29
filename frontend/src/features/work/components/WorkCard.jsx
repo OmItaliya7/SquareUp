@@ -2,9 +2,9 @@ import { memo } from "react";
 import squareIcon from "../../../assets/images/work/link-btn.svg";
 import { Link } from "react-router-dom";
 
-const WorkCard = ({ category, image, brand, url, description }) => {
+const WorkCard = ({id ,category, image, brand, url, description }) => {
   return (
-    <div className="flex flex-col pb-10 xl:pb-20 2xl:pb-25 gap-5 xl:gap-7.5">
+    <div className={`flex flex-col pb-10 xl:pb-20 2xl:pb-25 gap-5 xl:gap-7.5 border-b border-subtle ${id % 2 === 0 ? 'lg:border-b border-subtle ' : 'lg:border-r lg:border-b border-subtle'}`}>
 
       {/*  TITLE */}
       <h4 className="px-6 py-5 xl:px-10 xl:py-6 2xl:px-12.5 2xl:py-7.5 border-b border-subtle font-medium text-lg xl:text-xl 2xl:text-[26px] leading-none text-muted">
